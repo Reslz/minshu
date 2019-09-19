@@ -1,0 +1,32 @@
+package com.neusoft.service.byservice;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.HouseListInfo;
+import com.neusoft.dao.bydao.HouseListMapper;
+@Service
+public class HouseListServiceImpl implements HouseListService{
+	@Autowired
+	private HouseListMapper houseListMapper;
+	
+	@Override
+	public int countHouse(int uid) {
+		return houseListMapper.countHouse(uid);
+	}
+
+	@Override
+	public List<HouseListInfo> houseList(int uid) {
+		List<HouseListInfo> list = houseListMapper.houseList(uid);
+		return list;
+	}
+
+	@Override
+	public void housedel(int houseid) {
+		houseListMapper.housedel(houseid);
+		
+	}
+
+}

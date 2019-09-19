@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.lydao.TieziMapper">
+
+	<!-- 查询所有帖子 List<Tiezi> getAllTiezi(); -->
+	<select id="getTieziPageList" resultType="map">
+		SELECT
+   			t.*,
+   			i.img,
+   			tf.fenlei,
+   			COUNT(distinct l.id) as kiss_num
+ 		FROM tiezi t
+  		LEFT JOIN img i on t.tieziid = i.tieziid
+  		LEFT JOIN tiezifenlei tf on t.fenleiid = tf.fenleiid
+ 		LEFT JOIN Love l on t.tieziid = l.tieziid
+  		GROUP BY t.tieziid 
+ 		ORDER BY kiss_num desc limit #{startindex},#{pagesize}
+	</select>
+
+	<!-- 获取所有帖子数 int TieziCount(Tiezi tiezi); -->
+	<select id="TieziCount" resultType="int">
+		select count(1) from tiezi 
+	</select>
+
+	<!-- 获取景色帖子 List<Tiezi> getTieziViewList(Tiezi tiezi); -->
+	<select id="getTieziViewList" resultType="map">
+		SELECT
+   			t.*,
+   			i.img,
+   			tf.fenlei,
+   			COUNT(distinct l.id) as kiss_num
+   		FROM tiezi t
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		LEFT JOIN Love l on t.tieziid = l.tieziid
+		LEFT JOIN tiezifenlei tf on t.fenleiid = tf.fenleiid where t.fenleiid = #{fenleiid}
+		GROUP BY t.tieziid
+		order by kiss_num desc limit #{startindex},#{pagesize}
+	</select>
+	
+	
+	<!-- 获取景色帖子数 int TieziViewCount(Tiezi tiezi); -->
+	<select id="TieziViewCount" resultType="Integer">
+		select count(1) from tiezi t
+		LEFT JOIN tiezifenlei tf on t.fenleiid = tf.fenleiid where t.fenleiid = #{fenleiid}
+	</select>
+	
+	<!-- 获取民宿列表
+	List<HouseInfo> getHouseList(HouseInfo houseInfo); -->
+	<select id="getHouseList" resultType="map">
+		select * from house limit #{startindex},#{pagesize}
+	</select>
+	
+	<!-- 获取民宿总数
+	int HouseCount(HouseInfo houseInfo); -->
+	<select id="HouseCount" resultType="Integer">
+		select count(1) from house		
+	</select>
+	
+
+
+	<!-- 获取帖子详细信息(带评论) List<Tiezi> getTieziDetailInfoWithContent(int id); -->
+	<select id="getTieziDetailInfoWithContent" resultType="map">
+		SELECT
+			u.username,
+			u.img as loginPic,
+			t.title,t.content,t.view_num,t.createtime,			
+			p.content as picContent,p.createtime as picCreatetime,
+			count(distinct l.id) as kiss_num
+		FROM tiezi t 
+		LEFT JOIN userinfo u on t.uid = u.uid
+		LEFT JOIN topic  p on t.tieziid = p.tieziid
+		LEFT JOIN Love l on t.tieziid = l.tieziid
+		WHERE t.tieziid = #{tieziid}
+	</select>
+	
+	<!-- 获取帖子详细信息(带图片，带点赞)
+	List<Tiezi> getTieziDetailInfoWithPic(int id); -->
+	<select id="getTieziDetailInfoWithPic" resultType="map">
+		SELECT
+			u.username,
+			u.img as loginPic,
+			i.img,
+			t.title,t.content,t.view_num,t.createtime,	
+			p.content as picContent,p.createtime as picCreatetime,
+			count(distinct l.id) as kiss_num
+		FROM tiezi t 
+		LEFT JOIN userinfo u on t.uid = u.uid
+		LEFT JOIN topic  p on t.tieziid = p.tieziid
+		LEFT JOIN Love l on t.tieziid = l.tieziid
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		WHERE t.tieziid = #{tieziid}
+		GROUP BY i.img
+	</select>
+	
+<!-- 	点赞功能
+	int addKissNum(Tiezi tiezi);  -->
+	<insert id="addKissNum">
+		insert into love(tieziid,uid) VALUES(#{tieziid},#{uid})
+	</insert>
+	
+	<!-- 获取评论总数
+	int TopicCount(Tiezi tiezi); -->
+	<select id="TopicCount" resultType="Integer">
+		select count(1) from topic where tieziid = #{tieziid};	
+	</select>
+	
+	<!-- 获取点赞权限
+	int LoveCount(Tiezi tiezi); -->
+	<select id="LoveCount" resultType="Integer">
+		SELECT count(*) FROM Love WHERE tieziid = #{tieziid} and uid = #{uid}
+	</select>
+	
+<!-- 	发帖功能
+	int NewTopic(Tiezi tiezi);
+	<insert id="NewTopic" keyProperty="id" >
+		使用这种方式要注意，resultType是要设置的，否则将抛异常，该值对应的实体类中的主键类型
+		keyProperty对应的是实体类中的主键名
+		<selectKey keyProperty="id" resultType="int">
+			select LAST_INSERT_ID()
+		</selectKey>
+		insert into tiezi(uid,title,content,createtime,fenleiid) VALUES(#{uid},#{title},#{content},now(),#{fenleiid})
+	</insert>
+	
+	<insert id="NewImg">
+		insert into img(tieziid,img) VALUES(#{tieziid},#{img})
+	</insert> -->
+	
+	<!-- 获取评论人的信息
+	List<Map<String,Object>> getTopicInfo(Tiezi tiezi); -->
+	<select id="getTopicInfo" resultType="map">
+		SELECT		
+			p.content as picContent,p.createtime as picCreatetime,
+			u.username,u.uid,u.img as picImg
+		FROM topic  p 
+		LEFT JOIN tiezi t on p.tieziid = t.tieziid
+		LEFT JOIN userinfo u on p.uid = u.uid
+		WHERE t.tieziid = #{tieziid}
+	</select>
+	
+	<!-- 发布评论
+	int NewTopic(TopicInfo topicInfo); -->
+	<insert id="NewTopic" keyProperty="id" useGeneratedKeys="true">
+		insert into topic(uid,tieziid,content,createtime) values(#{uid},#{tieziid},#{content},now())
+	</insert>
+	
+
+</mapper>

@@ -1,0 +1,14 @@
+package com.neusoft.dao.slzdao;
+
+import com.neusoft.bean.lybean.TiYanDaRen;
+import com.neusoft.bean.lybean.TiYanInFo;
+import com.neusoft.bean.lybean.UserInfo;
+
+public interface TYDRMapper {
+
+	void drAdd(TiYanDaRen dr);
+	
+	void submitTiYan(TiYanInFo ty);
+	
+	UserInfo selectDaRen(int uid);
+}

@@ -1,0 +1,55 @@
+package com.neusoft.controller.srlcontroller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.neusoft.bean.lybean.Bookinginfo;
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.PictureInfo;
+import com.neusoft.service.srlservice.CityInfoService;
+
+@CrossOrigin(origins = "*", maxAge = 3600)
+@Controller("citycontroller")
+public class CityInfoController {
+@Autowired
+private CityInfoService mapper;
+
+@RequestMapping(value = "picturelist",method = {RequestMethod.POST,RequestMethod.GET})
+@ResponseBody
+public List<PictureInfo> test() {
+	List<PictureInfo> list = mapper.findpictureinfo();
+	return list;
+}
+
+@RequestMapping(value = "findhouseinfo",method = {RequestMethod.POST,RequestMethod.GET})
+@ResponseBody
+public HouseInfo findhouseinfo(HouseInfo houseInfo){
+	HouseInfo houseInfo2 = mapper.findhouseinfo(houseInfo);
+	return houseInfo2;
+}
+
+
+@RequestMapping(value = "submintbookinfo",method = {RequestMethod.POST,RequestMethod.GET})
+@ResponseBody
+public int submintbookinfo(Bookinginfo order) {
+	try {
+		mapper.submintbookinfo(order);
+		return 1;
+	} catch (Exception e) {
+		return 0;
+	}
+	
+}
+
+
+
+
+
+
+}

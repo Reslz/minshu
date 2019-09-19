@@ -1,0 +1,16 @@
+package com.neusoft.controller.slzcontroller;
+
+import com.neusoft.util.IndustrySMS;
+
+public class Test {
+
+	   @SuppressWarnings("static-access")
+	public static void main(String[] args) {
+		   IndustrySMS am = new IndustrySMS();
+			try {
+				am.execute();
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+	   }
+}

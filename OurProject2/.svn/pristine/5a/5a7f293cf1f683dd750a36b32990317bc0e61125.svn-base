@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.thxdao.tHouseInfoMapper">
+
+	<select id="findHouseInfo" resultType="map">
+		select * 
+		from house 
+		left join housetype
+		on house.housetype = housetype.id
+		where locationid=#{locationid}
+	</select>
+	
+	<select id="findHouseByHid" resultType="map">
+		select *
+		from house
+		left join houseimg
+		on house.houseid = houseimg.houseid
+		where house.houseid = #{houseid}	
+	</select>
+	
+</mapper>

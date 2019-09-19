@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>房源信息</title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700" rel="stylesheet">
+
+		<!-- FONT-AWESOME ICON CSS -->
+		<link rel="stylesheet" href="../../css/font-awesome.min.css">
+
+		<!--== ALL CSS FILES ==-->
+		<link rel="stylesheet" href="muban/css/style.css">
+		<link rel="stylesheet" href="muban/css/bootstrap.css">
+		<link rel="stylesheet" href="muban/css/mob.css">
+		<link rel="stylesheet" href="muban/css/animate.css">
+		<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css" />
+		
+		
+		<style>
+			#box{
+				z-index: 9999;				
+			}
+			.ac{
+				color: #356635;
+				font-weight: bold;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!--====== HOTELS LIST ==========-->
+        	<!--导航栏-->
+			<section>
+				<div class="rows main_menu">
+					<div class="container res-menu">
+						<nav class="navbar navbar-inverse">
+							<div>
+								<!-- Brand and toggle get grouped for better mobile display(MOBILE MENU) -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	                                <span class="icon-bar"></span>
+	                                <span class="icon-bar"></span>
+	                                <span class="icon-bar"></span>
+	                            	</button>
+									<img src="../images/logo.png" alt="" class="mob_logo" />
+								</div>
+								<!-- NAVIGATION MENU -->
+								<div class="collapse navbar-collapse" id="myNavbar">
+									<ul class="nav navbar-nav">
+										<li>
+											<a href="../srl/newpriject/lvxin/index.html">回到主页</a>
+										</li>
+										<li>
+											<a href="../by/addhouse.html">成为房主</a>
+										</li>
+										<li>
+											<a href="../experiencer.html">成为体验达人</a>
+										</li>
+										<li>
+											<a href="../ly/places.html">故事</a>
+										<li>
+											<a href="../by/housemuban/house_list.html">房源订单中心</a>
+										</li>
+										<li>
+											<a href="../by/user-profile.html">个人中心</a>
+										</li>
+									</ul>
+	
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</section>
+		<div>
+			<div style="margin-top: 15px; margin-left:12% ;" id="dImg">
+				
+			</div>
+		</div>
+		<div id="box" class="col-md-9" style="margin-left:12% ; hanging-punctuation: 30px; background-color: white;" >
+			<div style="margin-top: 10px;" class="container">
+				<a href="#xq" class="ac">详情</a><strong><strong> · </strong></strong>
+				<a href="#pj" class="ac">评价</a><strong> · </strong>
+				<a href="#rq" class="ac">可定日期</a><strong> · </strong>
+				<a href="#wz" class="ac">位置</a><strong> · </strong>
+				<a href="#xz" class="ac">须知</a><strong> · </strong>
+				<a href="#fd" class="ac">房东</a>
+			</div>
+			<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>
+		</div>
+
+		<!--详情-->
+
+		<div id="xq" class="col-md-5" style="margin-left:12% ; hanging-punctuation: 30px;">
+
+			<div class="col-md-12">
+				<h5><span id="dCity"></span>· <span id="dType"></span></h5>
+				<h2 id="dName"></h2>
+			</div>
+
+			<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>
+			<div class="col-md-12" style="margin-top:25px ;">
+				<div class="col-md-2" id="tImg">
+					<!--头像-->
+					
+				</div>
+				<div class="col-md-12">
+					<!--房东-->
+					<h4>房东：<span id="uName"></span> <a href="#"><strong style="color: #356635;">联系房东</strong></a></h4>
+					<h5><strong>共收到<span>800</span>条评论  · <span>已验证</span></strong></h5>
+				</div>
+				<!--房屋介绍-->
+				<div class="col-md-12">
+					<p class="bg-primary" id = "miaoshu">
+						
+					</p>
+				</div>
+			</div>
+			<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>
+
+			<!--
+            	评价部分
+            -->
+			<div id="pj">
+				<div class="col-md-12" style="margin-top: 40px;">
+					<h2>评价 </h2>
+					<div style="height: 60px;">
+						<div class="col-md-3">
+							评分：<span id="score"></span>分
+						</div>
+						<h4><span id="pNum"></span>条评价</h4>
+					</div>
+				</div>
+				<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>
+				
+				<!--
+                	作者：offline
+                	时间：2019-08-24
+                	描述：評論類型
+                -->
+				<div class="col-md-12">
+					<button type="button" class="btn btn-primary btn-lg active" style="margin: 5px;">全部<span>200</span></button>
+					<button type="button" class="btn btn-primary btn-lg active" style="margin: 5px;">位置便利<span>20</span></button>
+					<button type="button" class="btn btn-primary btn-lg active" style="margin: 5px;">房东热情好客<span>20</span></button>
+					<button type="button" class="btn btn-primary btn-lg active" style="margin: 5px;">设备设施<span>20</span></button>
+					<button type="button" class="btn btn-primary btn-lg active" style="margin: 5px;">干净卫生<span>20</span></button>
+					<button type="button" class="btn btn-primary btn-lg active" style="margin: 5px;">装修设计<span>10</span></button>
+
+				</div>
+
+				<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>
+		
+				<!--
+                	作者：offline
+                	时间：2019-08-24
+                	描述：評論信息
+                -->
+                
+				<div class="col-md-12" style="margin-top: 30px;" id="pinglun">
+				<!--<div id="pinglun">
+						<div class="col-md-2">
+							
+							<img src="https://z1.muscache.cn/im/pictures/32454599/1d949861_original.jpg?" class="img-circle" style="height: 40px; width: 40px;">
+						</div>
+						<span>文杰</span><br />
+						<span>2019年5月</span><br />
+						<p style="margin-top:30px;">
+							
+						</p>
+						<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>
+					</div>-->
+				</div>
+				<!--
+                	作者：offline
+                	时间：2019-08-24
+                	描述：分页
+                -->
+                
+                <div class="col-md-12">
+					<nav aria-label="Page navigation">
+						<ul class="pagination">
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+			<!--
+                	作者：offline
+                	时间：2019-08-24
+                	描述：可定日期
+                -->
+            <div id="rq" class="col-md-12">           	
+            	<h2>可定时间</h2>           	
+            	<div type="text" id="test1"></div>            	
+            <!--	<input type="date" value="2015-09-24" min="2019-09-16" max="2020-09-26"/>-->
+            	<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>	
+            </div>  
+            
+			<!--
+            	作者：offline
+            	时间：2019-08-26
+            	描述：位置信息
+            -->
+			 <div id="wz" class="col-md-12">
+            	<h2>位置信息</h2>
+            	<h4><strong><span>成都</span>,<span>四川</span>,<span>中国</span></strong></h4>
+            	<p>
+            		位于最市中心的春熙路-太古里商圈,出门就是公共交通,24小时便利店,网红美食,大型商超,市医院,菜市场,享尽一切中心资源｡<br />
+					隔壁是锦江区政协,公安局办证中心｡<br />
+					森林原木风格,一张大床,一张沙发床,适合2-3人居住,床品一客一换,智能门锁一客一换｡<br />
+            	</p>
+            	<h4><strong>出行信息</strong></h4>
+            	<p>
+            		
+            		出门过街就是IFS太古里<br />
+					｢大慈寺｣100米<br />
+					｢春熙路地铁站｣300米,2号线/3号线<br />
+            	</p>            	           	
+            </div> 
+            
+            <!--
+            	作者：offline
+            	时间：2019-08-26
+            	描述：须知
+            -->
+            <div id="xz" class="col-md-12">
+            	<h2>须知</h2>
+            	<div>
+            		<div class="col-md-4"><h4><strong>基本要求</strong></h4></div>
+            		<div class="col-md-8">
+            			<p>
+							不适合儿童和婴幼儿入住<br />
+							不允许携带宠物<br />
+		
+						</p>
+            		</div>
+            	</div>
+            	<div>
+            		<div class="col-md-4" style="height: 40px;"><h4>取消政策</h4></div>
+            		<div class="col-md-8" style="height: 40px;">添加入住退房日期后，可查看取消政策详情</div>
+            	</div>
+            	
+            	<div>
+            		<div class="col-md-4"><h4>交易提示</h4></div>
+            		<div class="col-md-8">
+            			<p>
+            				若需要开具房费发票，请您与房东协商。<br />
+							为了保护您的账号隐私和付款安全，请不要相信其它任何平台的折扣或礼金券代订，并始终在爱彼迎站内转账和交流。
+            			</p>
+            		</div>
+            	</div>
+            </div>
+            <!--
+            	作者：offline
+            	时间：2019-08-26
+            	描述：房東
+            -->
+            <div id="xz" class="col-md-12">
+            	<h2>房东</h2>
+            	<div class="col-md-8">
+            		<h4><strong id="fangzhu"></strong> <a href="#"><strong style="color: #356635;">联系房东</strong></a></h4>
+            		<!--<strong>注册时间:<span>2015年8月</span></strong><br />-->
+            		<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">超赞房东</span>
+            		<a href="#pj"><span class="glyphicon glyphicon-comment" aria-hidden="true" id="t"></span>条评价</a>
+            		<!--<span class="glyphicon glyphicon-check" aria-hidden="true">已验证</span>-->
+            	</div>
+            	<div class="col-md-4" id="touxiang1">
+					<!--头像-->
+					
+				</div>
+				<div class="col-md-12" style="height: 800px;">
+					<h3>自我介绍</h3>
+					<p id="jieshao">
+						
+					</p>
+					<h3>与房客的互动</h3>
+					<p>
+						旅行中需要任何帮助,可以联系我,我是土生土长成都妹子,卫星随时在线,欢迎沟通!
+					</p>
+				</div>	
+            </div>
+		</div>
+		<div id="yd" class="col-md-3" style=" height: 400px; margin-left: 10%;">
+			<h3>￥<span id="newprice"></span></h3>每晚
+			<form class="form-inline">
+				<!--<div id="price">
+					<big><s id='old_price' style="color: gray;"></s></big><br />
+					<big id='new_price' style="font-weight: 700; color: green"></big><small>/Day</small><br />
+					<small class="glyphicon glyphicon-ok-sign">优质房源</small>
+					<small class="glyphicon glyphicon-ok-sign">房东nice</small>
+					<small class="glyphicon glyphicon-ok-sign">初秋特惠</small>
+				</div>
+-->
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputEmail3">选择入住日期</label>
+					<input type="text" class="form-control input-lg" id="test1" placeholder="选择入住日期">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputPassword3">Password</label>
+					<input type="text" class="form-control input-lg" id="test2" placeholder="选择退房日期">
+				</div>
+				<div class="checkbox">
+				</div>
+				<div style="text-align: center;padding-top: 10px;">
+					<button type="button" class="btn btn-success btn-lg" id="date_sub">提 交 预 定</button>
+				</div>
+				<div style="text-align: center;padding-top: 10px;">
+					<button type="button" class="btn btn-success btn-lg" id="daren_sub">申请体验</button>
+				</div>
+			</form>
+		</div>
+	</body>
+
+</html>
+<!--========= Scripts ===========-->
+<script src="muban/js/jquery-latest.min.js"></script>
+<script src="muban/js/bootstrap.js"></script>
+<script src="muban/js/wow.min.js"></script>
+<script src="muban/js/custom.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="bootstrap-3.3.7/js/bootstrap.js"></script>
+<script src="layDate-v5.0.9/laydate/laydate.js"></script>
+            	
+<script>
+	laydate.render({
+					  elem: '#test1'
+					  ,position: 'static'
+					});
+					
+					
+	$(document).ready(function() {
+		//获取要定位元素距离浏览器顶部的距离  
+		var navH = $("#box").offset().top;
+		//滚动条事件  
+		$(window).scroll(function() {
+			//获取滚动条的滑动距离  
+			var scroH = $(this).scrollTop();
+			//滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定  
+			if(scroH >= navH) {
+				$("#box").css({
+					"position": "fixed",
+					"top": 0
+				});
+			} else if(scroH < navH) {
+
+				$("#box").css({
+					"position": "static"
+				});
+			}
+		})
+	})
+	$(document).ready(function() {
+		var navY = $("#yd").offset().top;
+		//滚动条事件  
+		$(window).scroll(function() {
+			//获取滚动条的滑动距离  
+			var scroY = $(this).scrollTop();
+			//滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定  
+			if(scroY >= navY) {
+				$("#yd").css({
+					"position": "fixed",
+					"top": 100,
+					"left":765
+				});
+			} else if(scroY < navY) {
+
+				$("#yd").css({
+					"position": "static"
+				});
+			}
+		})
+	})
+	$(document).ready(function() {
+		var houseid=window.localStorage.getItem("houseid");
+		console.log(houseid)
+		$.post("http://localhost:8080/OurProject/findHouseByHid",{houseid:houseid},function(data){
+			console.log(data[0].img)
+			var house_str = ""
+			house_str +='<div class="col-md-6"><div class="v_place_img" id="">'
+			house_str +='<img style="height: 300px;" src="'+data[0].img+'" title="Tour Booking" />'
+			house_str +='</div></div><div>'
+			house_str +='<div class="col-md-3"><div class="v_place_img">'
+			house_str +='<img style="height: 150px;" src="'+data[0].url+'" title="Tour Booking" />'
+			house_str +='</div></div><div class="col-md-3"><div class="v_place_img">'
+			house_str +='<img style="height: 150px;" src="'+data[0].url1+'" title="Tour Booking" /></div></div>'
+			house_str +='<div class="col-md-3"><div class="v_place_img">'
+			house_str +='<img style="height: 150px;" src="'+data[0].url2+'" title="Tour Booking" /></div></div>'
+			house_str +='<div class="col-md-3"><div class="v_place_img">'	
+			house_str +='<img style="height: 150px;" src="'+data[0].url3+'" title="Tour Booking" /></div></div></div>'
+			
+			$("#dImg").html(house_str)
+			
+			var newprice_str = data[0].newprice
+			$("#newprice").html(newprice_str)
+			$("#dCity").html(data[0].city)
+			$("#dType").html(data[0].type)
+			$("#dName").html(data[0].housename)
+			$("#miaoshu").html(data[0].miaoshu)
+			
+		})
+		$.post("http://localhost:8080/OurProject/findUserByHid",{houseid:houseid},function(userInfo){
+			var touxiang_str = ""
+			var touxiang1_str = ""
+			touxiang1_str +='<img src="'+userInfo[0].img+'" class="img-circle" style="height: 80px; width: 80px;">'
+			touxiang_str+='<img src="'+userInfo[0].img+'" class="img-circle" style="height: 64px; width: 64px;">'
+			$("#tImg").html(touxiang_str)
+			$("#touxiang1").html(touxiang1_str)
+			$("#uName").html(userInfo[0].username)
+			$("#fangzhu").html(userInfo[0].username)
+			$("#jieshao").html(userInfo[0].selfintroduction)
+		})
+		
+		var startpage = 0;
+		var pagesize = 6
+		PL(houseid,startpage,pagesize)
+		
+		$.post("http://localhost:8080/OurProject/countPL",{houseid:houseid},function(countPL){
+			var pageNum = 0
+			$("#t").html(countPL)
+			$("#pNum").html(countPL)
+			if(countPL%6 == 0){
+				pageNum = countPL/6
+			}else{
+				pageNum = (countPL-countPL%6)/6+1
+			}
+			var li_str = ''
+			li_str +='<li id="qian">'
+			li_str +='<a href="#" aria-label="Previous">'
+			li_str +='<span aria-hidden="true">&laquo;</span>'
+			li_str +='</a>'
+			li_str +='</li>'
+			for(var i=1;i<=pageNum;i++){
+				li_str +='<li id="pageNumLi" data-page="'+i+'"><a href="#">'+i+'</a></li>'
+			}
+			li_str +='<li id="hou">'
+			li_str +='<a href="#" aria-label="Next">'
+			li_str +='<span aria-hidden="true">&raquo;</span>'
+			li_str +='</a>'
+			li_str +='</li>'					
+			
+			$(".pagination").html(li_str)
+			
+			$("li[id='pageNumLi']").click(function(){
+				console.log($(this).attr("data-page"))
+				startpage = ($(this).attr("data-page")-1)*pagesize
+				PL(houseid,startpage,pagesize)
+			})
+			
+			$("li[id='qian']").click(function(){
+				
+				if(0 >= (startpage-pagesize)){
+					startpage = 0;
+				}else{
+					startpage = startpage-pagesize
+				}
+				PL(houseid,startpage,pagesize)
+			})
+			$("li[id='hou']").click(function(){
+				if((startpage+pagesize)>=pageNum*pagesize){
+					startpage = (pageNum-1)*pagesize
+				}else{
+					startpage = startpage+pagesize
+				}
+				PL(houseid,startpage,pagesize)
+			})
+			
+		})
+		
+		function PL(houseid,startpage,pagesize){
+			$("div[id='pinglun']").ready(function(){
+				$.post("http://localhost:8080/OurProject/findPingLunByHid",{houseid:houseid,startpage:startpage,pagesize:pagesize},function(pinglun){
+					var pinglun_str = ""
+					
+					var c = 0
+					if(pinglun.length>6){
+						c = 6
+					}else{
+						c =pinglun.length		
+					}
+					for(i=0;i<c;i++){
+						pinglun_str +='<div class="col-md-2">'
+						pinglun_str +='<img src="'+pinglun[i].img+'" class="img-circle" style="height: 40px; width: 40px;"></div>'
+						pinglun_str +='<span>'+pinglun[i].username+'</span><br />'
+						pinglun_str +='<span>'+pinglun[i].ptime+'</span><br />'		
+						pinglun_str +='<p style="margin-top:30px;">'+pinglun[i].pinglun+'</p>'
+						pinglun_str +='<div class="col-md-12" style="height: 1px; margin-top: 10px; background-color: #D4D4D4;"></div>'			
+		
+					}
+					$("#pinglun").html(pinglun_str)
+					
+				})
+			})	
+		}	
+		
+		$.post("http://localhost:8080/OurProject/avgScore",{houseid:houseid},function(score){
+		
+			$("#score").html(score)
+		})
+		
+
+
+	})
+	
+</script>
+<script>
+		var houseid = window.localStorage.getItem("houseid");
+		var uid = window.localStorage.getItem("uid");
+		$("#date_sub").click(function() {
+
+			var t1 = $("#test1").val();
+			var t2 = $("#test2").val();
+			if(uid == null) {
+				var con = confirm("当前未登录，是否进行登录？")
+				if(con == true) {
+					window.location.href = "../index.html";
+				}
+			} else if(t1 == "" || t2 == "") {
+				alert("好好选日期")
+			} else if(1 == 1) {
+				$.post(base_path + "/submintbookinfo", {
+					uid: uid,
+					houseid: houseid,
+					checkInTime: t1,
+					checkOutTime: t2
+				}, function(data) {
+					if(data == 1) {
+						alert("预定成功^_^");
+						window.location.href = "../../../../by/housemuban/customOrderlist.html"
+					} else {
+						alert("faild");
+					}
+				})
+			}
+
+		})
+		$("#daren_sub").click(function() {
+
+			var t1 = $("#test1").val();
+			var t2 = $("#test2").val();
+			if(uid == null) {
+				var con = confirm("当前未登录，是否进行登录？")
+				if(con == true) {
+					window.location.href = "../index.html";
+				}
+			} else if(t1 == "" || t2 == "") {
+				alert("好好选日期")
+			} else if(1 == 1) {
+				$.post(base_path + "/tiyandaren/submitTiYan", {
+					uid: uid,
+					houseid: houseid,
+					checkInTime: t1,
+					checkOutTime: t2
+				}, function(data) {
+					if(data == 1) {
+						alert("申请成功^_^");
+						window.location.href = "../../../../by/housemuban/customOrderlist.html"
+					} else {
+						alert("faild");
+					}
+				})
+			}
+
+		})
+		//执行一个laydate实例
+		laydate.render({
+			elem: '#test1' //指定元素
+				,
+			min: 0//0天前
+				,
+			max: 30 //30天后
+		});
+
+		laydate.render({
+			elem: '#test2' //指定元素
+				,
+			min: -1 //0天前
+				,
+			max: 60 //60天后		  
+		});
+
+		$(function() {
+			var houseid = window.localStorage.getItem("houseid");
+			$.post("http://localhost:8080/OurProject/findhouseinfo", {
+				houseid: houseid
+			}, function(data) {
+				$("#house_name").html(data.housename);
+				var miaoshu = data.miaoshu;
+				$("#miaoshu1").html(miaoshu);
+				var op = "原价：" + data.oldprice + "RMB";
+				$("#old_price").html(op);
+				var np = "现价" + data.newprice + "￥";
+				$("#new_price").html(np);
+			})
+
+			$.post("http://localhost:8080/OurProject/picturelist", {}, function(data) {
+				var data1 = data[houseid - 1];
+				var u = data1.url + "1";
+				var url1 = "<img src='" + data1.url1 + "' alt='' class='img-responsive'>";
+				var url2 = "<img src='" + data1.url2 + "' alt='' class='img-responsive'>";
+				var src = "<img src='"+data1.url3+"' alt='' class='img-responsive'>";
+				$("#pic").html(src);
+				$("#url1").html(url1);
+				$("#p1").html(url2);
+				var diaplaypicture1 = "<a href='" + data1.url + "' rel='title' class='b-link-stripe b-animate-go  thickbox'><figure class='effect-bubba'><img class='img-responsive' src='" + data1.url + "' alt=''><figcaption><h4 class='gal'>查看大图</h4><p class='gal1'></p></figcaption></figure></a>";
+				var diaplaypicture2 = "<a href='" + data1.url2 + "' rel='title' class='b-link-stripe b-animate-go  thickbox'><figure class='effect-bubba'><img class='img-responsive' src='" + data1.url2 + "' alt=''><figcaption><h4 class='gal'>查看大图</h4><p class='gal1'></p></figcaption></figure></a>";
+				var diaplaypicture3= "<a href='" + data1.url1 + "' rel='title' class='b-link-stripe b-animate-go  thickbox'><figure class='effect-bubba'><img class='img-responsive' src='" + data1.url1 + "' alt=''><figcaption><h4 class='gal'>查看大图</h4><p class='gal1'></p></figcaption></figure></a>";
+				$("#display_pic1").html(diaplaypicture1);
+				$("#display_pic2").html(diaplaypicture2);
+				$("#display_pic3").html(diaplaypicture3);
+				
+			})
+		})
+</script>		

@@ -1,0 +1,315 @@
+<script src="../../js/islogin.js"></script>
+<!DOCTYPE html>
+<html  lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js" ></script>
+	<script src="sanji/dist/distpicker.data.js"></script>
+	<script src="sanji/dist/distpicker.js"></script>
+	<script src="sanji/js/main.js"></script>
+	<script src="../../js/common.js"></script>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+	
+	<style>
+		#step1,#step2,#step3,#step4,#step5{
+			float: left;
+		}
+	</style>
+
+	<style>
+		#result{
+			width: 300px;
+			height: 250px;
+		}
+		body{
+			background-image: url(img/bg.jpg);
+			background-repeat: no-repeat;
+			background-size: 100%,100%;		
+		}
+		h2,h4{
+			font-weight: 700;
+		}
+		.div1:hover{
+			/*background-color: #BCE8F1;*/
+			text-decoration: underline;
+		}
+		</style>
+	<body>
+		
+	<!--第一页-->
+		<div class="row">
+		 	<div class="col-md-1"></div>
+			<div id="step1" >
+				<h2>您好，开启您的房东之旅吧</h2>
+				<div class="div1">
+					<h4>您想以什么方式出租呢？</h4>
+					<div id="rentwaydiv">
+						<input type="radio" name="rentway" ></input>
+					</div>
+				</div>
+				<hr />
+				<div class="div1">
+					<h4>您的房源是什么类型呢？</h4>
+					<div id="divinput">
+						<input type="radio" name="htype" ></input>
+					</div>
+				</div>
+				<hr />
+				<div class="div1">
+					<h4>您的房源可以住几位客人？</h4>
+					房客人数：<input type="number" name="guestnum" min="1" max="10">
+				</div>
+				<hr />
+				<div class="div1">
+					<h4>您的房源有几间卧室呢？</h4>
+					<select id="roodnum">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<hr />
+				<div class="div1">
+					<h4>您的房源有几张床铺呢？</h4>
+					<select id="bednum">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<hr />
+				<div>
+					<a href="../srl/newpriject/lvxin/index.html" class="btn btn-primary">回到主页</a>
+					<button type="button" class="btn btn-primary" id="next1">下一步</button>
+				</div>
+			</div>
+		</div>
+	<!--第二页-->	
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div id="step2" style="display: none;">		
+				<h2>具体描述一下您的房源吧</h2>
+				<div class="div1">
+				<h4>您的房源有几个卫生间呢？</h4>
+				卫生间数量：
+				<select id="toiletnum">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				</div>
+				<hr />
+				<div class="div1">
+					<h4>可以提供哪些便利设施呢？</h4>
+					<div id="divsheshi">
+						<input type="checkbox" name="sheshiid" />
+					</div>
+				</div>
+				<hr />
+				<div class="div1">
+					<h4>你的房源位于哪里呢？</h4>
+					<div data-toggle="distpicker">
+						  <select id="province"></select>
+						  <select id="city"></select>
+						  <select id="county"></select>
+					</div>
+					<br />
+					具体位置信息：<input type="text" id="floor"/>
+				</div>
+				<hr />
+				<div>
+					<button type="button" class="btn btn-primary" id="back1">返回</button>
+					<button type="button" class="btn btn-primary" id="next2">下一步</button>
+				</div>
+			</div>
+		</div>
+	<!--第四页-->
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div id="step4" style="display: none;">
+				<h2></h2>
+				<h4 class="div1">给您的房源起一个有吸引力的名字</h4>
+				<input type="text" id="housename"/>
+				<hr />
+				<h4 class="div1">给房子定个价格吧</h4>
+				现价：￥<input type="text" id="newprice" /><br></br>
+				原价：￥<input type="text" id="oldprice"/>
+				<hr />
+				<h4 class="div1">您的房子是什么样的，请具体描述一下</h4>
+				<textarea rows="6" cols="40" maxlength="100" id="miaoshu"></textarea>
+				<hr />
+				<div>
+					<button type="button" class="btn btn-primary" id="back3">返回</button>
+					<button type="button" class="btn btn-primary" id="next4">下一步</button>
+				</div>
+			</div>
+		</div>
+	<!--第五页-->	
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div id="step5" style="display: none;">
+				<h2></h2>
+				<h4 class="div1">客人需要提前多久预定呢？</h4>
+				<select id="presettime">
+					<option value="0">随时可以</option>
+					<option value="1">提前1天</option>
+					<option value="2">提前3天</option>
+					<option value="3">提前5天</option>
+					<option value="4">提前10天</option>
+					<option value="5">提前1月</option>
+				</select>
+				<hr />
+				<h4 class="div1">您什么时间开始可以接待客人呢？</h4>
+				<input type="date" id="settimestar"/>
+				<hr />
+				<div>
+					<button type="button" class="btn btn-primary" id="back4">返回</button>
+					<button type="button" class="btn btn-primary" id="tijiao">完成发布</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+		$(function(){
+			$("#next1").click(function(){
+				var htype = $("input[name='htype']:checked").val();
+				var rentway = $("input[name='rentway']:checked").val();
+				var guestnum = $("input[name='guestnum']").val();
+				if(htype=="" || htype==null||rentway=="" || rentway==null){
+					alert("还没填完不能走哦@_@");
+				}else if(guestnum>10||guestnum<1||guestnum==null||guestnum==""){
+					alert("客人数不对呀");
+				}else{
+					$("#step1").hide();
+					$("#step2").show();
+				}
+				
+			});
+		/*第二页*/	
+			$("#back1").click(function(){
+				$("#step2").hide();
+				$("#step1").show();
+			});
+			$("#next2").click(function(){
+				var sheshiid = $("input:checkbox[name='sheshiid']:checked").val();
+				var floor = $("input[id='floor']").val();
+				if(floor==null||floor==""||sheshiid==null){
+					alert("还没填完不能走哦@_@");
+				}else{
+					$("#step2").hide();
+					$("#step4").show();
+				};				
+			});
+		/*第三页*/	
+	/*		$("#back2").click(function(){
+				$("#step3").hide();
+				$("#step2").show();				
+			});
+			$("#next3").click(function(){
+				$("#step3").hide();
+				$("#step4").show();
+			});*/
+		/*第四页*/
+			$("#back3").click(function(){
+				$("#step4").hide();
+				$("#step2").show();
+			});
+			$("#next4").click(function(){
+				var housename = $("input[id='housename']").val();
+				var miaoshu = $("textarea[id='miaoshu']").val();
+				var newprice = $("input[id='newprice']").val();
+				var oldprice = $("input[id='oldprice']").val();
+				if(housename==null||housename==""||miaoshu==null||miaoshu==""){
+					alert("还没填完不能走哦@_@");
+				}else if(newprice==null||newprice==""||oldprice==null||oldprice==""){
+					alert("还没填完不能走哦@_@");
+				}else{
+					$("#step4").hide();
+					$("#step5").show();
+				}
+				
+			});
+		/*第五页*/
+			$("#back4").click(function(){
+				$("#step5").hide();
+				$("#step4").show();
+			});
+			
+		});		
+		
+
+	</script>
+	
+	
+<script type="text/javascript">
+	$(document).ready(function(){
+		//出租方式
+		$.post(base_path+"/rentway",{},function(data){
+			var rentway="";
+			for(var i=0;i<data.length;i++){
+				rentway+="<input type='radio' name='rentway' value='"+data[i].rentwayid+"'>"+data[i].rentway+"</input>";	
+			}
+			$("#rentwaydiv").html(rentway);
+		});
+		//房源类型
+		$.post(base_path+"/houseType",{},function(data){
+			var type1="";
+			for(var i=0;i<data.length;i++){
+				type1+="<input type='radio' name='htype' value='"+data[i].id+"'>"+data[i].type+"</input>";	
+			}
+			$("#divinput").html(type1);
+		});
+		//便利设施
+		$.post(base_path+"/sheshi",{},function(data){
+			var sheshi="";
+			for(var i=0;i<data.length;i++){
+				sheshi+="<input type='checkbox' name='sheshiid' value='"+data[i].sheshiid+"'>"+data[i].sheshi+"</input>";	
+			}
+			$("#divsheshi").html(sheshi);
+		});
+		
+
+		$("#tijiao").click(function(){
+			$.post(base_path+"/addHouse",
+			{
+				uid:window.localStorage.getItem("uid"),
+				housetype:$("input[name='htype']:checked").val(),
+				rentwayid:$("input[name='rentway']:checked").val(),
+				guestnum:$("input[name='guestnum']").val(),
+				bednum:$("#bednum option:selected").val(),
+				roodnum:$("#roodnum option:selected").val(),
+				toiletnum:$("#toiletnum option:selected").val(),
+				sheshiid:$("input:checkbox[name='sheshiid']:checked").map(function(index,elem) {return $(elem).val();}).get().join(','),
+				housename:$("input[id='housename']").val(),
+				presettime:$("#presettime option:selected").val(),
+				settimestar:$("input[id='settimestar']").val(),
+				newprice:$("input[id='newprice']").val(),
+				oldprice:$("input[id='oldprice']").val(),
+				miaoshu:$("textarea[id='miaoshu']").val(),
+				img:$("input[id='file']").val(),
+				province:$("#province option:selected").val(),
+				city:$("#city option:selected").val(),
+				county:$("#county option:selected").val(),
+				floor:$("input[id='floor']").val()
+				
+			},
+			function(data){
+				if(data==1){
+					window.location.href="addimg.html";
+				}else{
+					alert("添加失败");
+				}
+				
+			});
+			
+			
+		});
+		
+	})
+</script>

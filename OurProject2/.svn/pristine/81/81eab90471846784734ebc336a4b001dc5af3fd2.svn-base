@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.lydao.TieziMapper">
+
+	<!-- 查询所有帖子 List<Tiezi> getAllTiezi(); -->
+	<select id="getTieziPageList" resultType="map">
+		select * from tiezi t
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		LEFT JOIN tiezifenlei tf on t.fenleiid = tf.fenleiid
+		order by kiss_num desc limit #{startindex},#{pagesize}
+	</select>
+
+	<!-- 获取所有帖子数 int TieziCount(Tiezi tiezi); -->
+	<select id="TieziCount" resultType="int">
+		select count(1) from tiezi t
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		order by kiss_num desc 
+	</select>
+
+	<!-- 获取景色帖子 List<Tiezi> getTieziViewList(Tiezi tiezi); -->
+	<select id="getTieziViewList" resultType="map">
+		select * from tiezi t
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		LEFT JOIN tiezifenlei tf on t.fenleiid = tf.fenleiid where t.fenleiid = #{id}
+		order by kiss_num desc limit #{startindex},#{pagesize}
+	</select>
+	
+	
+	<!-- 获取景色帖子数 int TieziViewCount(Tiezi tiezi); -->
+	<select id="TieziViewCount" resultType="int">
+		select count(1) from tiezi t
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		LEFT JOIN tiezifenlei tf on t.fenleiid = tf.fenleiid where t.fenleiid = #{id}
+		order by kiss_num desc 
+	</select>
+	
+	<!-- 获取民宿列表
+	List<HouseInfo> getHouseList(HouseInfo houseInfo); -->
+	<select id="getHouseList" resultType="map">
+		select * from house limit #{startindex},#{pagesize}
+	</select>
+	
+	<!-- 获取民宿总数
+	int HouseCount(HouseInfo houseInfo); -->
+	<select id="HouseCount" resultType="int">
+		select count(1) from house		
+	</select>
+	
+
+
+	<!-- 获取帖子详细信息 List<Tiezi> getTieziDetailInfo(int id); -->
+	<select id="getTieziDetailInfo" resultType="map">
+		SELECT
+			u.username,
+			u.img as loginPic,
+			t.title,t.content,t.kiss_num,t.view_num,
+			i.img,
+			p.content as picContent,p.createtime as picCreatetime
+		FROM tiezi t 
+		LEFT JOIN userinfo u on t.uid = u.uid
+		LEFT JOIN img i on t.tieziid = i.tieziid
+		LEFT JOIN topic  p on t.tieziid = p.tieziid
+		WHERE t.tieziid = #{tieziid}
+	</select>
+
+</mapper>

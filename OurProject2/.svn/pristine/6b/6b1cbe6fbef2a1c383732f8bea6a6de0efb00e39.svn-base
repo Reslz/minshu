@@ -1,0 +1,15 @@
+package com.neusoft.dao.bydao;
+
+import java.util.Date;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.neusoft.bean.lybean.UserOrderInfo;
+
+public interface UserOrdersMapper {
+	int orderCount(int uid);
+	List<UserOrderInfo> userOrderList(int uid);
+	List<UserOrderInfo> userHistory(int uid);
+	int hisOrderCount(int uid);
+}

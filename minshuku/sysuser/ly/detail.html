@@ -1,0 +1,352 @@
+<script type="text/javascript" src="../../js/common.js" ></script>
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.airbnb.cn/content/stories/140076?referral=story_feed -->
+<html lang="zh" dir="ltr" xmlns:fb="http://ogp.me/ns/fb#"
+	class="js-focus-visible">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700" rel="stylesheet">
+
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+
+    <!--== ALL CSS FILES ==-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/mob.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="css/places.css" />
+<link
+	href="css/detail1.css"
+	media="all" rel="stylesheet" type="text/css">
+<link href="css/detail2.css"
+	media="all" rel="stylesheet" type="text/css">
+<link href="css/detail3.css"
+	media="screen" rel="stylesheet" type="text/css">
+<link href="css/detail4.css"
+	media="screen" rel="stylesheet" type="text/css">	
+<link href="css/detail5.css"
+	media="screen" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/detail6.css" />
+<script>
+
+      // Source: https://git.musta.ch/airbnb/airbnb-first-input-delay/blob/eff4e3d5fc430272f712a188cccbdf223ef2cfed/dist/first-input-delay.min.js
+// Verbose Version: https://git.musta.ch/airbnb/airbnb-first-input-delay/blob/eff4e3d5fc430272f712a188cccbdf223ef2cfed/src/first-input-delay.js
+!function(n,e){var t,i,c,o,r=[],f={passive:!0,capture:!0},u=new Date,a="pointerup",p="pointercancel";function l(n,e){t||(t=e,i=n,c=new Date,s())}function s(){i>=0&&i<c-u&&(r.forEach(function(n){n(i,t)}),r=[])}function w(t){if(t.cancelable){var i=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,i){function c(){l(t,i),r()}function o(){r()}function r(){e(a,c,f),e(p,o,f)}n(a,c,f),n(p,o,f)}(i,t):l(i,t)}}o=n,["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(n){o(n,w,f)}),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){r.push(n),s()},self.perfMetrics.clearFirstInputDelay=function(){t&&(t=null,i=null,c=null)}}(addEventListener,removeEventListener);
+
+// FCP init code. Verbose version at hyperloop/src/app/utils/fcpPolyfill
+var rAF=window.requestAnimationFrame;window._fcpPolyfill=new function(){var n,o;this.onFCP=function(e){o?e(o):n=e},rAF(function e(){document.body&&null!==document.createNodeIterator(document.body,NodeFilter.SHOW_TEXT,function(e){return!!e&&/[^\s]/.test(e.nodeValue)&&"SCRIPT"!==e.parentNode.tagName&&"STYLE"!==e.parentNode.tagName&&0<e.parentNode.offsetHeight},!1).nextNode()||null!==document.querySelector("input[placeholder]")?rAF(function(){var e=performance.now();n?n(e):o=e}):rAF(e)})};
+
+// TTI Polyfill code. Verbose version: https://gist.git.musta.ch/gabe-lyons/b4f68296a0fa9b4a5a6e1de0eec88e97
+window._getFirstInteractivePolyfill=rAF&&new function(){var t,i,e,o,r=!1;function f(){var n=performance.now();if(50<n-i)t=n;else if(5e3<n-t)return r=!1,void(o?o(t):e=t);i=n,rAF(f)}function a(){r||(i=t=performance.now(),rAF(f),r=!0)}this.onInteractive=function(n){e?(n(e),e=null):(o=n,a())},a()};
+
+// TTFMP polyfill. Verbose version at hyperloop/src/app/utils/fmpPolyfill.js
+window._fmpPolyfill=new function(){var i,o,r,a,m="FMP-target";this.checkForFMP=function e(){var n=document.getElementById(m);if(a=0,n)if(r===n)i=requestAnimationFrame(e);else if("IMG"!==n.tagName||n.complete){var t=performance.now();r=n,o?o(t):a=t}else i=requestAnimationFrame(e);else i=requestAnimationFrame(e)},this.refreshHeroElement=function(){r=document.getElementById(m)},this.stopSearchingForFMP=function(){cancelAnimationFrame(i)},this.onFMP=function(e){a?e(a):o=e},i=requestAnimationFrame(this.checkForFMP)};
+
+</script>
+
+<meta id="csrf-param-meta-tag" name="csrf-param"
+	content="authenticity_token">
+<meta id="csrf-token-meta-tag" name="csrf-token"
+	content="V4$.airbnb.cn$e3kP8QtXoEM$ZLPTXa3bRn0ROF3uMK9_bdEE-Z2rksSazD5QVWlVXN0=">
+
+
+<title>帖子详情页</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta id="english-canonical-url" content="">
+<meta content="" name="keywords">
+
+<script type="text/javascript" async="" src="js/detail01.js"></script>
+</head>
+<body class="with-new-header has-epcot-header">
+
+    <!--====== NAVIGATION MENU ==========-->
+    <section>
+        <div class="rows main_menu">
+            <div class="container res-menu">
+                <nav class="navbar navbar-inverse">
+                    <div>
+                        <!-- Brand and toggle get grouped for better mobile display(MOBILE MENU) -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <img src="images/logo.png" alt="" class="mob_logo" />
+                        </div>
+                        <!-- NAVIGATION MENU -->
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="indexStory.html">精选故事</a></li>
+								<li><a href="hotels-list.html">房源</a></li>
+								<li><a href="places.html">景点</a>
+                                <li><a href="food.html">美食</a></li>
+								<li><a href="culture.html">文化</a></li>
+                                <li><a href="contact.html">活动</a></li>
+                           </ul>                        
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    
+<div id="smart-banner"></div>
+<div id="header" class="">
+	
+<script type="application/json"
+	data-hypernova-key="headerdefaultbundlejs"
+	data-hypernova-id="7100773f-6a96-41ae-b546-7481dfbe9f05"><!--{"bootstrapData":{"data":{"user":{"isLoggedIn":true,"isHost":false,"name":"Momochi","profilePicUrl":"https://z1.muscache.cn/im/pictures/user/95d728dd-5da8-4ad9-be75-ee2c5eabc862.jpg?aki_policy=profile_small"}},"props":{"searchSettings":{"location":null,"datePlaceholder":"年-月-日"},"initiallyHideNavigation":null,"hideSearch":false,"hidden":false,"floating":false,"showHostStatsLink":false,"chinaQRCodes":{"show":true,"app_download_qr_code_src":"https://z1.muscache.cn/airbnb/static/wechat/download_app_other-2216c06ab35e39238e40720ed9bf1439.png","wechat_service_account_qr_code_src":"https://z1.muscache.cn/airbnb/static/wechat/service_account_qr_code_header_other-9291205a414d3af6b492e99d4a0b21e4.png"},"showGiftCardLink":false,"showHelpLink":true,"showStories":true,"showHmcLink":false,"redirectParams":"redirect_params[action]=show&amp;redirect_params[controller]=content_framework&amp;redirect_params[id]=140076&amp;redirect_params[referral]=story_feed","referralsRedirectParams":"redirect_params[action]=index&amp;redirect_params[controller]=referrals&amp;redirect_params[r]=56","isHostLandingPage":false}},"phrases":{"shared.Home":"首页","shared.Airbnb":"爱彼迎","header.accessible text for Airbnb logo that links to the homepage":"爱彼迎主页","header.accessible text for Airbnb logo button that opens flyout navigation menu":"主页面菜单","shared.Help":"帮助","shared.Trips":"行程","header.Saved":"心愿单","shared.Messages":"消息","shared.Become a Host":"成为房东/体验达人","header.Mobile":"手机端","Log In":"登录","Sign Up":"注册","help":"帮助","referrals.Travel Credit":"旅行基金","shared.Business":"商务","currency_picker.short text for ARS":"阿根廷比索","currency_picker.short text for AUD":"澳大利亚元","currency_picker.short text for BRL":"巴西雷亚尔","currency_picker.short text for BGN":"保加利亚列瓦","currency_picker.short text for CAD":"加拿大元","currency_picker.short text for CLP":"智利比索","currency_picker.short text for CNY":"人民币","currency_picker.short text for COP":"哥伦比亚比索","currency_picker.short text for CRC":"哥斯达黎加科朗","currency_picker.short text for HRK":"克罗地亚库纳","currency_picker.short text for CZK":"捷克克朗","currency_picker.short text for DKK":"丹麦克朗","currency_picker.short text for AED":"阿联酋迪拉姆","currency_picker.short text for EUR":"欧元","currency_picker.short text for HKD":"港币","currency_picker.short text for HUF":"匈牙利福林","currency_picker.short text for INR":"印度卢比","currency_picker.short text for IDR":"印尼盾","currency_picker.short text for ILS":"以色列新谢克尔","currency_picker.short text for JPY":"日元","currency_picker.short text for MYR":"马来西亚林吉特","currency_picker.short text for MXN":"墨西哥比索","currency_picker.short text for MAD":"摩洛哥迪拉姆","currency_picker.short text for TWD":"新台币","currency_picker.short text for NZD":"新西兰元","currency_picker.short text for NOK":"挪威克郎","currency_picker.short text for PEN":"秘鲁索尔","currency_picker.short text for PHP":"菲律宾比索","currency_picker.short text for PLN":"波兰兹罗提","currency_picker.short text for GBP":"英镑","currency_picker.short text for RON":"罗马尼亚列伊","currency_picker.short text for RUB":"俄罗斯卢布","currency_picker.short text for SAR":"沙特里亚尔","currency_picker.short text for SGD":"新加坡元","currency_picker.short text for ZAR":"南非兰特","currency_picker.short text for KRW":"韩元","currency_picker.short text for SEK":"瑞典克朗","currency_picker.short text for CHF":"瑞士法郎","currency_picker.short text for THB":"泰铢","currency_picker.short text for TRY":"土耳其里拉","currency_picker.short text for UAH":"乌克兰格里夫纳","currency_picker.short text for USD":"美元","currency_picker.short text for UYU":"乌拉圭比索","currency_picker.short text for VND":"越南盾","currency_picker.title for frequently used currencies":"常用货币","currency_picker.title for other less frequently used currencies":"其他货币","Add a new listing":"添加新房源","Add listing":"添加房源","shared.Search":"搜索","shared.Search.VoiceOver instructions":"您可使用上下箭头选择建议。","shared.Search.Suggestion Count for Voiceover":"%{smart_count}条建议。","shared.Search.Screen reader text that informs number of suggestions with user input":"关于%{user_input}的%{smart_count}条建议。","search.voiceover.VoiceOver_description_for_list_of_search_suggestions":"搜索建议","shared.Messages.Discriminatory content warning for notification":"警告：此对话可能包含歧视性语言。","Edit Profile":"编辑个人资料","shared.Travel Credit":"旅行基金","shared.Stories Navigation Menu Bar for Story Feed":"故事","shared.CouponCenter Navigation Menu Bar for Coupon Center":"礼券中心","shared.Account Settings":"账号设置","trips.explore.guidebook.header_nav_dropdown_guidebook_dashboard_entry_point":"我的旅行指南","shared.Gift Cards":"礼品卡","shared.Business Travel":"商务差旅","Log Out":"退出","flyout.Log out":"退出","header_global.dropdown_item.label.profile":"个人资料","header_global.dropdown_item.label.account":"账号","shared.Host":"房东","header.Host":"管理面板","Dashboard":"控制面板","Hosting dashboard":"控制面板","hmc.cta.message.header.dropdown.title":"没时间出租房源？","hmc.cta.message.header.dropdown.subtitle":"让我们的优选物业经理来帮助您。","Inbox":"收件箱","Dashboard Statistics":"统计数据","Dashboard Progress":"进度","performance_hub_phrases.performance.hub.host.header.dropdown.label":"业绩","header.host_menu.Reservations":"预订","homes.prohost.teams.header.host_menu.Team":"团队","shared.Calendar":"日历","Manage Listings":"管理房源","Listings":"房源","Listing":"房源","shared.list_your_space":"发布房源","Add new listings":"添加新房源","Add a city guide":"添加城市指南","shared.host_a_home [header drop down list your space entry]":"出租房源","shared.host_a_home_what_my_place_is_worth [nav item subtitle]":"一周最多可以赚%{bold_start}%{income}%{bold_end}","shared.host_a_home_what_my_place_is_worth_a_month [nav item subtitle]":"把房子租出去，%{bold_start}每月多赚%{income}%{bold_end}","shared.host_a_home_what_my_place_is_worth_generic [nav item subtitle]":"看看您可以赚取多少收入","shared.host_an_experience [header drop down create experience entry]":"开展体验","shared.host_an_experience [header drop down create experience entry subtitle]":"与房客分享您最喜爱的一项活动，赚取额外收入","shared.manage homes existing host [header drop down homes manage homes]":"管理房源","shared.manage experiences [header drop down experience manage experiences]":"管理体验","shared.make a city guide [header drop down add city guide entry]":"旅行指南","shared.dashboard [header drop down experience dashboard]":"控制面板","shared.calendar [header drop down experience calendar]":"日历","shared.inbox [header drop down experience inbox]":"收件箱","shared.experiences [header drop down experience experiences]":"体验","shared.resources [header drop down experience resources]":"资源中心","shared.resources [header drop down add a new experience]":"添加新体验","Your Reservations":"您的预订","Transaction History":"交易记录","shared.Refer Hosts":"邀请房东","header_global.shared.refer_hosts":"邀请房东","header_global.shared.host_referrals_earnings":"您已赚取了%{localized_total_earnings}，潜在收入可达%{localized_potential_earnings}","header_global.shared.host_referrals_potential_earnings":"最多可赚取%{localized_potential_earnings}","shared.Reviews":"评价","shared.host_assist":"房东助手","shared.Hospitality":"待客之道","shared.Experience_Hosting":"提供体验","Experience hosting":"发布/管理体验","shared.Finish listing your space":"完成您的房源发布","top navigation bar for hosts.link to china host promotions page":"营销","shared.Finish creating the trip listing":"完成体验","shared.Reactivate":"重新激活","Profile":"个人资料","shared.download_the_app":"下载应用","shared.Invite Friends":"邀请好友","shared.Photography":"摄影","Wish Lists":"心愿单","header.Download Mobile App":"下载手机客户端","header.Follow Us on WeChat":"关注微信服务号","header.wechat service account id":"id：%{wechat_id}","header.Scan to open WeChat MiniApp [China P1 navigation header dropdown showing round WeChat QR code, prompt to scan]":"扫一扫，打开爱彼迎微信小程序","header.label text.for work":"商务差旅","shared.New":"新推出","shared.host.menu.unfinished.listing.progress.percentage":"已完成%{percent}%","header.label text.company travel":"公司行程","header.label text.manage bookings":"管理预订","header.label text.manage settings":"管理设置","header.label text.tutorial":"如何替别人预订","header.label text.book for someone":"替别人预订","header_dropdown.new_label_for_business_travel":"商务爱彼迎","main_title_in_reservation_list_page":"房源订单中心","china_reservation_center.general_nights_postfix_in_reservation_card":"晚","china_reservation_center.header_tooltip.more_reservations_link":"查看更多订单","china_reservation_center.start_exploring_button_text_in_empty_list_page":"开始探索","load_more_button_text_in_reservation_list_page":"加载更多","china_reservation_center. empty_message_of_all_list":"您还没有预订过房源，点击「开始探索」开启下一段旅程吧","counting_down_w2p_cta_button_text":"%{time_left} 内完成支付","general_reservation_cta_text_for_check_availability":"查看是否可订","general_reservation_cta_text_for_checkpoint_verify":"重新验证","general_reservation_status_text_for_checkpoint_failed":"预订已取消","general_reservation_status_text_for_checkpoint_pending":"待完成身份验证","general_reservation_status_text_for_w2p_expired":"支付已超时","general_reservation_cta_text_for_check_available_date":"查看可订日期","general_reservation_cta_text_for_pay":"完成支付","general_reservation_cta_text_for_review":"待评价","general_reservation_cta_text_for_search_ib":"其他闪订房源","general_reservation_status_text_for_canceled":"订单已取消","general_reservation_status_text_for_checkpoint":"身份信息验证中","general_reservation_status_text_for_closed":"订单已关闭","general_reservation_status_text_for_completed":"旅程已完成","general_reservation_status_text_for_confirmed":"订单已确认","general_reservation_status_text_for_decliend":"申请未通过","general_reservation_status_text_for_expired":"申请已过期","general_reservation_status_text_for_pending":"订单待确认","general_reservation_status_text_for_w2p":"订单待支付","china.reservation_center.reservation_card_listing_name":"%{location}的%{listing_type}","mario_copy_monorail_referrals_entry_top_nav_logged_out":{"nav_text":"赚取旅行基金","moweb_text":"邀请好友","box_content":"每邀请一位好友加入爱彼迎，您都将免费获得旅行基金。%{link_start}查看条款%{link_end}。","button_text":"邀请好友"},"mario_hog_become_a_host_dropdown_experiment":{"start_hosting":"开始开展体验","homes_header":"房源","experiences_header":"体验","learn_about_hosting_title":"了解如何出租您的房源","list_your_place":"发布房源","experiences_subtitle":"带领别人做自己热爱的事并赚取收入","experiences_subtitle_flyout":"做您喜爱的事情来赚取收入"},"mario_hog_hlp_entrypoints":{"become_a_host_wmpw_subtitle_generic":"看看您可以赚取多少收入。","become_a_host_wmpw_subtitle_month":"在%{city}接待房客，每月为您带来高达%{income}的收入","become_a_host_default_title":"出租房源","become_a_host_title_with_experience_host_menu":"添加房源","become_a_host_wmpw_subtitle_month_bold":"%{bold_start}每月多赚%{income}%{bold_end}"},"explore.koan.shared.screenreader_instructions":"输入搜索词条，向后浏览并查看搜索建议。","header.OneTrust.when_you_visit_any_web_site_it_may_store_or_retrieve_informatio":"您访问任意网站时，这些网站可能会在您的浏览器上存储或检索信息，这些信息多数以cookie形式存储， 可能与您个人、您的偏好或设备有关，主要用于让网站按照您希望的方式运行。 这些信息一般不能直接识别您的身份，但可以为您提供更个性化的浏览体验。 出于对您的隐私权的尊重，您可以选择不允许使用某些类型的cookie。 您可以点击不同的类别标题，了解更多信息并更改默认设置。 但是，屏蔽某些类型的cookie可能会影响您在本网站的体验，您可能无法享受我们提供的某些服务。","header.OneTrust.cookie_policy":"Cookie政策","header.OneTrust.your_privacy":"您的隐私","header.OneTrust.allow_all":"允许全部","header.OneTrust.save_settings":"保存设置","header.OneTrust.cookies_used":"使用的Cookie","header.OneTrust.active":"活跃","header.OneTrust.always_active":"始终活跃","header.OneTrust.we_use_cookies_to_help_personalize_content_tailor_and_measure_a":"我们使用Cookie来使内容个性化，定制和测量广告，并提供更安全的体验。 浏览本网站即表示您同意我们使用Cookie在爱彼迎网站及站外收集相关信息。 请阅读我们的<a href=\"/terms/cookie_policy\"&gt;Cookie政策</a&gt;，了解更多信息，或前往Cookie偏好管理您的设置。","header.OneTrust.close":"关闭","header.OneTrust.cookie_settings":"Cookie偏好","header.OneTrust.got_it":"确认","header.OneTrust.inactive":"不活跃","header.OneTrust.cookies":"Cookie","header.OneTrust.categories":"类型","header.OneTrust.lifespan":"生命周期","header.OneTrust.session":"会话","header.OneTrust.days":"天数","header.OneTrust.these_cookies_are_necessary_for_the_website_to_function_and_can":"这些Cookie是支持网站正常运行的必要Cookie，不能在我们的系统中禁用。 这些文件的存在通常只是为了在您提出服务请求时作出响应，例如，在您设置隐私偏好、登录或填表的时候。 您可以将浏览器设置为阻止Cookie或Cookie提醒，但网站的部分功能可能会无法正常使用。","header.OneTrust.strictly_necessary_cookies":"绝对必要的Cookie","header.OneTrust.these_cookies_allow_us_to_count_visits_and_traffic_sources_so_w":"我们通过这些Cookie来统计访问量和流量来源，以便衡量和改进网站的性能。 Cookie能帮助我们了解最受欢迎和最不受欢迎的页面，并获知访问者是如何使用我们网站的。 此类Cookie收集到的均为汇总信息，因此属于匿名性质。 如果不允许这些Cookie，我们将不会知道您何时访问过我们的网站。","header.OneTrust.performance_cookies":"性能Cookie","header.OneTrust.google_analytics":"Google Analytics","header.OneTrust.these_cookies_allow_the_provision_of_enhance_functionality_and_p":"这些Cookie可以提供更高级的功能以及个性化服务，如视频和在线客服。 它们可能由我们或第三方提供商设置（我们在网站页面上添加了这些提供商的服务）。 如果不允许这些Cookie，部分或全部相关功能可能无法正常使用。","header.OneTrust.functional_cookies":"功能性Cookie","header.OneTrust.airbnb_analytics":"爱彼迎分析","header.OneTrust.inspectlet":"检查","header.OneTrust.these_cookies_are_set_through_our_site_by_our_advertising_partne":"这些Cookie由广告合作伙伴通过我们的网站设置。 这些合作伙伴可能会利用这些Cookie收集您的个人兴趣资料数据，并在其他网站向您展示相关广告。 这是通过个别识别浏览器和设备来实现的。 如果不允许这些Cookie，您将不会在其他网站看到我们的针对性广告。","header.OneTrust.targeting_cookies":"针对性Cookie","header.OneTrust.google_universal_analytics":"Google Universal Analytics","header.OneTrust.security":"财物安全","header.OneTrust.user_experience":"用户体验","header.OneTrust.airbnb":"爱彼迎","header.OneTrust.wordpress":"Wordpress","header.OneTrust.language_settings":"语言设置","header.OneTrust.onetrust":"OneTrust","account_settings.header.flyout.menu.label.text.account_settings":"账号设置","shared.Close":"关闭","shared.Close this modal":"关闭","accessibility.pagination_number.selected_page_link":"本页为%{pageNumber}页","accessibility.pagination_number.unselected_page_link":"第%{pageNumber}页","accessibility.pagination_text.selected_page_link":"第%{pageText}页，当前页","accessibility.pagination_text.unselected_page_link":"第%{pageText}页","shared.Next":"下一张","shared.Back":"返回","shared.Previous":"上一张","accessibility.text_for_link_to_account":"账号","accessibility.text_for_icon_indicating_unread":"有未读消息","shared.link_to_users_account_options":"%{usersName}的账号","help center.hosting help link text in nav header":"出租帮助","help center.traveling help link text in nav header":"旅行帮助","px.dls_help_center.search_title":"我们能帮上什么忙吗？","hc_search_help_articles":"搜索帮助文章"},"trebuchets":{},"breakpointCookie":"4","themeId":3,"i18nInit":{"locale":"zh","language":"zh","moment_locale":"zh-cn","country":"CN","tld_country":"CN","currencies":[{"code":"AUD","id":"AUD","localized_full_name":"澳大利亚元","name":"Australian Dollars","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"ARS","id":"ARS","localized_full_name":"阿根廷比索","name":"Argentinian Pesos","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"AED","id":"AED","localized_full_name":"阿联酋迪拉姆","name":"United Arab Emirates Dirham","symbol":"&amp;#1583;.&amp;#1573;","unicode_symbol":"ﺩ.ﺇ","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"BGN","id":"BGN","localized_full_name":"保加利亚列弗","name":"Bulgarian Leva","symbol":"&amp;#1083;&amp;#1074;","unicode_symbol":"лв","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"PLN","id":"PLN","localized_full_name":"波兰兹罗提","name":"Zlotych","symbol":"z&amp;#22;&amp;#322;","unicode_symbol":"zł","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"BRL","id":"BRL","localized_full_name":"巴西雷亚尔","name":"Brazilian Reais","symbol":"R$","unicode_symbol":"R$","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"DKK","id":"DKK","localized_full_name":"丹麦克朗","name":"Danish Kroner","symbol":"kr","unicode_symbol":"kr","show_currency_explicitly":true,"explicit_currency_not_aesthetic":true,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"RUB","id":"RUB","localized_full_name":"俄罗斯卢布","name":"Rubles","symbol":"&amp;#1088;","unicode_symbol":"₽","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":false},{"code":"PHP","id":"PHP","localized_full_name":"菲律宾比索","name":"Philippines Peso","symbol":"&amp;#8369;","unicode_symbol":"₱","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"HKD","id":"HKD","localized_full_name":"港币","name":"Hong Kong Dollars","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"COP","id":"COP","localized_full_name":"哥伦比亚比索","name":"Columbian Pesos","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"CRC","id":"CRC","localized_full_name":"哥斯达黎加科朗","name":"Colon","symbol":"&amp;#8353;","unicode_symbol":"₡","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"KRW","id":"KRW","localized_full_name":"韩元","name":"South Korean Won","symbol":"&amp;#8361;","unicode_symbol":"₩","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"CZK","id":"CZK","localized_full_name":"捷克克朗","name":"Czech Koruny","symbol":"&amp;#75;&amp;#269;","unicode_symbol":"Kč","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"CAD","id":"CAD","localized_full_name":"加拿大元","name":"Canadian Dollar","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"HRK","id":"HRK","localized_full_name":"克罗地亚库纳","name":"Croatian Kuna","symbol":"kn","unicode_symbol":"kn","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"RON","id":"RON","localized_full_name":"罗马尼亚列伊","name":"New Lei","symbol":"lei","unicode_symbol":"lei","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"MAD","id":"MAD","localized_full_name":"摩洛哥迪拉姆","name":"Moroccan Dirham","symbol":"MAD","unicode_symbol":"MAD","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"PEN","id":"PEN","localized_full_name":"秘鲁索尔","name":"Nuevos Soles","symbol":"&amp;#83;&amp;#47;","unicode_symbol":"S/","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"MYR","id":"MYR","localized_full_name":"马来西亚林吉特","name":"Ringgits","symbol":"&amp;#82;&amp;#77;","unicode_symbol":"RM","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"MXN","id":"MXN","localized_full_name":"墨西哥比索","name":"Mexican Pesos","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"USD","id":"USD","localized_full_name":"美元","name":"United States Dollars","symbol":"$","unicode_symbol":"$","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"ZAR","id":"ZAR","localized_full_name":"南非兰特","name":"Rand","symbol":"R","unicode_symbol":"R","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"NOK","id":"NOK","localized_full_name":"挪威克朗","name":"Krone","symbol":"kr","unicode_symbol":"kr","show_currency_explicitly":true,"explicit_currency_not_aesthetic":true,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"EUR","id":"EUR","localized_full_name":"欧元","name":"Euro","symbol":"&amp;euro;","unicode_symbol":"€","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"special","space_between_price_and_symbol":false},{"code":"SEK","id":"SEK","localized_full_name":"瑞典克朗","name":"Sweden, Kronor","symbol":"kr","unicode_symbol":"kr","show_currency_explicitly":true,"explicit_currency_not_aesthetic":true,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"CNY","id":"CNY","localized_full_name":"人民币","name":"Chinese Yuan","symbol":"&amp;#65509;","unicode_symbol":"￥","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"CHF","id":"CHF","localized_full_name":"瑞士法郎","name":"Swiss Francs","symbol":"CHF","unicode_symbol":"CHF","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":true,"position":"after","space_between_price_and_symbol":true},{"code":"JPY","id":"JPY","localized_full_name":"日元","name":"Yen","symbol":"&amp;yen;","unicode_symbol":"¥","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":true},{"code":"SAR","id":"SAR","localized_full_name":"沙特里亚尔","name":"Saudi Riyal","symbol":"SR","unicode_symbol":"SR","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"TWD","id":"TWD","localized_full_name":"新台币","name":"Taiwan Dollars","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"TRY","id":"TRY","localized_full_name":"土耳其里拉","name":"Turkish Lira","symbol":"&amp;#84;&amp;#76;","unicode_symbol":"₺","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"after","space_between_price_and_symbol":true},{"code":"THB","id":"THB","localized_full_name":"泰铢","name":"Baht","symbol":"&amp;#3647;","unicode_symbol":"฿","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"UAH","id":"UAH","localized_full_name":"乌克兰格里夫纳","name":"Ukrainian hryvnia","symbol":"&amp;#8372;","unicode_symbol":"₴","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"UYU","id":"UYU","localized_full_name":"乌拉圭比索","name":"Uruguayan Pesos","symbol":"&amp;#36;&amp;#85;","unicode_symbol":"$U","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"SGD","id":"SGD","localized_full_name":"新加坡元","name":"Singapore, Dollars","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"NZD","id":"NZD","localized_full_name":"新西兰元","name":"New Zealand Dollars","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"HUF","id":"HUF","localized_full_name":"匈牙利福林","name":"Forint","symbol":"Ft","unicode_symbol":"Ft","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"GBP","id":"GBP","localized_full_name":"英镑","name":"Pounds Sterling","symbol":"&amp;pound;","unicode_symbol":"£","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"INR","id":"INR","localized_full_name":"印度卢比","name":"Indian Rupee","symbol":"&amp;#8377;","unicode_symbol":"₹","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"IDR","id":"IDR","localized_full_name":"印度尼西亚卢比","name":"Indonesian Rupiah","symbol":"Rp","unicode_symbol":"Rp","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"VND","id":"VND","localized_full_name":"越南盾","name":"Vietnamese Dong","symbol":"&amp;#8363;","unicode_symbol":"₫","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"ILS","id":"ILS","localized_full_name":"以色列新谢克尔","name":"New Shekels","symbol":"&amp;#8362;","unicode_symbol":"₪","show_currency_explicitly":false,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false},{"code":"CLP","id":"CLP","localized_full_name":"智利比索","name":"Chilean Pesos","symbol":"$","unicode_symbol":"$","show_currency_explicitly":true,"explicit_currency_not_aesthetic":false,"hide_code_if_symbol_shown":false,"position":"before","space_between_price_and_symbol":false}],"current_locale_name":"中文 (简体)","languages":[{"locale_name":"Bahasa Indonesia","locale":"id"},{"locale_name":"Bahasa Melayu","locale":"ms"},{"locale_name":"Català","locale":"ca"},{"locale_name":"Dansk","locale":"da"},{"locale_name":"Deutsch","locale":"de"},{"locale_name":"English","locale":"en"},{"locale_name":"Español","locale":"es"},{"locale_name":"Eλληνικά","locale":"el"},{"locale_name":"Français","locale":"fr"},{"locale_name":"Hrvatski","locale":"hr"},{"locale_name":"Italiano","locale":"it"},{"locale_name":"Magyar","locale":"hu"},{"locale_name":"Nederlands","locale":"nl"},{"locale_name":"Norsk","locale":"no"},{"locale_name":"Polski","locale":"pl"},{"locale_name":"Português","locale":"pt"},{"locale_name":"Suomi","locale":"fi"},{"locale_name":"Svenska","locale":"sv"},{"locale_name":"Türkçe","locale":"tr"},{"locale_name":"Íslenska","locale":"is"},{"locale_name":"Čeština","locale":"cs"},{"locale_name":"Русский","locale":"ru"},{"locale_name":"עברית","locale":"he"},{"locale_name":"العربية","locale":"ar"},{"locale_name":"ภาษาไทย","locale":"th"},{"locale_name":"中文 (简体)","locale":"zh"},{"locale_name":"中文 (繁體)","locale":"zh-TW"},{"locale_name":"日本語","locale":"ja"},{"locale_name":"한국어","locale":"ko"}],"base_direction":"ltr","request_host":"www.airbnb.cn"}}--></script>
+<script type="application/json"
+	data-aphrodite-css="header/default.bundle.js"><!--["_ousp44","_shsmsj","_dx84z0","_8iqo2b","_19trzwd","_hgs47m","_ni9axhe","_10ejfg4u","_5nim5h","_36rlri","_iiid5y","_3n7658","_1g2dfiu","_1gbvotfo","_pawvzww","_mo78s93","_z7e3cb","_17ctt5","_cfvh61"]--></script>
+</div>
+
+<div id="field-guide-container">
+	<div dir="ltr"></div>
+</div>
+
+<div class="flash-container"></div>
+
+
+<main id="site-content" role="main" tabindex="-1">
+
+	<div data-hypernova-key="content_frameworkarticlebundlejs"
+		data-hypernova-id="2796761d-8c97-4416-9a72-a721f799540e">
+		<div dir="ltr" data-reactroot="">
+			<div style="padding-bottom: 80px">
+				<div class="_ekctcu">
+					<div class="_1udzt2s"></div>
+					<div class="_1n53is3h">
+						<div class="_1fxhuwm" id="loginImg">
+														
+						</div>
+					</div>
+					<article>
+						<section class="_8cf4xg8" id="picImg">
+																					
+						</section>
+						<h2 class="_ivcfar" id="TieziTitle"></h2>
+						
+						<div id="TieziContent">
+							
+						</div>
+						<div class="_n8f94g" style="overflow: hidden" id="Love">
+
+						</div>
+					</article>
+					<div class="_67w4oa">
+						<div style="display: inline-block">
+							<button class="_vgp6uy" type="button" id="LoveBtn">
+								<svg viewBox="0 0 16 16" role="img" aria-label="赞"
+									focusable="false"
+									style="height: 24px; width: 24px; display: block; fill: #767676">
+									<path
+										d="m8.37 1c-.34 0-.53.43-.64.79l-.04.17c-.17.74-.56 2.47-3.76 3.58-1.97.68-2.93 2.31-2.93 4.96 0 1.68.56 4.5 4.3 4.5h6.2c.3 0 1-.06 1-.63 0-.41-.26-.63-.5-.63a.5.5 0 1 1 0-1c .92 0 1-.31 1-.63 0-.52-.38-.61-.54-.63a.5.5 0 0 1 -.46-.52.5.5 0 0 1 .5-.48c1 0 1-.41 1-.63s0-.62-1-.62a.5.5 0 1 1 0-1c1 0 1-.47 1-.63 0-.58-.77-.63-1-.63h-4.5a1 1 0 0 1 -.83-1.56c.05-.07.16-.19.31-.35.34-.35.92-.93 1.21-1.58.24-.52.35-1.25.28-1.78 0-.01-.12-.74-.62-.74m3.15 15.04h-6.2c-3.32 0-5.3-2.06-5.3-5.5 0-3.09 1.21-5.08 3.61-5.91 2.67-.93 2.97-2.23 3.11-2.86.02-.08.04-.16.05-.22.37-1.31 1.16-1.51 1.6-1.51 1.02 0 1.52.96 1.61 1.61.09.71-.06 1.64-.37 2.32-.37.81-1.02 1.47-1.41 1.86-.09.1-.17.17-.2.21h4.5c1.2 0 2 .65 2 1.63 0 .46-.16.84-.45 1.11.39.37.45.86.45 1.14 0 .34-.09.98-.74 1.35.15.23.24.53.24.9 0 .41-.12 1.01-.74 1.36.15.26.24.56.24.89 0 .97-.8 1.63-2 1.63"></path></svg>
+							</button>
+							<div style="color: #767676; font-size: 17px; margin-top: 5px">赞</div>
+						</div>
+						<div style="margin-right: 40px; display: inline-block"></div>
+					</div>
+				</div>
+				<div class="_wplk8i">
+					<div class="_ekctcu">
+						<div style="" class="_fqu9p6" id="article-comment-container">
+							<div class="_51rqd0">
+								<div class="_idgnzwj" id="comment">
+									
+								</div>
+							</div>
+							<div id="article-comment-list" class="" style="margin-top: 30px;">
+								<ul style="padding: 0px;" id="TopicImg">
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="display:block;width:54%;line-height:50px;font-size:20px;font-weight:bold;" align="center">撰写评论</div>
+				<div class="_188wjts" style="display:block;" align="center">
+					<form role="form" action="" method="post"> 						
+							<div class="form-group">						  
+							    <textarea class="form-control" rows="10" cols="10" style="width:50%;" name="topic" id="topic"></textarea>
+							</div>						
+						<!--<div style="width:100%;height:50px;display:block; "></div>-->
+						<input type="button" id="topicBtn" value="提交" style="border-radius: 4px;font-size: 12px;height: 30px;line-height: 30px;padding: 0 30px;color: #FFFFFF;background-color: #1B9AF7;border-color: #1B9AF7;text-decoration: none;text-align: center;cursor: pointer;border: none; "/>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	</main>
+	<div id="fb-root"></div>
+<script>
+	  !function(){var e=document,t=e.createElement("script")
+	  if(!("noModule"in t)&&"onbeforeload"in t){var n=!1
+	  e.addEventListener("beforeload",function(e){if(e.target===t)n=!0
+	  else if(!e.target.hasAttribute("nomodule")||!n)return
+	  e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}()
+</script>
+</body>
+
+<script src="../../js/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	//正则表达式截取参数
+	function getQueryString(name){
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null){
+	     	return  unescape(r[2]);
+	     }
+	     return null;
+	}
+	
+	//获取当前登录用的uid
+	var uid = window.localStorage.getItem("uid");
+	var ip = "tieziid";
+	var tieziid = getQueryString(ip);
+	console.log(tieziid);
+	console.log(uid);
+	
+	
+	//获取帖子详情带内容
+	$.post(base_path+"ly/getTieziDetailInfoWithContent",
+		{
+			tieziid:tieziid
+		},
+		function(data){
+			console.log(data);
+			//
+			var str1 = 	"<div style='float: left'><div class='_e296pg' style='height: 48px; width: 48px; display: inline-block'>"+
+						"<a href='https://www.airbnb.cn/users/show/56126328' target='_blank' class='_91831o8' aria-label='Sulin' aria-busy='false'>"+
+						"<img class='_1mgxxu3' src='"+data[0].loginPic+"' height='48' width='48' alt='"+data[0].username+"' title='"+data[0].username+"'></a></div><div>"+
+						"<div class='_1w545qg'><div class='_12q2dfk'><span class='_ppgibgk'>"+data[0].username+"</span></div>"+
+						"<div class='_12q2dfk'><span class='_ppgibgk'>发帖时间</span><span style='padding-left: 5px'></span><span class='_ppgibgk'>"+data[0].createtime+"</span></div></div>";
+			$("#loginImg").html(str1);			
+						
+			//
+			var str3 = "<span>"+data[0].title+"</span>";						
+			$("#TieziTitle").html(str3);
+			
+			//
+			var str4 = "<p class='_9j5k16'>"+data[0].content+"</p>";			
+			$("#TieziContent").html(str4);
+			
+			//
+			var str5 = "<div style='float: left'><span class='_1k03xgts' aria-busy='false'>"+data[0].kiss_num+"人已赞"+"</span></div>";
+			$("#Love").html(str5);
+			
+
+			
+	});
+	
+	//获取帖子详情带图片
+	$.post(base_path+"ly/getTieziDetailInfoWithPic",
+		{
+			tieziid:tieziid
+		},
+		function(data){
+			console.log(data);
+					
+			
+			//
+			var str2 = "";			
+			for(var i = 0;i < data.length;i++){
+				str2 += "<div class='_n3ene5' style='padding-top: 75.18796992481202%'>"+
+							"<img alt='' class='_1t4cz5qb' src='"+data[i].img+"' srcset='"+data[i].img+" 639w,"+data[i].img+" 1440w' width='0'></div><div style='height: 50px'></div>";
+			}						
+			$("#picImg").html(str2);
+					
+	});
+	
+	//获取评论总数
+	$.post(base_path+"ly/getTopicCount",
+		{
+			tieziid:tieziid
+		},
+		function(data){
+			console.log(data);
+			//
+			var str6 = "<div class='_6wmcjak'>"+data+"条评论"+"</div>";
+			$("#comment").html(str6);
+				
+	});
+	
+	
+	//获取评论详情
+	$.post(base_path+"ly/getTopicInfo",
+		{
+			tieziid:tieziid
+		},
+		function(data){
+			console.log(data);
+			var str7 = "";
+			for(var i = 0;i < data.length;i++){
+				str7 += "<li class='_1mbjyje' style='list-style-type:none;'><div>"+
+							"<div class='_1tbqa0i' style='float: left;' ><div class='_e296pg' style='height: 48px; width: 48px; display: block;'>"+
+							"<a href='https://www.airbnb.cn/users/show/72227532' target='_blank' class='_16lonkd' aria-label='"+data[i].username+"' aria-busy='false'>"+
+							"<img class='_1mgxxu3' src='"+data[i].picImg+"' height='48' width='48' alt='"+data[i].username+"' title='"+data[i].username+"'></a></div></div>"+
+							"<div class='_1w545qg'><div class='_15tj18o'><span class='_ppgibgk'>"+data[i].username+"</span></div>"+
+							"<div class='_15tj18o'><span class='_ppgibgk'>"+data[i].picCreatetime+"</span></div></div></div>"+
+							"<div style='clear: both; padding-top: 16px; padding-right: 16px;'><div class='_79301r'>"+data[i].picContent+"</div></div></li></hr>";				
+			}
+			
+			$("#TopicImg").html(str7);
+			
+			
+	});
+	
+	//增加阅读量
+	$.post(base_path+"ly/addView",
+		{
+			tieziid:tieziid
+		},
+		function(data){
+			console.log(data);
+	});
+			
+			
+		
+		
+	//点赞功能
+	$("#LoveBtn").click(function(){
+		$.post(base_path+"ly/addLove",
+			{
+				tieziid:tieziid,
+				uid:uid
+			},
+			function(data){
+				alert(data);
+		});
+	});
+	
+	//回复帖子功能
+	$("#topicBtn").click(function(){
+		
+		var content = $("#topic").val();
+		
+		$.post(base_path+"ly/NewTopic",
+			{
+				uid:uid,
+				tieziid:tieziid,
+				content:content
+				
+			},
+			function(data){
+				window.location.reload();
+		});
+	});
+
+		
+		
+});
+</script>
+
+
+</html>

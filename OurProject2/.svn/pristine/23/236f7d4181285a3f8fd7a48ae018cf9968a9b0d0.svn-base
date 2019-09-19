@@ -1,0 +1,21 @@
+package com.neusoft.service.slzservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.TiYanDaRen;
+import com.neusoft.dao.slzdao.TYDRMapper;
+
+@Service("drService")
+public class TYDRServiceImpl implements TYDRService{
+
+	@Autowired
+	private TYDRMapper drMapper ;
+	
+	@Override
+	public void drAdd(TiYanDaRen dr) {
+		// TODO Auto-generated method stub
+		drMapper.drAdd(dr);
+	}
+
+}

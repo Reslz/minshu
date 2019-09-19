@@ -1,0 +1,23 @@
+package com.neusoft.controller.bycontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.LocationInfo;
+import com.neusoft.service.byservice.HouseInfoService;
+@Controller
+public class HouseInfoController {
+	@Autowired
+	private HouseInfoService houseInfoService;
+		
+	@RequestMapping("/addHouse")
+	@ResponseBody
+	public String addHouse(HouseInfo houseInfo,LocationInfo locationInfo) {		
+		houseInfoService.addHouse(houseInfo, locationInfo);	
+		return "1";
+	}
+	 
+	
+}

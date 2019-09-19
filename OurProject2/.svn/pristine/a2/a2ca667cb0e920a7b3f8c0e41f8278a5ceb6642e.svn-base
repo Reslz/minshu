@@ -1,0 +1,97 @@
+package com.neusoft.bean.lybean;
+
+public class Tiezi {
+	private int id;
+	private int uid;
+	private String title;
+	private String content;
+	private String createtime;
+	private int kiss_num;
+	private int view_num;
+	private int startindex; 
+	private int pagesize; 
+	private UserInfo userInfo;
+	private ImgInfo imgInfo;
+	private TieziType tieziType;
+	private TopicInfo topicInfo;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getUid() {
+		return uid;
+	}
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public String getCreatetime() {
+		return createtime;
+	}
+	public void setCreatetime(String createtime) {
+		this.createtime = createtime;
+	}
+	public int getKiss_num() {
+		return kiss_num;
+	}
+	public void setKiss_num(int kiss_num) {
+		this.kiss_num = kiss_num;
+	}
+	public int getView_num() {
+		return view_num;
+	}
+	public void setView_num(int view_num) {
+		this.view_num = view_num;
+	}
+	public int getStartindex() {
+		return startindex;
+	}
+	public void setStartindex(int startindex) {
+		this.startindex = startindex;
+	}
+	public int getPagesize() {
+		return pagesize;
+	}
+	public void setPagesize(int pagesize) {
+		this.pagesize = pagesize;
+	}
+	public UserInfo getUserInfo() {
+		return userInfo;
+	}
+	public void setUserInfo(UserInfo userInfo) {
+		this.userInfo = userInfo;
+	}
+	public ImgInfo getImgInfo() {
+		return imgInfo;
+	}
+	public void setImgInfo(ImgInfo imgInfo) {
+		this.imgInfo = imgInfo;
+	}
+	public TieziType getTieziType() {
+		return tieziType;
+	}
+	public void setTieziType(TieziType tieziType) {
+		this.tieziType = tieziType;
+	}
+	public TopicInfo getTopicInfo() {
+		return topicInfo;
+	}
+	public void setTopicInfo(TopicInfo topicInfo) {
+		this.topicInfo = topicInfo;
+	}
+	
+}

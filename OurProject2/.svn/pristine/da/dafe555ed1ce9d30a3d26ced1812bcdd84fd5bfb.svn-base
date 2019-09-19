@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.bydao.UserOrdersMapper">
+	<!--总订单数  -->
+	<select id="orderCount" parameterType="int" resultType="int">
+		select count(*) from bookinginfo where uid=#{uid}
+	</select>
+	<!--查询全部订单  -->
+	<select id="userOrderList" parameterType="int" resultType="userOrderInfo">
+		select h.housename,h.houseid, l.province,l.city,l.county,l.floor ,u.realname,u.tel,u.email,b.check_in_time,b.check_out_time,h.newprice,b.idcard  
+		from bookinginfo b,house h,location l,userinfo u
+		where b.houseid = h.houseid
+		and h.locationid = l.locationid
+		and u.uid = h.uid
+		and b.uid=#{uid}
+		ORDER BY b.check_in_time desc
+		limit #{startindex},#{pageSize}
+	</select>
+	
+	<!--历史订单总数  -->
+	<select id="hisOrderCount" parameterType="int" resultType="int">
+		select count(*) from bookinginfo where check_out_time &lt; now() and uid=#{uid}
+	</select>
+	
+	<!--查询历史订单  -->
+ 	<select id="userHistory"  parameterType="int" resultType="userOrderInfo">
+		select  h.housename,h.houseid, l.province,l.city,l.county,l.floor ,u.realname,u.tel,u.email,b.check_in_time,b.check_out_time,h.newprice,b.idcard
+		from bookinginfo b,house h,location l,userinfo u
+		where b.houseid = h.houseid
+		and h.locationid = l.locationid
+		and u.uid = h.uid
+		and b.check_out_time &lt; now()
+		and b.uid=#{uid}
+		limit #{startindex},#{pageSize}
+	</select> 
+	
+	<insert id="pingLun" parameterType="pinglunInfo">
+		insert into pinglun (houseid,pinglun,ptime,uid,score) 
+		values (#{houseid},#{pinglun},now(),#{uid},#{score})
+	</insert>
+	
+</mapper>

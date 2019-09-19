@@ -1,0 +1,131 @@
+package com.neusoft.controller.lycontroller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.Tiezi;
+import com.neusoft.bean.lybean.TopicInfo;
+import com.neusoft.service.lyservice.TieziService;
+
+@RequestMapping("ly")
+@Controller
+@CrossOrigin(origins = "*", maxAge = 3600)
+public class TieziController {
+
+	@Autowired
+	private TieziService tieziService;
+
+	@RequestMapping("getTieziPageList")
+	@ResponseBody
+	public List<Map<String,Object>> getTieziPageList(Tiezi tiezi) {
+		List<Map<String,Object>> list = tieziService.getTieziPageList(tiezi);
+		return list;
+	}
+
+	@RequestMapping("getTieziViewList")
+	@ResponseBody
+	public List<Map<String,Object>> getTieziViewList(Tiezi tiezi) {
+		List<Map<String,Object>> list = tieziService.getTieziViewList(tiezi);
+		return list;
+	}
+
+	@RequestMapping("getTieziDetailInfoWithContent")
+	@ResponseBody
+	public List<Map<String,Object>> getTieziDetailInfoWithContent(Tiezi tiezi) {
+		List<Map<String,Object>> list = tieziService.getTieziDetailInfoWithContent(tiezi);
+		return list;
+	}
+
+	@RequestMapping("getTieziDetailInfoWithPic")
+	@ResponseBody
+	public List<Map<String,Object>> getTieziDetailInfoWithPic(Tiezi tiezi) {
+		List<Map<String,Object>> list = tieziService.getTieziDetailInfoWithPic(tiezi);
+		return list;
+	}
+
+	@RequestMapping("getTieziCount")
+	@ResponseBody
+	public int getTieziCount(Tiezi tiezi) {
+		return tieziService.TieziCount(tiezi);
+
+	}
+
+	@RequestMapping("getTieziViewCount")
+	@ResponseBody
+	public int getTieziViewCount(Tiezi tiezi) {
+		return tieziService.TieziViewCount(tiezi);
+
+	}
+
+	@RequestMapping("getHouseInfoList")
+	@ResponseBody
+	public List<Map<String,Object>> getHouseInfoList(HouseInfo houseInfo) {
+		List<Map<String,Object>> list = tieziService.getHouseList(houseInfo);
+		return list;
+
+	}
+
+	@RequestMapping("getHouseCount")
+	@ResponseBody
+	public int getHouseCount(HouseInfo houseInfo) {
+		return tieziService.HouseCount(houseInfo);
+
+	}
+
+	@RequestMapping(value = "addLove", method = RequestMethod.POST)
+	@ResponseBody
+	public int addLove(Tiezi tiezi) {
+		int loveCount = tieziService.LoveCount(tiezi);
+		int num = 0;
+		if (loveCount > 0) {
+			num =  0;
+		} else {
+			int addKissNum = tieziService.addKissNum(tiezi);
+			if (addKissNum == 1) {
+				num =  1;
+			} else {
+
+			}
+		}
+		return num;
+	}
+
+	@RequestMapping("getTopicCount")
+	@ResponseBody
+	public int getTopicCount(Tiezi tiezi) {
+		int topicCount = tieziService.TopicCount(tiezi);
+		System.out.println(topicCount);
+		return topicCount;
+	}
+	
+	@RequestMapping("getTopicInfo")
+	@ResponseBody
+	public List<Map<String, Object>> getTopicInfo(Tiezi tiezi) {
+		List<Map<String,Object>> list = tieziService.getTopicInfo(tiezi);
+		return list;
+	}
+	
+	@RequestMapping("NewTopic")
+	@ResponseBody
+	public int NewTopic(TopicInfo topicInfo) {
+		int newTopic = tieziService.NewTopic(topicInfo);
+		int num = 0;
+		if(newTopic > 0) {
+			num =  1;
+		}else {
+			num =  0;
+		}
+		return num;
+	}
+	
+	
+}

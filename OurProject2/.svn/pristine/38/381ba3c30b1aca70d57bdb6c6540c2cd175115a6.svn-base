@@ -1,0 +1,15 @@
+package com.neusoft.service.byservice;
+
+import java.util.Date;
+import java.util.List;
+
+import com.neusoft.bean.lybean.PinglunInfo;
+import com.neusoft.bean.lybean.UserOrderInfo;
+
+public interface UserOrdersService {
+	int orderCount(int uid);
+	List<UserOrderInfo> userOrderList(int uid);
+	List<UserOrderInfo> userHistory(int uid);
+	int hisOrderCount(int uid);
+	void pingLun(PinglunInfo pinglunInfo);
+}

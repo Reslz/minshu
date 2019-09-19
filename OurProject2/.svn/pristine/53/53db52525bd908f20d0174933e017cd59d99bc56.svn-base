@@ -1,0 +1,40 @@
+package com.neusoft.service.byservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.HouseImg;
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.LocationInfo;
+import com.neusoft.dao.bydao.HouseImgMapper;
+import com.neusoft.dao.bydao.HouseInfoMapper;
+import com.neusoft.dao.bydao.LocationMapper;
+
+@Service
+public class HouseInfoServiceImpl implements HouseInfoService{
+	@Autowired
+	private HouseInfoMapper houseInfoMapper;
+	@Autowired
+	private LocationMapper locationMapper;
+	@Autowired
+	private HouseImgMapper houseImgMapper;
+
+	@Override
+	public void addHouse(HouseInfo houseInfo,LocationInfo locationInfo,HouseImg houseImg) {
+		locationMapper.addLocation(locationInfo);//插入地址
+		int locationid = locationMapper.findLocation(locationInfo);//查找地址id
+		
+		houseInfo.setLocationid(locationid);//地址id给house表
+		houseInfoMapper.addHouse(houseInfo);//向house表插入数据
+		
+		/*int houseid = houseInfoMapper.findHouse(houseInfo);//查找houseid
+		houseImg.setHouseid(houseid);
+		System.out.println(houseid);
+		houseImgMapper.insertImg(houseImg);//插入图片
+*/		
+	}
+
+	
+	
+	
+}

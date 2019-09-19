@@ -1,0 +1,23 @@
+package com.neusoft.service.lkxservice;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.Tiezi;
+import com.neusoft.dao.lkxdao.TieMapper;
+
+@Service
+public class TieServiceImpl implements TieService{
+
+	@Autowired
+	private TieMapper tieMapper;
+	@Override
+	public List<Tiezi> getAll(int id) {
+		// TODO Auto-generated method stub
+		List<Tiezi> list = tieMapper.getAll(id);
+		return list;
+	}
+	
+}

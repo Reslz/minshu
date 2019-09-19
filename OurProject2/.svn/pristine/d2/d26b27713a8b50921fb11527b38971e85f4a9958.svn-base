@@ -1,0 +1,14 @@
+package com.neusoft.dao.lkxdao;
+
+import java.util.List;
+
+import com.neusoft.bean.lybean.Tiezi;
+
+
+
+
+
+public interface TieMapper {
+	
+	List<Tiezi> getAll(int id);
+}

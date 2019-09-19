@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.slzdao.TYDRMapper">
+
+	<insert id="drAdd" parameterType="com.neusoft.bean.lybean.TiYanDaRen" >
+		insert into tiyandaren (location,language,type,introduce,content,place,provide,title,img，uid) 
+		values (#{location},#{language},#{type},#{introduce},#{content},#{place},#{provide},#{title},#{img},#{uid})
+	
+	</insert>
+
+</mapper>

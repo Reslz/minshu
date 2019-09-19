@@ -1,0 +1,64 @@
+package com.neusoft.service.lyservice;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.Tiezi;
+import com.neusoft.dao.lydao.TieziMapper;
+
+@Service("tieziService")
+public class TieziServiceImpl implements TieziService {
+
+	@Autowired
+	private TieziMapper tieziMapper;
+
+	@Override
+	public List<Tiezi> getTieziPageList(Tiezi tiezi) {
+		// TODO Auto-generated method stub
+		List<Tiezi> list = tieziMapper.getTieziPageList(tiezi);
+		return list;
+	}
+
+	@Override
+	public List<Tiezi> getTieziViewList(Tiezi tiezi) {
+		// TODO Auto-generated method stub
+		List<Tiezi> list = tieziMapper.getTieziViewList(tiezi);
+		return list;
+	}
+
+
+	@Override
+	public int TieziCount(Tiezi tiezi) {
+		// TODO Auto-generated method stub
+		return tieziMapper.TieziCount(tiezi);
+	}
+
+	@Override
+	public int TieziViewCount(Tiezi tiezi) {
+		// TODO Auto-generated method stub
+		return tieziMapper.TieziViewCount(tiezi);
+	}
+
+	@Override
+	public List<HouseInfo> getHouseList(HouseInfo houseInfo) {
+		// TODO Auto-generated method stub
+		List<HouseInfo> list = tieziMapper.getHouseList(houseInfo);
+		return list;
+	}
+
+	@Override
+	public int HouseCount(HouseInfo houseInfo) {
+		// TODO Auto-generated method stub
+		return tieziMapper.HouseCount(houseInfo);
+	}
+
+	@Override
+	public List<Tiezi> getTieziDetailInfo(int id) {
+		// TODO Auto-generated method stub
+		List<Tiezi> list = tieziMapper.getTieziDetailInfo(id);
+		return list;
+	}
+}

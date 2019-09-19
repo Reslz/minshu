@@ -1,0 +1,148 @@
+.lv1 {
+	border-top: 1px solid #999999;
+}
+
+.lv2 {
+	width: 1080px;
+	height: 339px;
+	/*background-color: aqua;*/
+	margin: 0 auto;
+}
+
+.lv3 {
+	margin: 0 auto;
+}
+
+.lv4 {
+	width: 1032px;
+	height: 60px;
+	margin: 0 auto;
+	border-top: 1px solid #999999;
+}
+#a1{
+	text-align: center;
+}
+.d1 {
+	list-style: none;
+	text-align: center;
+	padding-right: 50px;
+}
+
+.d2 {
+	list-style: none;
+	text-align: center;
+	float: left;
+	padding-right: 50px;
+}
+
+.d3 {
+	list-style: none;
+	text-align: center;
+	float: left;
+	padding-right: 50px;
+}
+
+.d4 {
+	list-style: none;
+	text-align: center;
+	float: left;
+	padding-right: 50px;
+	padding-top: 25px;
+}
+
+.d1 li a {
+	color: #999999;
+	text-decoration: none;
+}
+
+.d2 li a {
+	color: #999999;
+	text-decoration: none;
+}
+
+.d3 li a {
+	color: #999999;
+	text-decoration: none;
+}
+
+.d4 li a {
+	color: #999999;
+	text-decoration: none;
+}
+
+.d4 li a:hover {
+	text-decoration: underline;
+	color: #D3D3D3;
+}
+
+.d1 li a:hover {
+	text-decoration: underline;
+	color: #D3D3D3;
+}
+
+.d2 li a:hover {
+	text-decoration: underline;
+	color: #D3D3D3;
+}
+
+.d3 li a:hover {
+	text-decoration: underline;
+	color: #D3D3D3;
+}
+
+.li1 {
+	height: 30px;
+	width: 90px;
+	font-size: 17px;
+}
+
+div p {
+	color: #999999;
+	text-decoration: none;
+	text-align: center;
+}
+
+div p a {
+	color: #999999;
+	text-decoration: none;
+}
+
+div p a:hover {
+	text-decoration: underline;
+	color: #D3D3D3;
+}
+
+.lv6 {
+	color: #999999;
+	text-decoration: none;
+	margin-left: 38px;
+}
+
+.lv5 {
+	text-align: center;
+}
+
+.black_overlay {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFFf;
+	z-index: 1001;
+	-moz-opacity: 0.8;
+	opacity: .80;
+	filter: alpha(opacity=80);
+}
+
+.white_content {
+	display: none;
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	background-color: white;
+	z-index: 1002;
+	/* 数字的大小指明了div的相对层，数字大的在上层 */
+	overflow: auto;
+}

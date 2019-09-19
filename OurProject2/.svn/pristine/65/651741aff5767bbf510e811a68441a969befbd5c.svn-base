@@ -1,0 +1,15 @@
+package com.neusoft.service.slzservice;
+
+import com.neusoft.bean.lybean.TiYanDaRen;
+import com.neusoft.bean.lybean.TiYanInFo;
+import com.neusoft.bean.lybean.UserInfo;
+
+public interface TYDRService {
+
+	void drAdd(TiYanDaRen dr);
+	
+	void submitTiYan(TiYanInFo ty);
+	
+	UserInfo selectDaRen(int uid);
+	
+}

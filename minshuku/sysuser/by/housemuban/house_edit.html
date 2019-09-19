@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>房源编辑</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="scripts/jquery/jquery-1.7.1.js"></script>
+<link href="style/authority/basic_layout.css" rel="stylesheet" type="text/css">
+<link href="style/authority/common_style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/authority/commonAll.js"></script>
+<script type="text/javascript" src="scripts/jquery/jquery-1.4.4.min.js"></script>
+<script src="scripts/My97DatePicker/WdatePicker.js" type="text/javascript" defer="defer"></script>
+<script type="text/javascript" src="scripts/artDialog/artDialog.js?skin=default"></script>
+
+</head>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../sanji/dist/distpicker.data.js"></script>
+<script src="../sanji/dist/distpicker.js"></script>
+<script src="../sanji/js/main.js"></script>
+<script src="../../../js/common.js"></script>
+<body>
+	<input type="hidden" name="fyID" value="14458625716623" id="fyID"/>
+	<div id="container">
+		<div id="nav_links">
+			当前位置：房源中心&nbsp;>&nbsp;<span style="color: #1A5CC6;">房源编辑</span>
+			<div id="page_close">
+				<a href="javascript:parent.$.fancybox.close();">
+					<img src="images/common/page_close.png" width="20" height="20" style="vertical-align: text-top;"/>
+				</a>
+			</div>
+		</div>
+		<div class="ui_content">
+			<table  cellspacing="0" cellpadding="0" width="100%" align="left" border="0">
+				<tr>
+					<td class="ui_text_rt" width="80">房源区域</td>
+					<td class="ui_text_lt">
+                        <div data-toggle="distpicker">
+						  <select id="province" class="ui_select01"></select>
+						  <select id="city" class="ui_select01"></select>
+						  <select id="county" class="ui_select01"></select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">具体位置</td>
+					<td class="ui_text_lt">
+						<div id="floordiv">
+							<input type="text" id="floor" class="ui_select01"/>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">卫生间数</td>
+					<td class="ui_text_lt">
+						<select id="toiletnum" class="ui_select01">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">可住人数</td>
+					<td class="ui_text_lt">
+						<select id="guestnum" class="ui_select01">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">卧室数量</td>
+					<td class="ui_text_lt">
+						<select id="roodnum" class="ui_select01">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">床铺数量</td>
+					<td class="ui_text_lt">
+						<select id="bednum" class="ui_select01">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">出租方式</td>
+					<td class="ui_text_lt">
+						<div>
+							<select id="rentway" class="ui_select01">
+							</select>
+						</div>
+
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">房源类型</td>
+					<td class="ui_text_lt">
+						<div>
+							<select id="htype" class="ui_select01">
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">房源名字</td>
+					<td class="ui_text_lt">
+						<div id="housenamediv">
+							<input type="text" id="housename" class="ui_input_txt02"/>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">开始时间</td>
+					<td class="ui_text_lt">
+						<div id="settimediv">
+							<input type="date" id="settimestar" class="ui_input_txt02"/>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">现价(￥)/天</td>
+					<td class="ui_text_lt">
+						<div id="newpricediv">
+							<input type="text" id="newprice" class="ui_input_txt02"/>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">原价(￥)/天</td>
+					<td class="ui_text_lt">
+						<div id="oldpricediv">
+							<input type="text" id="oldprice" class="ui_input_txt02"/>
+						</div>
+						
+					</td>
+				</tr>
+				<tr>
+					<td class="ui_text_rt">房源描述</td>
+					<td class="ui_text_lt">
+						<div id="textdiv">
+							<textarea cols="20" rows="5" class="ui_input_txt02" maxlength="100" id="miaoshu"></textarea>
+						</div>
+						
+					</td>
+				</tr>
+
+				<tr>
+					<td>&nbsp;</td>
+					<td class="ui_text_lt">
+						&nbsp;<input  type="button" value="提交" id="updateBtn" class="ui_input_btn01"/>
+						&nbsp;<input  type="button" value="取消" id="quxiaoBtn" class="ui_input_btn01"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
+<script>
+	$(document).ready(function(){
+		//房源类型
+		$.post(base_path+"/houseType",{},
+			function(data){
+				var opn="";
+				for(var i=0;i<data.length;i++){
+					opn+="<option value='"+data[i].id+"'>"+data[i].type+"</option>";
+				}
+				$("#htype").html(opn);
+		});
+		//出租方式
+		$.post(base_path+"/rentway",{},function(data){
+			var rentway="";
+			for(var i=0;i<data.length;i++){
+				rentway+="<option value='"+data[i].rentwayid+"'>"+data[i].rentway+"</option>";
+			}
+			$("#rentway").html(rentway);
+		});
+		
+		/*原有房源信息显示出来*/
+		$.post(base_path+"/showLoction",
+		{
+			locationid:window.localStorage.getItem("locationid")
+		},
+		function(data){
+			var floor="<input type='text' id='floor' class='ui_select01' value='"+data.floor+"'/>";
+			$("#floordiv").html(floor);
+		});
+		$.post(base_path+"/showHouseInfo",
+		{
+			houseid:window.localStorage.getItem("houseid")
+		},
+		function(data){
+			var housename = "<input type='text' id='housename' class='ui_input_txt02' value='"+data.housename+"'/>";
+			$("#housenamediv").html(housename);
+			var settime = "<input type='date' id='settimestar' class='ui_input_txt02' value='"+data.settimestar+"'/>";
+			$("#settimediv").html(settime);
+			var newprice = "<input type='text' id='newprice' class='ui_input_txt02' value='"+data.newprice+"'/>";
+			$("#newpricediv").html(newprice);
+			var oldprice = "<input type='text' id='oldprice' class='ui_input_txt02' value='"+data.oldprice+"'/>";
+			$("#oldpricediv").html(oldprice);
+			var miaoshu = "<textarea cols='20' rows='5' class='ui_input_txt02' maxlength='100' id='miaoshu' >"+data.miaoshu+"</textarea>";
+			$("#textdiv").html(miaoshu);
+		});
+		
+		/*编辑房源信息*/
+		$("#updateBtn").click(function(){
+			$.post(base_path+"/updateHouse",
+			{
+				houseid:window.localStorage.getItem("houseid"),
+				housetype:$("#htype option:selected").val(),
+				rentwayid:$("#rentway option:selected").val(),
+				guestnum:$("#guestnum option:selected").val(),
+				bednum:$("#bednum option:selected").val(),
+				roodnum:$("#roodnum option:selected").val(),
+				toiletnum:$("#toiletnum option:selected").val(),
+				housename:$("input[id='housename']").val(),
+				settimestar:$("input[id='settimestar']").val(),
+				newprice:$("input[id='newprice']").val(),
+				oldprice:$("input[id='oldprice']").val(),
+				miaoshu:$("textarea[id='miaoshu']").val(),
+				province:$("#province option:selected").val(),
+				city:$("#city option:selected").val(),
+				county:$("#county option:selected").val(),
+				floor:$("input[id='floor']").val(),
+				locationid:window.localStorage.getItem("locationid")
+			},
+			function(data){
+				if(data==1){
+					alert("修改成功");
+					window.location.href="house_list.html";
+				}else{
+					alert("修改失败");
+					window.location.href="house_list.html";
+				}
+				
+			});	
+		});
+		
+		$("#quxiaoBtn").click(function(){
+			window.location.href="house_list.html";
+		});
+		
+		
+		
+	});
+</script>

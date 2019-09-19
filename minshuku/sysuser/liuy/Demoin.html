@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			.lv1 {
+				border-top: 1px solid #999999;
+			}
+			
+			.lv2 {
+				width: 1080px;
+				height: 339px;
+				/*background-color: aqua;*/
+				margin: 0 auto;
+			}
+			
+			.lv3 {
+				margin: 0 auto;
+			}
+			
+			.lv4 {
+				width: 1032px;
+				height: 60px;
+				margin: 0 auto;
+				border-top: 1px solid #999999;
+			}
+			
+			.d1 {
+				list-style: none;
+				float: left;
+				padding-right: 125px;
+			}
+			
+			.d2 {
+				list-style: none;
+				float: left;
+				padding-right: 125px;
+			}
+			
+			.d3 {
+				list-style: none;
+				float: left;
+				padding-right: 125px;
+			}
+			
+			.d4 {
+				list-style: none;
+				float: left;
+				padding-right: 125px;
+				padding-top: 25px;
+			}
+			
+			.d1 li a {
+				color: #999999;
+				text-decoration: none;
+			}
+			
+			.d2 li a {
+				color: #999999;
+				text-decoration: none;
+			}
+			
+			.d3 li a {
+				color: #999999;
+				text-decoration: none;
+			}
+			
+			.d4 li a {
+				color: #999999;
+				text-decoration: none;
+			}
+			
+			.d4 li a:hover {
+				text-decoration: underline;
+				color: #D3D3D3;
+			}
+			
+			.d1 li a:hover {
+				text-decoration: underline;
+				color: #D3D3D3;
+				
+				
+			}
+			
+			.d2 li a:hover {
+				text-decoration: underline;
+				color: #D3D3D3;
+			}
+			
+			.d3 li a:hover {
+				text-decoration: underline;
+				color: #D3D3D3;
+			}
+			
+			.li1 {
+				height: 40px;
+				font-size: 17px;
+			}
+			
+			div p {
+				color: #999999;
+				text-decoration: none;
+				text-align: center;
+			}
+			
+			div p a {
+				color: #999999;
+				text-decoration: none;
+			}
+			
+			div p a:hover {
+				text-decoration: underline;
+				color: #D3D3D3;
+			}
+			
+			.lv6 {
+				color: #999999;
+				text-decoration: none;
+				margin-left: 38px;
+			}
+			
+			.lv5 {
+				text-align: center;
+			}
+			
+			.black_overlay {
+				display: none;
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				width: 100%;
+				height: 100%;
+				background-color: #FFFFFFf;
+				z-index: 1001;
+				-moz-opacity: 0.8;
+				opacity: .80;
+				filter: alpha(opacity=80);
+			}
+			
+			.white_content {
+				display: none;
+				position: absolute;
+				top: 10%;
+				left: 30%;
+				background-color: white;
+				z-index: 1002;
+				/* 数字的大小指明了div的相对层，数字大的在上层 */
+				overflow: auto;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="lv1">
+			<div class="lv2">
+				<div class="lv3" id="a1">
+					<div class="col-xs-6 col-md-4 container-fluid">
+					<table class="lv3" id="a1" >
+						<thead>
+							<tr>
+								<th>
+									<ul class="d1">
+										
+											<li class="li1">爱彼迎</li>
+										
+										
+
+									</ul>
+								</th>
+								<th>
+									<ul class="d2">
+										<li class="li1">发现</li>
+
+									</ul>
+								</th>
+								<th>
+									<ul class="d3">
+										<li class="li1">出租</li>
+
+									</ul>
+								</th>
+
+							</tr>
+
+						</thead>
+						<tbody id="c1">
+
+						</tbody>
+
+					</table>
+					<div style="float: right;">
+						<ul class="d4">
+						<li class="li1">
+							<a href="https://weibo.com/airbnb?is_hot=1"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+							<a href="#" id="contact_weixin" onclick="openWindow(this)">
+								<i class="fa fa-weixin" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.airbnb.cn/terms ">条款</a>
+						</li>
+						<li>
+							<a href=" https://www.airbnb.cn/terms/privacy_policy">隐私政策</a>
+						</li>
+						<li>
+							<a href=" https://www.airbnb.cn/sitemaps/v2">网站地图</a>
+						</li>
+					</ul>
+	
+</div>
+					
+					
+					<div id="light_weixin " class="white_content ">
+						<!--<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<p>获得即时提醒，探索旅行故事</p>
+			<p>爱彼迎服务号：AirbnbOfficial</p>-->
+						<img src='erweima.png' />
+						<!--<button type="button" class="btn btn-primary">关闭</button>-->
+					</div>
+					<div id="fade" class="black_overlay" onclick="closeWindow()">
+					</div>
+				</div>
+				<!--<div id="light_qq " class="white_content ">
+			<img src='gongan.png' />
+		</div>-->
+</div>
+			</div>
+
+		</div>
+
+		<div class="lv4 " id="a2 ">
+			<div class="lv5 ">
+				<p>
+
+					京ICP备16017121号-3 京ICP证 160773号 中国公安局标志 <img src="gongan.png ">
+					<a href=" http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032345">京公网安备 11010502032345号 </a>安彼迎网络（北京）有限公司
+					<a href="yingyezhizhao.jpg">营业执照</a>
+					<!--<img src="yingyezhizhao.jpg" />-->
+				</p>
+			</div>
+			<div class="lv6 ">© 2019 Airbnb, Inc. All rights reserved.</div>
+
+		</div>
+		</div>
+
+	</body>
+	<script src=""></script>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function openWindow(obj) {
+			var weixin = "light_weixin ";
+			/*	switch(obj.id) {
+					case 'contact_weixin':
+						weixin = "light_weixin ";
+						break;
+
+					case 'contact_qq':
+						weixin = "light_qq ";
+						break;
+				}*/
+			document.getElementById(weixin).style.display = 'block';
+			document.getElementById("fade").style.display = 'block';
+		}
+
+		function closeWindow() {
+			document.getElementById("light_weixin ").style.display = 'none';
+
+			document.getElementById("fade").style.display = 'none';
+		}
+
+		$(document).ready(function() {
+
+			$.post("http://localhost:8080/OurProject/findColumn", {}, function(data) {
+				var column_str = "";
+				console.log(data);
+
+				for(var i = 0; i < data.length; i++) {
+					console.log(data[i].connect1);
+					/*column_str+="<tr><td>"+data[i].connect1+"</td></tr>"*/
+					column_str += "<tr><td>" + data[i].connect1 + "</td><td>" + data[i].connect2 + "</td><td>" + data[i].connect3 + "</td></tr>"
+				}
+				$("#c1").html(column_str);
+			})
+
+		});
+	</script>
+
+</html>

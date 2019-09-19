@@ -1,0 +1,19 @@
+package com.neusoft.bean.lybean;
+
+public class Column {
+	private int id;
+	private String connect;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getConnect() {
+		return connect;
+	}
+	public void setConnect(String connect) {
+		this.connect = connect;
+	}
+	
+}

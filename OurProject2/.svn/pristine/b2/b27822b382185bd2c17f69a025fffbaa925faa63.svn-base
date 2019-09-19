@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.lkxdao.TieMapper">
+	
+	
+	<!--List<Tiezi> getAll();获取分类的各种帖子  -->
+	<select id="getAll" parameterType="int" resultMap="Topic">
+		select * from tiezi t 
+		left join img i on t.tieziid = i.tieziid 
+		left join tiezifenlei tf on tf.fenleiid = t.fenleiid 
+		where t.fenleiid = #{id} limit #{startindex},#{pagesize}
+	</select>
+	<resultMap type="com.neusoft.bean.lybean.Tiezi" id="Topic">
+		<id column="id" property="id"/>
+		<result column="uid" property="uid"/>		
+		<result column="title" property="title"/>
+		<result column="content" property="content"/>
+		<result column="createtime" property="createtime"/>
+		<result column="kiss_num" property="kiss_num"/>
+		<result column="view_num" property="view_num"/>		
+		<association property="imgInfo" column="tieziid" javaType="com.neusoft.bean.lybean.ImgInfo" resultMap="TopicID"></association>
+		<association property="tieziType" column="fenleiid" javaType="com.neusoft.bean.lybean.TieziType" resultMap="TopicType"></association> 
+	</resultMap>
+	<resultMap type="com.neusoft.bean.lybean.ImgInfo" id="TopicID">
+		<result column="id" property="id"/>
+		<result column="tieziid" property="tieziid"/>
+		<result column="img" property="img"/>
+	</resultMap>
+	<resultMap type="com.neusoft.bean.lybean.TieziType" id="TopicType">
+		<result column="id" property="id"/>
+		<result column="fenleiid" property="fenleiid"/>
+		<result column="fenlei" property="fenlei"/>
+	</resultMap> 
+	
+	
+	
+	
+	
+	
+	
+
+</mapper>

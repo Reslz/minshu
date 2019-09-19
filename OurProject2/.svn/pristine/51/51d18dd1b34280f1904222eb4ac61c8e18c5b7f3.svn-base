@@ -1,0 +1,75 @@
+package com.neusoft.controller.lycontroller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.Tiezi;
+import com.neusoft.service.lyservice.TieziService;
+
+@RequestMapping("ly")
+@Controller
+@CrossOrigin(origins = "*", maxAge = 3600)
+public class TieziController {
+
+	@Autowired
+	private TieziService tieziService;
+
+	@RequestMapping("getTieziPageList")
+	@ResponseBody
+	public List<Tiezi> getTieziPageList(Tiezi tiezi) {
+		List<Tiezi> list = tieziService.getTieziPageList(tiezi);
+		return list;
+	}
+
+	@RequestMapping("getTieziViewList")
+	@ResponseBody
+	public List<Tiezi> getTieziViewList(Tiezi tiezi) {
+		List<Tiezi> list = tieziService.getTieziViewList(tiezi);
+		return list;
+	}
+
+	@RequestMapping("getTieziDetailInfo")
+	@ResponseBody
+	public List<Tiezi> getTieziDetailInfo(int id) {
+		List<Tiezi> list = tieziService.getTieziDetailInfo(id);
+		return list;
+	}
+
+	@RequestMapping("getTieziCount")
+	@ResponseBody
+	public int getTieziCount(Tiezi tiezi) {
+		return tieziService.TieziCount(tiezi);
+	
+	}
+	
+	@RequestMapping("getTieziViewCount")
+	@ResponseBody
+	public int getTieziViewCount(Tiezi tiezi) {
+		return tieziService.TieziViewCount(tiezi);
+	
+	}
+	
+	@RequestMapping("getHouseInfoList")
+	@ResponseBody
+	public List<HouseInfo> getHouseInfoList(HouseInfo houseInfo) {
+		List<HouseInfo> list = tieziService.getHouseList(houseInfo);		
+		return list;
+	
+	}
+	
+	@RequestMapping("getHouseCount")
+	@ResponseBody
+	public int getHouseCount(HouseInfo houseInfo) {	
+		return tieziService.HouseCount(houseInfo);
+	
+	}
+	
+	
+
+}

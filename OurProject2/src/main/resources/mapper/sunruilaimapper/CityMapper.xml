@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.srldao.CityInfoMapper">
+	
+	<select id="findpictureinfo" resultType="pictureinfo">
+	select * from houseimg
+	</select>
+	
+	
+	
+	<select id="findhouseinfo" resultType="houseinfo" parameterType="houseinfo">
+	select * from house where houseid = #{houseid} 
+	</select>
+	
+	
+	<!--  订房+ 生成随机订单id-->
+	<insert id="submintbookinfo" parameterType="bookinginfo">
+	insert into bookinginfo (uid,houseid,check_in_time,check_out_time,idcard) values(#{uid},#{houseid},#{checkInTime},#{checkOutTime},round(rand()*1000000000,0))
+	</insert>
+	
+	<!--  -->
+</mapper>

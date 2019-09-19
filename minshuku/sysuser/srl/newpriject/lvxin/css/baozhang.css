@@ -1,0 +1,208 @@
+.at1 {
+	width: 1032px;
+	height: 42px;
+	margin: 25px auto;
+}
+
+.b1 {
+	margin: 8px 0;
+	width: 1032px;
+	height: 98px;
+	position: relative;
+	margin: 0 auto
+}
+
+.b2 {
+	width: 333.328px;
+	height: 50px;
+	float: left;
+	position: absolute;
+	margin-left: 360px
+}
+
+.b3 {
+	width: 333.328px;
+	height: 50px;
+	position: absolute;
+}
+
+.b4 {
+	width: 333.328px;
+	height: 50px;
+	position: absolute;
+	margin-left: 720px;
+}
+
+.v1 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+.v2 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+.v3 {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+.p1 {
+	width: 283px;
+	height: 50px;
+	position: absolute;
+	margin-left: 60px;
+}
+
+.p2 {
+	width: 283px;
+	height: 50px;
+	position: absolute;
+	margin-left: 60px;
+}
+
+.p3 {
+	width: 283px;
+	height: 50px;
+	position: absolute;
+	margin-left: 60px;
+}
+
+.ac1 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.ac2 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.ac3 {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.b5 {
+	position: absolute;
+	bottom: 0;
+	margin: -25px 10px;
+}
+
+._1k03xgts {
+	color: rgb(0, 132, 137) !important;
+	-webkit-appearance: none !important;
+	cursor: pointer !important;
+	user-select: auto !important;
+	text-align: left !important;
+	font: inherit inherit inherit inherit inherit inherit inherit inherit inherit !important;
+	text-decoration: none !important;
+	background: transparent !important;
+	border-width: 0px !important;
+	border-style: initial !important;
+	border-color: initial !important;
+	border-image: initial !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+body {
+	position: relative;
+}
+
+.scrollspy-example {
+	width: 871px;
+	height: 420px;
+	overflow: auto;
+	position: relative;
+	z-index: 999;
+}
+
+#nb {
+	width: 1903px;
+	height: 769px;
+	padding: 48px;
+	margin: 0 auto
+}
+
+.vm {
+	width: 1423px;
+	height: 769px;
+	margin: 0 auto
+}
+
+.modal-content {
+	width: 1032px;
+	height: 641px;
+	padding: 48px;
+	margin: 0 -280px;
+}
+
+#ll {
+	width: 1032px;
+	height: 641px;
+	padding: 48px;
+	margin: 0 auto
+}
+
+.mm {
+	width: 1920px;
+	height: 70px;
+	margin: 0 auto
+}
+
+.aa {
+	width: 400px;
+	height: 320px;
+	float: left;
+	position: absolute;
+	margin: 60px auto;
+}
+
+.bb {
+	position: absolute;
+	margin-left: 430px;
+}
+
+.dd {
+	margin-top: 100px auto;
+	float: right;
+}
+
+.aw {
+	margin-top: 60px;
+	margin-right: 430px;
+}
+
+.gg {
+	float: left;
+}
+
+#js {
+	float: left;
+	margin: 0;
+}
+
+#asd {
+	font-weight: 600;
+}
+
+.az {
+	width: 443.5px;
+	height: 374px;
+}
+
+.modal-header1 {
+	position: fixed;
+}
+
+.aws {
+	width: 871px;
+	height: 427px;
+}

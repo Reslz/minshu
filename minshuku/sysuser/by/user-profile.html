@@ -1,0 +1,441 @@
+<script src="../../js/islogin.js"></script>
+<!DOCTYPE html>
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>用户信息</title>
+        <meta name="description" content="GARO is a real-estate template">
+        <meta name="author" content="Kimarotec">
+        <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme , bootstrap template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="../srl/newpriject/lvxin/css/demoin.css" />
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/fontello.css">
+        <link href="assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+        <link href="assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="assets/css/bootstrap-select.min.css"> 
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/icheck.min_all.css">
+        <link rel="stylesheet" href="assets/css/price-range.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">  
+        <link rel="stylesheet" href="assets/css/owl.theme.css">
+        <link rel="stylesheet" href="assets/css/owl.transitions.css"> 
+        <link rel="stylesheet" href="assets/css/wizard.css"> 
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/animate.css" />
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js" ></script>
+        <script src="../../js/common.js"></script>
+       
+    </head>
+    <script>
+    	//判断两次密码是否相同（ajax）
+		function v_password(){
+			var password = document.getElementById("pass");
+			var repass = document.getElementById("repass");
+			var s2 = document.getElementById("s2");
+			var inner = null;
+			if(password.value.trim() != "" && repass.value.trim() != ""){ //trim去掉两端空格
+				if(password.value == repass.value){
+					inner = "两次密码相同".fontcolor("green");
+				}else{
+					inner = "两次密码不同重新输入".fontcolor("red");
+					password.value = null;
+					repass.value = null;
+				}
+			}
+			s2.innerHTML = inner;
+		}
+    </script>
+
+    <body>
+
+        <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div>
+        <!-- Body content -->
+
+      <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../srl/newpriject/lvxin/index.html" >名树</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse yamm" id="navigation">
+                    <div class="button navbar-right">
+                       <!-- <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register.html')" data-wow-delay="0.4s">Login</button>-->
+                        <!--<button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.5s">Submit</button>-->
+                    </div>
+                    <ul class="main-nav nav navbar-nav navbar-right">
+                        <li class="dropdown ymm-sw " data-wow-delay="0.6s">
+                            <a href="../srl/newpriject/lvxin/index.html">主页 </a>
+                        </li>
+
+                        <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="" href="addhouse.html">发布房源</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="" href="../slz/experiencer.html">成为达人</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.5s"><a href="../ly/places.html">故事 </a></li>
+
+                        <!--<li class="wow fadeInDown" data-wow-delay="0.4s"><a href="contact.html">Contact</a></li>-->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- End of nav bar -->
+        <!-- End page header --> 
+        <!-- property area -->
+        <div class="content-area user-profiel" style="background-color: #FCFCFC;">&nbsp;
+            <div class="container">   
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1 profiel-container">
+
+                      <!--  <form id="form1">-->
+                            <div class="profiel-header">
+                                <h3>
+                                    <b>完善</b> 您的个人信息<br><br>
+                                    <small>此数据将帮助我们更好地为您提供服务，除必要的内部使用外，我们不会将您的信息透露给房东或其他用户.</small>
+                                </h3>
+                                <hr>
+                            </div>
+
+                            <div class="clear">
+                                <div class="col-sm-3 col-sm-offset-1">
+                                    <div class="picture-container">
+                                        <div class="picture" >
+                                             <img src="img/welcome.jpg" />
+                                        </div>
+                                        <h6>欢迎您来到名树</h6>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3 padding-top-25">
+
+                                    <div class="form-group">
+                                        <label>用户名<small></small></label>
+                                        <input name="firstname" id="username" type="text" class="form-control" placeholder="Andrew...">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>真实姓名<small></small></label>
+                                        <input name="lastname" id="realname" type="text" class="form-control" placeholder="Smith...">
+                                    </div> 
+                                    <div class="form-group" >
+                                        <label>电子邮件 <small></small></label>
+                                        <div class="form-group" id="emaildiv">
+                                        	<input name="email"  id="email" type="email" disabled="disabled" class="form-control">
+                                    	</div> 
+                                    </div> 
+                                </div>
+                                <div class="col-sm-3 padding-top-25">
+                                    <div class="form-group">
+                                        <label>密码 <small></small></label>
+                                        <input name="Password" id="pass" onblur="v_password()" type="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>确认密码: <small><span id="s2"></span></small></label>
+                                        <input type="password" id="repass" onblur="v_password()" class="form-control">
+                                    </div>
+                                </div>  
+
+                            </div>
+
+                            <div class="clear">
+                                <br>
+                                <hr>
+                                <br>
+                                <div class="col-sm-5 col-sm-offset-1">
+                                    <div class="form-group">
+                                        <label>性别 :</label>
+                                        <input name="sex" type="radio" value="1" class="form-control">男
+                                        <input name="sex" type="radio" value="0" class="form-control">女
+                                    </div>
+                                    <div class="form-group">
+                                        <label>出生日期 :</label>
+                                        <form name="date" >
+										  <select name="year" id="year1" οnchange="selectYear(this.value)">
+										  </select>
+										  <select name="month" id="month1" οnchange="selectMonth(this.value)">
+										  </select>
+										  <select name="day" id="day1">
+										  </select>
+										</form>
+										
+                                    </div>
+                                    <div class="form-group">
+                                        <label>联系电话 :</label>
+                                        <input name="Phone" type="text" id="tel" class="form-control" placeholder="+1 9090909090">
+                                    </div>
+                                </div>  
+
+                                <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>自我介绍:</label>
+                                        <textarea cols="10" rows="10" id="selfintro" class="form-control"></textarea>
+                                    </div>
+                                </div>
+ 
+                            </div>
+                    
+                            <div class="col-sm-5 col-sm-offset-1">
+                                <br>
+                                <input type='button' id="finish" class='btn btn-finish btn-primary' name='finish' value='保存' />
+                            </div>
+                            <div class="col-sm-5 col-sm-offset-1">
+                                <br>
+                                <input type='button' id="backhome" class='btn btn-finish btn-primary' name='backhome' value='退出' />
+                            </div>
+                            <br>
+                  <!--  </form>-->
+
+                </div>
+            </div><!-- end row -->
+
+        </div>
+    </div>
+
+
+		<!--===========demoin==================-->
+		<section>
+			<div class="lv1">
+				<div class="lv2">
+					<div class="lv3" id="a1">
+						<div class="col-xs-6 col-md-4 container-fluid">
+							<table class="lv3" id="a1">
+								<thead>
+									<tr>
+										<th>
+											<ul class="d1">
+
+												<li class="li1">名树</li>
+
+											</ul>
+										</th>
+										<th>
+											<ul class="d2">
+												<li class="li1">发现</li>
+
+											</ul>
+										</th>
+										<th>
+											<ul class="d3">
+												<li class="li1">出租</li>
+
+											</ul>
+										</th>
+										<th>
+											<ul class="d4">
+												<li class="li1">
+													<a href="https://weibo.com/airbnb?is_hot=1"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+													<a href="#" id="contact_weixin" onclick="openWindow(this)">
+														<i class="fa fa-weixin" aria-hidden="true"></i></a>
+												</li>
+											</ul>
+										</th>
+
+									</tr>
+
+								</thead>
+								<tbody id="c2">
+		
+								</tbody>
+
+							</table>
+							<div style="float: right;">
+
+							</div>
+
+							<div id="light_weixin " class="white_content ">
+								<!--<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<p>获得即时提醒，探索旅行故事</p>
+								<p>名树服务号：AirbnbOfficial</p>-->
+								<img src='img/erweima.png' />
+								<!--<button type="button" class="btn btn-primary">关闭</button>-->
+							</div>
+							<div id="fade" class="black_overlay" onclick="closeWindow()">
+							</div>
+						</div>
+						<!--<div id="light_qq " class="white_content ">
+			<img src='gongan.png' />
+		</div>-->
+					</div>
+				</div>
+
+			</div>
+
+			<div class="lv4 " id="a2 ">
+				<div class="lv5 ">
+					<p>
+
+						京ICP备16017121号-3 京ICP证 160773号 中国公安局标志 <img src="img/gongan.png ">
+						<a href=" http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032345">京公网安备 11010502032345号 </a>安彼迎网络（北京）有限公司
+						<a href="img/yingyezhizhao.jpg">营业执照</a>
+						<!--<img src="yingyezhizhao.jpg" />-->
+					</p>
+				</div>
+				<div class="lv6 ">© 2019 Airbnb, Inc. All rights reserved.</div>
+
+			</div>
+			</div>
+		</section>
+
+
+        <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="assets/js//jquery-1.10.2.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-select.min.js"></script>
+        <script src="assets/js/bootstrap-hover-dropdown.js"></script>
+        <script src="assets/js/easypiechart.min.js"></script>
+        <script src="assets/js/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/wow.js"></script>
+        <script src="assets/js/icheck.min.js"></script>
+
+        <script src="assets/js/price-range.js"></script> 
+        <script src="assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/wizard.js"></script>
+
+		<script src="assets/"></script>
+        <script src="assets/js/main.js"></script>
+		<script type="text/javascript" src="js/birthday.js"></script>
+		 
+
+</body>
+</html>
+
+<script>
+			function openWindow(obj) {
+				var weixin = "light_weixin ";
+				/*	switch(obj.id) {
+						case 'contact_weixin':
+							weixin = "light_weixin ";
+							break;
+
+						case 'contact_qq':
+							weixin = "light_qq ";
+							break;
+					}*/
+				document.getElementById("contact_weixin").style.display = 'block';
+				document.getElementById("fade").style.display = 'block';
+			}
+
+			function closeWindow() {
+				document.getElementById("light_weixin ").style.display = 'none';
+
+				document.getElementById("fade").style.display = 'none';
+			}
+
+			$(document).ready(function() {
+
+				$.post("http://localhost:8080/OurProject/findColumn", {}, function(data) {
+					var column_str = "";
+					/*console.log(data);*/
+					for(var i = 0; i < data.length; i++) {
+						/*console.log(data[i].connect1);*/
+						/*column_str+="<tr><td>"+data[i].connect1+"</td></tr>"*/
+						column_str += "<tr><td>" + data[i].connect1 + "</td><td>" + data[i].connect2 + "</td><td>" + data[i].connect3 + "</td>"
+						if(i == 1){
+							column_str += " <td><a href='https://www.airbnb.cn/terms '>条款</a></td>"
+						}else if(i == 2){
+							column_str += " <td><a href=' https://www.airbnb.cn/terms/privacy_policy'>隐私政策</a></td>"
+						}else if(i == 3){
+							column_str += " <td><a href=' https://www.airbnb.cn/sitemaps/v2'>网站地图</a></td>"
+						}else{
+							
+						}
+						column_str += "</tr>"
+					}
+					$("#c2").html(column_str);
+				})
+
+			});
+		</script>
+
+		<script>
+			$('#myModal').on('show.bs.modal', function() {
+				/* alert("显示模态框");*/
+			});
+
+			$('#myModal').on('shown.bs.modal', function() {
+				/*alert("完全显示模态框");*/
+			});
+
+			$('#myModal').on('hide.bs.modal', function() {
+				/*alert("隐藏模态框");*/
+			});
+
+			$('#myModal').on('hidden.bs.modal', function() {
+				/* alert("完全隐藏模态框");*/
+			});
+		</script>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		var uid = window.localStorage.getItem("uid");
+		$.post(base_path+"/selectById",
+		{
+			uid:uid
+		},
+		function(data){
+			var email="";
+			email="<input name='email'  id='email' disabled='disabled' class='form-control' type='email' value='"+data+"'></input>";	
+			$("#emaildiv").html(email);
+		});
+		
+		
+		$("#backhome").click(function(){
+			window.location.href="../srl/newpriject/lvxin/index.html";
+		});
+		
+		$("#finish").click(function(){	
+			var username = $("#username").val();
+			var pass = $("#pass").val();
+			var repass = $("#repass").val();
+			var realname = $("#realname").val();
+			var tel = $("#tel").val();
+			var sex = $("input[name='sex']:checked").val();
+			var selfintroduction = $("#selfintro").val();
+			if(username==null||username==""||realname==null||realname==""||tel==null||tel==""||sex==null||sex==""||selfintroduction==null||selfintroduction==""||pass==null||pass==""||repass==null||repass==""){
+				alert("还有信息没填呢！！");
+			}else{
+											
+			$.post(base_path+"/userEdit",
+			{
+				uid:window.localStorage.getItem("uid"),
+				username:$("#username").val(),
+				password:$("#pass").val(),
+				realname:$("#realname").val(),
+				tel:$("#tel").val(),
+				sex:$("input[name='sex']:checked").val(),
+				birthday:$("#year1 option:selected").val()+"-"+$("#month1 option:selected").val()+"-"+$("#day1 option:selected").val(),
+				selfintroduction:$("#selfintro").val()
+			},
+			function(data){
+				if(data==1){
+					alert("修改成功");
+					window.setTimeout(function(){
+							window.location.href="user-head.html";
+					},1000);
+				}else{
+					alert("失败");
+				}
+			});
+		
+		}//else	
+		});
+		
+	});
+	
+	
+</script>

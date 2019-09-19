@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>名树</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<!-- Custom Theme files -->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="https://cdn.bootcss.com/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+		<!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<script type="application/x-javascript">
+			addEventListener("load", function(){
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!--Google Fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Hind:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Aladin' rel='stylesheet' type='text/css'>
+		<link href="../../../../../laydate/theme/default/laydate.css">
+		<link href="../../../../../layui/layui/css/layui.css" />
+		<link href="../../../../../layui/layui/css/layui.css" />
+		
+		
+		<link rel="stylesheet" href="../../../../../css/style.css">
+		<link rel="stylesheet" href="../../../../../css/bootstrap.css">
+		<link rel="stylesheet" href="../../../../../css/mob.css">
+		<link rel="stylesheet" href="../../../../../css/animate.css">
+
+		<!--google fonts-->
+		<!-- animated-css -->
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/wow.min.js"></script>
+		<script>
+			new WOW().init();
+		</script>
+		<!-- animated-css -->
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+	
+		<!-- NAVBAR
+		================================================== -->
+		<section>
+			<div class="rows head" data-spy="affix" data-offset-top="120">
+				<div class="container">
+					<div>
+						<!--====== BRANDING LOGO ==========-->
+						<div class="col-md-4 col-sm-12 col-xs-12 head_left">
+							<a href="../../lvxin/index.html"><img src="images/logo.png" alt="" />
+							</a>
+						</div>
+						<!--====== HELP LINE & EMAIL ID ==========-->
+						<div class="col-md-8 col-sm-12 col-xs-12 head_right head_right_all">
+							<ul>
+								<li>
+									<a href="#"><span class="glyphicon glyphicon-phone-alt"></span> 24H温馨电话：021-8888-8888</a>
+								</li>
+
+								<li>
+									<div class="dropdown">
+										<button class="dropbtn">我的账户</button>
+										<div class="dropdown-content">
+											<a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> 个人资料</a>
+                                        <a href="#"><i class="fa fa-address-book-o" aria-hidden="true"></i> 账号</a>
+                                        <a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i> 礼券中心</a>
+                                        <a href="#"><i class="fa fa-umbrella" aria-hidden="true"></i> 邀请好友</a>
+                                        <a href="#"><i class="fa fa-bed" aria-hidden="true"></i> 我的旅行指南</a>
+                                        <a href="#"><i class="fa fa-ban" aria-hidden="true"></i> 商务爱彼迎</a>
+                                        <a href="#"><i class="fa fa-print" aria-hidden="true"></i> 退出</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--header end here-->
+<section>
+        <div class="rows main_menu">
+            <div class="container res-menu">
+                <nav class="navbar navbar-inverse">
+                    <div>
+                        <!-- Brand and toggle get grouped for better mobile display(MOBILE MENU) -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="../../lvxin/index.html"><img src="images/logo.png" alt="" class="mob_logo" /></a>
+                        </div>
+                        <!-- NAVIGATION MENU -->
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li><a href="indexStory.html">精选故事</a></li>
+								<li><a href="../../../../slz/queryHouse/hotels-list.html">房源</a></li>
+								<li><a href="places.html">景点</a>
+                                <li><a href="blog.html">美食</a></li>
+								<li><a href="places.html">文化</a></li>
+                                <li><a href="contact.html">活动</a></li>
+                           </ul>                        
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+		<!--laiui date-->
+
+		<!--room start here-->
+		<div class="rooms">
+			<div class="container">
+				<div class="rooms-main">
+					<div class="room-head">
+						<h3 id="house_name"></h3>
+					</div>
+					<div class="rooms-top">
+						<div class="rooms-left wow slideInLeft" data-wow-delay="0.3s">
+							<div class="col-md-4 rooms-text">
+								<h2><a href="#">Beautiful listing</a></h2>
+								<p ></p>
+								<span class="label label-info" style="border-radius: 8px;">极力推荐</span>
+								<span class="label label-warning" style="border-radius: 8px;">交通方便</span>
+								<span class="label label-success" style="border-radius: 8px;">性价比高</span>
+								<span class="label label-danger" style="border-radius: 8px;">自助入住</span>
+								<span class="label label-default" style="border-radius: 8px;">名树担保</span>
+								<table class="table table-striped">
+		  							<tbody>
+		  								<!-- On rows -->
+		  								<tr class="active">
+											<td></td>
+											<td></td>
+										</tr>
+										<tr class="active">
+											<td ><i class="fa fa-map-marker" id="location1"></i></td>
+											<td></td>
+										</tr>
+										<tr class="active">
+											<td></td>
+											<td></td>
+										</tr>
+										<tr class="success">
+											<td ><i class="fa fa-eye" id="miaoshu1"></i></td>
+											<td></td>
+										</tr>
+										
+										<tr class="warning">
+											<td><i class="fa fa-lock" aria-hidden="true"></i>通过密码锁自助入住</td>
+											<td></td>
+										</tr>
+										<tr class="danger">
+											<td><a class="glyphicon glyphicon-time"></a></i>入住时间 14:00后 · 退房时间 12:00</td>
+											<td></td>
+										</tr>
+										<tr class="info">
+											<td><i class="fa fa-bath" aria-hidden="true"></i>高档洗浴&可以做饭</td>
+											<td></td>
+											
+										</tr>
+		  							</tbody>
+						</table>
+							</div>
+							<div class="col-md-8 rooms-img">
+								
+								<div class="luxury-block">
+									<a href="#" id="p1"></a>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="rooms-left1 wow slideInRight" data-wow-delay="0.3s">
+							<div class="col-md-8 rooms-img ulta-img">
+								<a href="#" id="url1"></a>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+
+		<!--gallery start here-->
+		<div class="gallery" id="gallery">
+			<div class="container">
+				<div class="gallery-main wow zoomIn" data-wow-delay="0.3s">
+					<div class="gallery-top">
+						<h1>房间布局</h1>	
+					</div>
+					<div class="gallery-bott" >
+						<div class="col-md-4 col1 gallery-grid" id="display_pic1">
+						</div>
+						<div class="col-md-4 col1 gallery-grid" id="display_pic2">
+						</div>
+						<div class="col-md-4 col1 gallery-grid" id="display_pic3">
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="position:fixed;top:150px;right: 40px;border: gainsboro solid 1px;height: 320px; width: 300px; padding: 30px;">
+
+			<form class="form-inline">
+				<div id="price">
+					<big><s id='old_price' style="color: gray;"></s></big><br />
+					<big id='new_price' style="font-weight: 700; color: green"></big><small>/Day</small><br />
+					<small class="glyphicon glyphicon-ok-sign">优质房源</small>
+					<small class="glyphicon glyphicon-ok-sign">房东nice</small>
+					<small class="glyphicon glyphicon-ok-sign">初秋特惠</small>
+				</div>
+
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputEmail3">选择入住日期</label>
+					<input type="text" class="form-control input-lg" id="test1" placeholder="选择入住日期">
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputPassword3">Password</label>
+					<input type="text" class="form-control input-lg" id="test2" placeholder="选择退房日期">
+				</div>
+				<div class="checkbox">
+				</div>
+				<div style="text-align: center;padding-top: 10px;">
+					<button type="button" class="btn btn-success btn-lg" id="date_sub">提 交 预 定</button>
+				</div>
+				<div style="text-align: center;padding-top: 10px;">
+					<button type="button" class="btn btn-success btn-lg" id="daren_sub">申请体验</button>
+				</div>
+			</form>
+
+		</div>
+
+		<!--gallery end here-->
+		<script src="js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8">
+		<!--light-box-files -->
+		<!--	<script type="text/javascript" charset="utf-8">
+		$(function() {
+			$('.gallery-grid a').Chocolat();
+		});
+		</script>-->
+
+		<!--room end here-->
+		<!--footer start here-->
+		
+		<!--footer end here-->
+		<!--copy rights start here-->
+
+<!--header-top end here-->
+<!--header start here-->
+	<!-- NAVBAR
+		================================================== -->
+
+<!--header end here-->
+<!--about start here-->
+<div class="about">
+	<div class="container">
+		<div class="about-main">
+			<div class="about-top">
+				<h1>详细信息</h1>
+			</div>
+			<div class="about-bottom">
+				<div class="col-md-5 about-left wow bounceInLeft" data-wow-delay="0.1s" id="pic">
+				
+				</div>
+				<div class="col-md-7 about-right wow bounceInRight" data-wow-delay="0.1s">
+					<h4>基本信息</h4>
+					<p ></p>
+				    <div class="about-list">
+					  	<div class="about-img">
+					  		
+					  	</div>
+					  	<div class="about-text">
+					  		<h5></h5>
+					  		<p id="housetype"></p>
+					  		<i class="fa fa-users" aria-hidden="true" style="font-size: 30px;">&nbsp;<span style="color: gray; font-size: 15px;" id="xx1"></span></i><br />
+					  		<i class="fa fa-bed" aria-hidden="true" style="font-size: 30px;">&nbsp;<span style="color: gray; font-size: 15px;" id="xx2"></span></i><br />
+					  		<i class="fa fa-user" aria-hidden="true" style="font-size: 30px;">&nbsp;<span style="color: gray; font-size: 15px;" id="xx4"></span></i><br />
+					  		<p></p>
+					  	</div>
+					  	 <div class="clearfix"></div>
+				   </div>
+				   
+				</div>
+			  <div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--about end here-->
+<!--about advantages start here-->
+<div class="rooms">
+			<div class="container">
+				<div class="rooms-main">
+					<div class="room-head">
+						<h3 id="house_name"></h3>
+					</div>
+					<div class="rooms-top">
+						<div class="rooms-left wow slideInLeft" data-wow-delay="0.3s">
+							<div class="col-md-8 rooms-text">
+								<h2><a href="#">评价</a></h2>
+								<p ></p>
+								<table class="table table-striped">
+		  							<tbody id="pinglun1">
+		  								<!-- On rows -->
+		  								<tr  >
+										</tr>
+		  							</tbody>
+						</table>
+						<!--分页-->
+						<nav aria-label="Page navigation">
+						  <ul class="pagination" id="page1">
+				
+						  </ul>
+						</nav>	
+						
+							</div>
+							<div class="col-md-8 rooms-img">
+								
+								<div class="luxury-block" >
+									<a href="#" id="p1"></a>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="rooms-left1 wow slideInRight" data-wow-delay="0.3s">
+							<div class="col-md-8 rooms-img ulta-img">
+								<a href="#" id="url1"></a>
+							</div>
+
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			
+		
+			
+		</div>
+		
+		
+<!--about advantages end here-->
+<!-- team start here-->
+	</body>
+	<script src="../../script/jquery-3.4.1.min.js"></script>
+	<script src="../jsfile/commons.js"></script>
+	<script src="../../../../../laydate/laydate.js"></script>
+	<script src="../jsfile/jspinlun.js"></script>
+
+	<script>
+		var houseid = window.localStorage.getItem("houseid");
+		var uid = window.localStorage.getItem("uid");
+		$("#date_sub").click(function() {
+
+			var t1 = $("#test1").val();
+			var t2 = $("#test2").val();
+			if(uid == null) {
+				var con = confirm("当前未登录，是否进行登录？")
+				if(con == true) {
+					window.location.href = "../index.html";
+				}
+			} else if(t1 == "" || t2 == "") {
+				alert("好好选日期")
+			} else if(1 == 1) {
+				$.post(base_path + "/submintbookinfo", {
+					uid: uid,
+					houseid: houseid,
+					checkInTime: t1,
+					checkOutTime: t2
+				}, function(data) {
+					if(data == 1) {
+						alert("预定成功^_^");
+						window.location.href = "../../../../by/housemuban/customOrderlist.html"
+					} else {
+						alert("faild");
+					}
+				})
+			}
+
+		})
+		$("#daren_sub").click(function() {
+
+			var t1 = $("#test1").val();
+			var t2 = $("#test2").val();
+			if(uid == null) {
+				var con = confirm("当前未登录，是否进行登录？")
+				if(con == true) {
+					window.location.href = "../index.html";
+				}
+			} else if(t1 == "" || t2 == "") {
+				alert("好好选日期")
+			} else if(1 == 1) {
+				$.post(base_path + "/tiyandaren/selectDaRen", {
+						uid: uid,
+					}, function(data) {
+						if(data == 1) {
+							var c = confirm("您还不是体验达人，是否注册体验达人？");
+							if(c == true){
+								window.location.href = "../../../../slz/experiencer.html";
+							}
+						} else {
+							$.post(base_path + "/tiyandaren/submitTiYan", {
+								uid: uid,
+								houseid: houseid,
+								checkInTime: t1,
+								checkOutTime: t2
+							}, function(data) {
+								if(data == 1) {
+									alert("申请成功^_^");
+									window.location.href = "../../../../by/housemuban/customOrderlist.html"
+								} else {
+									alert("faild");
+								}
+							})
+						}
+					})
+			}
+
+		})
+		//执行一个laydate实例
+		laydate.render({
+			elem: '#test1' //指定元素
+				,
+			min: 0//0天前
+				,
+			max: 30 //30天后
+		});
+
+		laydate.render({
+			elem: '#test2' //指定元素
+				,
+			min: -1 //0天前
+				,
+			max: 60 //60天后		  
+		});
+
+		$(function() {
+			var houseid = window.localStorage.getItem("houseid");
+			$.post(base_path + "/findhouseinfo", {
+				houseid: houseid
+			}, function(data) {
+				$("#house_name").html(data.housename);
+				var miaoshu = data.miaoshu;
+				$("#miaoshu1").html(miaoshu);
+				var op = "原价：" + data.oldprice + "RMB";
+				$("#old_price").html(op);
+				var np = "现价" + data.newprice + "￥";
+				$("#new_price").html(np);
+			})
+
+			$.post(base_path + "/picturelist", {}, function(data) {
+				var data1 = data[houseid - 1];
+				var u = data1.url + "1";
+				var url1 = "<img src='" + data1.url1 + "' alt='' class='img-responsive'>";
+				var url2 = "<img src='" + data1.url2 + "' alt='' class='img-responsive'>";
+				var src = "<img src='"+data1.url3+"' alt='' class='img-responsive'>";
+				$("#pic").html(src);
+				$("#url1").html(url1);
+				$("#p1").html(url2);
+				var diaplaypicture1 = "<a href='" + data1.url + "' rel='title' class='b-link-stripe b-animate-go  thickbox'><figure class='effect-bubba'><img class='img-responsive' src='" + data1.url + "' alt=''><figcaption><h4 class='gal'>查看大图</h4><p class='gal1'></p></figcaption></figure></a>";
+				var diaplaypicture2 = "<a href='" + data1.url2 + "' rel='title' class='b-link-stripe b-animate-go  thickbox'><figure class='effect-bubba'><img class='img-responsive' src='" + data1.url2 + "' alt=''><figcaption><h4 class='gal'>查看大图</h4><p class='gal1'></p></figcaption></figure></a>";
+				var diaplaypicture3= "<a href='" + data1.url1 + "' rel='title' class='b-link-stripe b-animate-go  thickbox'><figure class='effect-bubba'><img class='img-responsive' src='" + data1.url1 + "' alt=''><figcaption><h4 class='gal'>查看大图</h4><p class='gal1'></p></figcaption></figure></a>";
+				$("#display_pic1").html(diaplaypicture1);
+				$("#display_pic2").html(diaplaypicture2);
+				$("#display_pic3").html(diaplaypicture3);
+				
+			})
+		})
+		
+		
+		/*房间地址信息*/
+		$.post(base_path+"/houseinfo/houselocationinfo",{houseid:houseid},function(data){	
+			console.log(data);
+			var province = data[0].province;			
+			var city = data[0].city;
+			var floor =data[0].floor;
+			$("#location1").html("具体位置信息："+province+"&nbsp&nbsp&nbsp&nbsp"+city+floor);	
+			var housetype = data[0].type;
+			 
+			$("#housetype").html("户型："+housetype+"&nbsp&nbsp&nbsp&nbsp"+data[0].typeinfo);
+			var guestnum = data[0].guestnum;
+			$("#xx1").html("最多可住："+guestnum+"人");
+			var bednum = data[0].bednum;
+			$("#xx2").html("共有"+bednum+"张床位");
+			var roodnum = data[0].roodnum;
+			$("#xx4").html("共有"+guestnum+"间卧室");		
+		})
+		
+		//分页
+		var currentpage = 1;
+		page();
+		
+		
+	</script>
+
+</html>

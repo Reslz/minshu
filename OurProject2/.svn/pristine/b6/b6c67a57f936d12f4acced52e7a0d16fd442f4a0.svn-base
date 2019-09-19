@@ -1,0 +1,17 @@
+package com.neusoft.bean.lybean;
+
+import java.util.List;
+
+public class QueryHouseResult {
+
+	private List<Integer> array ;
+
+	public List<Integer> getLocationid() {
+		return array;
+	}
+
+	public void setLocationid(List<Integer> locationid) {
+		this.array = locationid;
+	}
+	
+}

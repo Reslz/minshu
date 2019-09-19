@@ -1,0 +1,12 @@
+package com.neusoft.service.thxservice;
+
+import java.util.List;
+import java.util.Map;
+
+import com.neusoft.bean.lybean.HouseInfo;
+
+public interface tHouseInfoService {
+	List<Map<Object, Object>> findHouseInfo(Integer locationid);
+	
+	List<Map<Object, Object>> findHouseByHid(Integer houseid);
+}

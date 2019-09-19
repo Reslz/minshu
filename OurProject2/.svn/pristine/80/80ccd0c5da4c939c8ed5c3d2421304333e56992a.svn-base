@@ -1,0 +1,10 @@
+package com.neusoft.service.byservice;
+
+import java.util.List;
+
+import com.neusoft.bean.lybean.HouseListInfo;
+
+public interface HouseListService {
+	int countHouse(int uid);
+	List<HouseListInfo> houseList(int uid);
+}

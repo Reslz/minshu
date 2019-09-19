@@ -1,0 +1,11 @@
+package com.neusoft.dao.bydao;
+
+import java.util.List;
+
+import com.neusoft.bean.lybean.HouseListInfo;
+
+public interface HouseListMapper {
+	int countHouse(int uid);
+	List<HouseListInfo> houseList(int uid);
+	void housedel(int houseid);
+}

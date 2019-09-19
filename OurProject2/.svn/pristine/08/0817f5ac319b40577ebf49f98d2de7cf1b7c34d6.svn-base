@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.bydao.HouseInfoMapper">
+	
+	<insert id="addHouse" useGeneratedKeys="true" keyProperty="houseid" parameterType="houseInfo" >
+		insert into house(uid,locationid,housetype,rentway,guestnum,bednum,roodnum,toiletnum,sheshiid,housename,presettime,settimestar,newprice,oldprice,miaoshu) 
+		values(1,#{locationid},#{housetype},#{rentway},#{guestnum},#{bednum},#{roodnum},#{toiletnum},#{sheshiid},#{housename},#{presettime},#{settimestar},#{newprice},#{oldprice},#{miaoshu})
+	</insert>
+	
+	<select id="findHouse"  parameterType="houseInfo" resultType="int">
+		select houseid from house 
+	</select>
+	
+</mapper>

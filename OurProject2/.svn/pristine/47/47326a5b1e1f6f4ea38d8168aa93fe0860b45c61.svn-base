@@ -1,0 +1,12 @@
+package com.neusoft.dao.thxdao;
+
+import java.util.List;
+import java.util.Map;
+
+import com.neusoft.bean.lybean.HouseInfo;
+
+public interface tHouseInfoMapper {
+	List<Map<Object, Object>> findHouseInfo(Integer locationid);
+	
+	List<Map<Object, Object>> findHouseByHid(Integer houseid);
+}

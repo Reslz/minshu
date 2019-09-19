@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.bydao.LocationMapper">
+
+	<insert id="addLocation" useGeneratedKeys="true" keyProperty="locationid" parameterType="locationInfo">
+		insert into location(province,city,county,floor) 
+		values (#{province},#{city},#{county},#{floor})
+	</insert>
+	
+	<select id="findLocation" parameterType="locationInfo" resultType="int">
+		select locationid from location where province=#{province} and city=#{city} and county=#{county} and floor=#{floor}
+	</select>
+	
+</mapper>

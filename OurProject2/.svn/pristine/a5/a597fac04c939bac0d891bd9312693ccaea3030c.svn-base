@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.bydao.HouseListMapper">
+	
+	<select id="countHouse" parameterType="int" resultType="int">
+		select count(*) from house where uid=#{uid}
+	</select>
+	
+	<select id="houseList" parameterType="int" resultType="houseListInfo">
+		select l.locationid,province,city,county,floor,t.type ,r.rentway ,h.houseid, h.housename,h.bednum,h.guestnum,h.roodnum,h.settimestar,h.toiletnum, h.miaoshu,h.oldprice,h.newprice 
+		from house h,location l,housetype t,rentway r
+		where h.locationid = l.locationid 
+		and h.housetype = t.id
+		and h.rentwayid = r.rentwayid
+		and h.uid=#{uid}
+		limit #{startindex},#{pageSize}
+	</select>
+	
+	<delete id="housedel" parameterType="int">
+		delete from house where houseid=#{houseid}
+	</delete>
+	
+	<select id="showHouseInfo" parameterType="int" resultType="houseListInfo">
+		select t.type,r.rentway,h.bednum,h.guestnum,h.housename,h.miaoshu,h.newprice,h.oldprice,h.roodnum,h.settimestar,h.toiletnum 
+		from house h,housetype t,rentway r
+		where h.housetype = t.id
+		and h.rentwayid = r.rentwayid
+		and houseid = #{houseid}
+	</select>
+	
+	<update id="updateHouse" parameterType="houseInfo">
+		update house set housetype=#{housetype},rentwayid=#{rentwayid},bednum=#{bednum},roodnum=#{roodnum},guestnum=#{guestnum},toiletnum=#{toiletnum},housename=#{housename},settimestar=#{settimestar},miaoshu=#{miaoshu},newprice=#{newprice},oldprice=#{oldprice}
+		where houseid = #{houseid}
+	</update>
+	
+	
+</mapper>

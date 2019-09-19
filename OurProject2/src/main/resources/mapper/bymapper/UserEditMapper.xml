@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.bydao.UserEditMapper">
+
+	<select id="selectById" parameterType="int" resultType="String">
+		select email from userinfo where uid=#{uid}
+	</select>
+	
+	<update id="userEdit" parameterType="UserInfo">
+		update userinfo set username=#{username},password=#{password},realname=#{realname},tel=#{tel},sex=#{sex},birthday=#{birthday},selfintroduction=#{selfintroduction}
+		where uid=#{uid}
+	</update>
+	
+</mapper>

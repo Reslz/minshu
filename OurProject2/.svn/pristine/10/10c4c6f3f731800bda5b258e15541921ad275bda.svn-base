@@ -1,0 +1,5 @@
+package com.neusoft.dao.bydao;
+
+public interface UserEditMapper {
+
+}

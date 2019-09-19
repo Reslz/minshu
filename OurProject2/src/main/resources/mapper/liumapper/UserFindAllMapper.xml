@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.liudao.UserFindAllMapper">
+	
+	<!-- 查询所有用户信息 List<UserInfo> getAllUserFindAll(); -->
+	<select id="findUserInfo" resultType="map">
+		select *,CASE sex WHEN '0' THEN '男'
+		WHEN '1' THEN '女'
+		END AS sex
+		from userinfo;
+	</select>
+	
+	
+	
+</mapper>

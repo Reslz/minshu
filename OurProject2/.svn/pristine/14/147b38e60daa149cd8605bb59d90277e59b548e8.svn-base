@@ -1,0 +1,20 @@
+package com.neusoft.bean.lybean;
+
+public class RentWay {
+	private int id;
+	private String rentway;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getRentway() {
+		return rentway;
+	}
+	public void setRentway(String rentway) {
+		this.rentway = rentway;
+	}
+	
+}

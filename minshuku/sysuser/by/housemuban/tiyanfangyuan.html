@@ -1,0 +1,164 @@
+<script src="../../../js/islogin.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="scripts/jquery/jquery-1.7.1.js"></script>
+<link href="style/authority/basic_layout.css" rel="stylesheet" type="text/css">
+<link href="style/authority/common_style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="scripts/authority/commonAll.js"></script>
+<script type="text/javascript" src="scripts/fancybox/jquery.fancybox-1.3.4.js"></script>
+<script type="text/javascript" src="scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="style/authority/jquery.fancybox-1.3.4.css" media="screen"></link>
+<script type="text/javascript" src="scripts/artDialog/artDialog.js?skin=default"></script>
+<script src="../../../js/common.js"></script>
+<title>体验房源订单</title>
+
+<style>
+	.alt td{ background:black !important;}
+	#box_top span a{
+		text-decoration: none;
+	}
+</style>
+</head>
+<body>
+		<input type="hidden" name="allIDCheck" value="" id="allIDCheck"/>
+		<input type="hidden" name="fangyuanEntity.fyXqName" value="" id="fyXqName"/>
+		<div id="container">
+			<div class="ui_content">
+				<div class="ui_text_indent">
+					<div id="box_border">
+						<div id="box_top">
+							<span><a style="color: white;" href="house_list.html">我的房源中心</a></span> 
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<span><a style="color: white;" href="customOrderlist.html"> 我的订单中心</a></span>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<span><a style="color: white;" href="#">体验房源订单</a></span>
+							&nbsp;&nbsp;&nbsp;&nbsp;
+							<span><a style="color: white;" href="../../srl/newpriject/lvxin/index.html"> 回到首页</a></span>
+						</div>
+						<div id="box_bottom">
+							<input type="button" value="全部订单" class="ui_input_btn01" id="allOrder" /> 
+							<input type="button" value="历史订单" class="ui_input_btn01" id="allHistory" /> 		
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui_content">
+				<div class="ui_tb">
+					<table style="word-break:break-all; word-wrap:break-all; table-layout: fixed;" class="table" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+						<tr>
+							<th width="100px"><input type="checkbox" id="all" onclick="selectOrClearAllCheckbox(this);" />
+							</th>
+							<th>位置</th>
+							<th>房源名字</th>
+							<th>房东电话</th>
+							<th>房东邮箱</th>
+							<th>房东姓名</th>	
+							<th>入住时间</th>
+							<th>退房时间</th>
+							<th>价格(￥)/天</th>	
+							<th>评价</th>
+						</tr>
+							<tbody id="tborder">								
+							</tbody>
+					</table>
+				</div>
+				<div class="ui_tb_h30">
+					<div class="ui_flt" style="height: 30px; line-height: 30px;">
+						共有
+						<span class="ui_txt_bold04" id="count2"></span>
+						条记录
+
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+</body>
+</html>
+<script>
+	$(document).ready(function(){	
+		init();
+		function init(){
+			/*客人订单总数*/
+			$.post(base_path+"/tiyandaren/daRenCount",
+			{
+				uid:window.localStorage.getItem("uid")
+			},		
+			function(data){		
+				$("#count2").html(data);
+			});
+			
+			/*客人订单列表*/	
+			$.post(base_path+"/tiyandaren/daRenOrderList",
+			{
+				uid:window.localStorage.getItem("uid")
+			},
+			function(data){
+				
+				var td="";
+				for(var i=0;i<data.length;i++){
+					
+					td+="<tr><td><input type='checkbox' name='IDCheck' value='14458579642011' class='acb' /></td><td>"+data[i].province+data[i].city+data[i].county+data[i].floor+"</td><td>"+data[i].housename+"</td><td>"
+					if(data[i].tel != null && data[i].tel != ""){
+						td+=data[i].tel;	
+					}else{
+						td+="无";	
+					}
+					td+="</td><td>"+data[i].email+"</td><td>"+data[i].realname+"</td><td>"+data[i].check_in_time+"</td><td>"+data[i].check_out_time+"</td><td>"+data[i].newprice+"</td>"
+					td+="<td><a href='pingjia/index.html' id='pinglun' data-houseid='"+data[i].houseid+"'>评价</a></td></tr>";
+				}
+				$("#tborder").html(td);
+				
+			$("a[id='pinglun']").click(function(){
+				var houseid=$(this).attr("data-houseid");
+				window.localStorage.setItem("houseid",houseid);
+			});	
+				
+			});
+			
+			
+		
+		
+		
+		/*查询全部*/
+		$("#allOrder").click(function(){
+			init();
+		});
+	
+		/*历史订单（check_out_time小于当前时间）*/
+		$("#allHistory").click(function(){
+			$.post(base_path+"/tiyandaren/daRenOrderCount",
+			{
+				uid:window.localStorage.getItem("uid")
+			},		
+			function(data){		
+				$("#count2").html(data);
+			});
+			
+			$.post(base_path+"/tiyandaren/daRenHistory",
+			{
+				uid:window.localStorage.getItem("uid")
+			},
+			function(data){
+				var td="";
+				for(var i=0;i<data.length;i++){
+					td+="<tr><td><input type='checkbox' name='IDCheck' value='14458579642011' class='acb' /></td><td>"+data[i].province+data[i].city+data[i].county+data[i].floor+"</td><td>"+data[i].housename+"</td><td>"+data[i].tel+"</td><td>"+data[i].email+"</td><td>"+data[i].realname+"</td><td>"+data[i].check_in_time+"</td><td>"+data[i].check_out_time+"</td><td>"+data[i].newprice+"</td>";
+					td+="<td><a href='pingjia/index.html' id='pinglun' data-houseid='"+data[i].houseid+"'>评价</a></td></tr>";
+				}
+				$("#tborder").html(td);
+				
+				$("a[id='pinglun']").click(function(){
+				var houseid=$(this).attr("data-houseid");
+				window.localStorage.setItem("houseid",houseid);
+				});
+			});
+		});
+		
+	}	
+		
+	});
+	
+</script>

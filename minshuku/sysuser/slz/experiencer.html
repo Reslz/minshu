@@ -1,0 +1,400 @@
+<script type="text/javascript" src="../../js/islogin.js" ></script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>成为达人</title>
+		
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	
+	    <!-- GOOGLE FONTS -->
+	    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700" rel="stylesheet">
+	
+	    <!-- FONT-AWESOME ICON CSS -->
+	    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+	
+	    <!--== ALL CSS FILES ==-->
+	    <link rel="stylesheet" href="../../css/style.css">
+	    <link rel="stylesheet" href="../../css/bootstrap.css">
+	    <link rel="stylesheet" href="../../css/mob.css">
+	    <link rel="stylesheet" href="../../css/animate.css">
+	    <link rel="stylesheet" href="../../css/radio.css"/>
+	    <link rel="stylesheet" href="css/experiencer.css" />
+	</head>
+	<body id="body">
+	    <!-- Preloader -->
+	    <div id="preloader">
+	        <div id="status">&nbsp;</div>
+	    </div>
+	
+	    <!--====== NAVIGATION MENU ==========-->
+	    <section>
+	        <div class="rows main_menu">
+	            <div class="container res-menu">
+	                <nav class="navbar navbar-inverse">
+	                    <div>
+	                        <!-- Brand and toggle get grouped for better mobile display(MOBILE MENU) -->
+	                        <div class="navbar-header">
+	                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	                                <span class="icon-bar"></span>
+	                                <span class="icon-bar"></span>
+	                                <span class="icon-bar"></span>
+	                            </button>
+	                            <img src="images/logo.png" alt="" class="mob_logo" />
+	                        </div>
+	                        <!-- NAVIGATION MENU -->
+	                        <div class="collapse navbar-collapse" id="myNavbar">
+	                            <div class="col-md-4 col-sm-12 col-xs-12 head_left">
+			                        <a href="../srl/newpriject/lvxin/index.html"><img src="images/logo.png" alt="" />
+			                        </a>
+			                    </div>
+	                            <ul class="nav navbar-nav">
+	                                <li><a href="../by/addhouse.html">成为房主</a></li>
+									<li><a href="#">成为体验达人</a></li>
+									<li><a href="../ly/places.html">故事</a>
+	                                <li><a href="../by/housemuban/house_list.html">房源订单中心</a></li>
+									<li><a href="../srl/newpriject/lvxin/index.html">登录/注册</a></li>
+	                                <li><a href="../by/user-profile.html">个人中心</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </nav>
+	            </div>
+	        </div>
+	    </section>
+	    <!--申请步骤1-1-->
+		<div style="color: lawngreen;" id="experiencer01">
+			<div id="content1">
+			<div style="height: 150px;"></div>
+				<div>
+					<h4>在名树开展体验</h4>
+					<div style="font-size: 40px;">带领别人做自己热爱的事，顺便赚取收入</div>
+					<!--<button type="button" id="starBtn" style="color: cadetblue;">开始吧</button>-->
+					<div style="height: 30px;"></div>
+					<a href="#" class="to-con-3 link-btn" onclick="showView(2)">开始!</a>
+				</div>
+			</div>
+		</div>
+		 <!--申请步骤1-2-->
+		<div style="color: lawngreen;" id="experiencer02">
+			<div id="content2" style="display: none;">
+				<!--<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>xxx,你好！</h3>
+					我们很高兴你想要开展体验<br />
+					几分钟就可以创建你自己的体验页面，之后再提交给名树审核
+					<div style="height: 30px;"></div>
+					<a href="#" class="to-con-3 link-btn" onclick="showView(3)">知道了!</a>
+				</div>
+				
+				<div style="display: inline-block;">
+					<img src="images/f1.png" />	    	
+				</div>
+			</div>
+			 <!--申请步骤1-3-->
+			<div id="content3" style="display: none;">
+				<!--<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>以下是大致流程：</h3>
+					1、了解我们的品质标准
+					<br />
+					了解如何让体验与众不同，以及爱彼迎对体验有什么要求。
+					<br />
+					<br />
+					2、创建体验
+					<br />
+					请添加照片、体验描述等详细内容，以便爱彼迎进行审核。
+					<br />
+					<br />
+					3、提交并等待审核
+					<br />
+					名树会审核您的体验页面， 如果体验符合我们的品质标准，您就可以添加可订日期，开始开展体验了！
+					<div style="height: 30px;"></div>
+					<a href="#" class="to-con-3 link-btn" onclick="showView(4)">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;">
+					<img id="img" src="images/f2.png" />	    	
+				</div>
+			</div>
+			 <!--申请步骤1-4-->
+			<div  id="content4" style="display: none;">
+				<!--<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>您为什么有兴趣开展体验？</h3>
+					<h4>别担心，您的答案不会影响申请提交</h4>
+					<div class="con">
+					    <span class="check_box">
+						     <input type="checkbox" id="check_1" checked="">
+						     <label for="check_1"></label>
+						     <em>对我所在的社区产生积极影响</em>
+					   	</span>
+					    <br><br>
+					    <span class="check_box">
+						     <input type="checkbox" id="check_2" checked="">
+						     <label for="check_2"></label>
+						     <em>与他人分享我的兴趣爱好/专业知识</em>
+					   </span>
+					   <br><br>
+					    <span class="check_box">
+						     <input type="checkbox" id="check_3" checked="">
+						     <label for="check_3"></label>
+						     <em>为我的公司/自己赚取收入</em>
+					   </span>
+					   <br><br>
+					    <span class="check_box">
+						     <input type="checkbox" id="check_4" checked="">
+						     <label for="check_4"></label>
+						     <em>其他原因</em>
+					   </span>
+					</div>
+					<div style="height: 30px;"></div>
+					<a href="#" class="to-con-3 link-btn" onclick="showView(5)">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;">
+					<img id="img" src="images/f3.jpg" />	    	
+				</div>
+			</div>
+			 <!--申请步骤1-5-->
+			<div id="content5" style="display: none;">
+				<!--<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>名树体验应具备哪些品质？</h3>
+					<ul>
+						<li>能产生积极影响</li>
+						<li>喜爱分享</li>
+						<li>热心活泼</li>
+						<li>细心仔细</li>
+					</ul>
+					<div style="height: 30px;"></div>
+					<a href="#" class="to-con-3 link-btn" onclick="showView(6)">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;">
+					<img id="img" src="images/f4.jpg" />	    	
+				</div>
+			</div>
+			 <!--申请步骤1-6-->
+			<div id="content6" style="display: none;">
+			<!--	<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>名树体验应具备哪些品质？</h3>
+					<h5>以下活动不属于名树体验的范畴</h5>
+					<ul>
+						<li>大型团队游</li>
+						<li>没有明确组织者的活动</li>
+						<li>单纯的服务（如机场接送）</li>
+						<li>参与者自己可以轻松找到的地点或活动</li>
+					</ul>
+					<div style="height: 30px;"></div>
+					<a href="#" class="to-con-3 link-btn" onclick="showView(7)">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;">
+					<img id="img" src="images/f5.png" />
+				</div>
+			</div>
+			 <!--申请步骤1-7-->
+			<div id="content7" style="display: none;">
+				<!--<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>以下是大致流程：</h3>
+					<span class="radio">
+						<input type="radio" id="radio_1" checked="">
+						<label for="radio_1"></label>
+						<em>了解我们的品质标准</em>
+					</span>
+					了解如何让体验与众不同，以及爱彼迎对体验有什么要求。
+					<br />
+					<br />
+					2、创建体验
+					<br />
+					请添加照片、体验描述等详细内容，以便爱彼迎进行审核。
+					<br />
+					<br />
+					3、提交并等待审核
+					<br />
+					名树会审核您的体验页面， 如果体验符合我们的品质标准，您就可以添加可订日期，开始开展体验了！
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="showView(8)">继续</a>
+				</div>
+				
+				<div style="display: inline-block;">
+					<img id="img" src="images/f6.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-1-->
+			<div id="content8" style="display: none;position: absolute;">
+				<!--<div style="height: 25px;"></div>-->
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>提交体验申请</h3>
+					<h2>地点</h2>
+					<h5>您将在哪个城市开展体验？</h5>
+					<div data-toggle="distpicker">
+						<select id="province"></select>
+						<select id="city"></select>
+						<select id="county"></select>
+					</div>
+					<h2>请选择体验页面显示的语言</h2>
+					<h4>该语言将是您的体验页面显示的语言，也是您开展体验时所用的语言。它也将作为参与者搜索体验时使用的筛选条件之一。</h4>
+					<h2>主要语言</h2>
+					<select id="language">
+						<option>中文</option>
+						<option>English</option>
+					</select>
+					<h2>您提供的体验是什么类型？</h2>
+					<h4>请选择最能说明您的体验的类别。</h4>
+					<h2>体验的主题是什么？</h2>
+					<select id="type">
+						<option>时尚</option>
+						<option>美食</option>
+					</select>
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="showView(9)">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 10px;">
+					<img id="img" src="images/f7.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-2-->
+			<div id="content9" style="display: none;position: absolute;top: 20px;">
+				<div style="height: 25px;"></div>
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h2>向大家介绍自己</h2>
+					<h5>向大家展示您的过往经历，以及您为什么热爱和了解这个主题，证明自己是开展该体验的不二人选。</h5>
+					<h5>示例：<br />
+					我是Amazing Brewing Company的创始人之一，是韩国7位拥有啤酒品酒师资格认证的职业品酒师之一。 我曾在亚洲、欧洲和美国生活过，品尝过世界各地超过100家啤酒厂酿造的啤酒。
+					</h5>
+					<textarea id="introduce" cols="10" rows="15" placeholder="向大家介绍一下您自己以及您和这个主题之间的故事"></textarea>
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="check1()">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 50px;">
+					<img id="img" src="images/f8.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-3-->
+			<div id="content10" style="display: none;position: absolute;top: 20px;">
+				<div style="height: 25px;"></div>
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h2>介绍体验内容</h2>
+					<h5>生动的描述或许能够吸引浏览体验的人预订，不妨在这里突出您体验的独家亮点｡</h5>
+					<h5>示例：<br />
+					您将直接参与我们每周的篮球训练营，跟60个孩子共度两小时的训练和比赛时间。 这里只有我们三个人负责所有孩子（10岁到17岁之间的男孩和女孩），您将协助我们一起训练并指导孩子打篮球。 与孩子们一起共度欢乐时光，让您的活力无限释放，汗水激情飞扬，当然也要注意安全.
+					</h5>
+					<textarea id="content" cols="10" rows="15" placeholder="描述体验的大致流程和独特之处"></textarea>
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="check2()">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 50px;">
+					<img id="img" src="images/f9.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-4-->
+			<div id="content11" style="display: none;position: absolute;top: 20px;">
+				<div style="height: 25px;"></div>
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h2>介绍行程涉及到的所有地点</h2>
+					<h5>提一提你们将到访的、对您个人有特殊意义的地方,带参与者去只有当地人才知道的地方</h5>
+					<h5>示例：<br />
+					我们会在由校车改造成的漂亮微型住宅中开展活动。 房子里的所有物品均符合可持续发展的环保理念。 这是个值得好好参观和体验的特别去处。
+					</h5>
+					<textarea id="place" cols="10" rows="15" placeholder="介绍行程涉及到的所有地点"></textarea>
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="check3()">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 50px;">
+					<img id="img" src="images/f10.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-5-->
+			<div id="content12" style="display: none;position: absolute;top: 20px;left: 130px;">
+				<div style="height: 25px;"></div>
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h2>请详细列出您提供的东西</h2>
+					<h5>您可以提供食物、饮料、特殊设备、音乐会门票等特色物品，让参与者更好地享受体验。</h5>
+					<textarea id="provide" cols="10" rows="5" placeholder="您提供的东西"></textarea>
+					<h2>给体验想个标题</h2>
+					<h5>标题应该简短、生动描述且引人入胜。</h5>
+					<textarea id="title" cols="10" rows="5" placeholder="请提供体验名称"></textarea>
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="check4()">下一步</a>
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 50px;">
+					<img id="img" src="images/f11.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-6-->
+			<div id="content13" style="display: none;position: absolute;top: 20px;">
+				<div style="height: 25px;"></div>
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h2>为体验添加照片</h2>
+					<h5>这些照片将会显示在体验页面的顶部，因此请尽量上传高品质的体验照片，给用户留下良好的第一印象。 您之后可以随时回来更改此选项。</h5>
+					<h4>封面照片</h4>
+					<h5>请为体验挑选一张最具代表性的照片，这会是参与者浏览体验时看到的第一张照片</h5>
+					<input id="infile" type="file" name="" id="" value="" accept="image/jpeg,image/jpg,image/png"/>
+					<div style="height: 30px;"></div>
+					<a class="to-con-3 link-btn" onclick="check5()" id="addBtn">提交</a>
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 50px;">
+					<img id="img" src="images/f12.jpg" />	    	
+				</div>
+			</div>
+			<!--申请步骤2-7-->
+			<div id="content14" style="display: none;position: absolute;top: 20px;">
+				<div style="color: lawngreen;display: inline-block;" class="content">
+					<h3>以下是大致流程：</h3>
+					<span class="radio">
+						<input type="radio" id="radio_1" checked="">
+						<label for="radio_1"></label>
+						<em>了解我们的品质标准</em>
+					</span>
+					了解如何让体验与众不同，以及爱彼迎对体验有什么要求。
+					<span class="radio">
+						<input type="radio" id="radio_1" checked="">
+						<label for="radio_1"></label>
+						<em>创建体验</em>
+					</span>
+					请添加照片、体验描述等详细内容，以便名树进行审核。
+					<span class="radio">
+						<input type="radio" id="radio_1" checked="">
+						<label for="radio_1"></label>
+						<em>提交并等待审核</em>
+					</span>
+					名树会审核您的体验页面， 如果体验符合我们的品质标准，您就可以添加可订日期，开始开展体验了！
+					<br />
+					<!--<span style="color: red;s">请点击下面确定键返回首页</span>
+					<div style="height: 30px;"></div>
+					<a href="index.html" class="to-con-3 link-btn">确定</a>-->
+				</div>
+				
+				<div style="display: inline-block;position: absolute;top: 50px;">
+					<img id="img" src="images/f13.jpg" />	    	
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	
+	
+    <!--========= Scripts ===========-->
+    <!--<script type="text/javascript" src="../../js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>-->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../js/wow.min.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="js/distpicker.data.js"></script>
+    <script src="js/distpicker.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/experiencer.js"></script>
+</html>

@@ -1,0 +1,12 @@
+package com.neusoft.dao.thxdao;
+
+import java.util.List;
+import java.util.Map;
+
+import com.neusoft.bean.lybean.PingLun;
+
+public interface tPingLunMapper {
+	List<Map<Object, Object>> findPingLunByHid(Integer houseid);
+	
+	double avgScore(Integer houseid);
+}

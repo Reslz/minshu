@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>更多房源</title>
+		<!--== META TAGS ==-->
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700" rel="stylesheet">
+
+		<!-- FONT-AWESOME ICON CSS -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!--== ALL CSS FILES ==-->
+		<link rel="stylesheet" href="muban/css/style.css">
+		<link rel="stylesheet" href="muban/css/bootstrap.css">
+		<link rel="stylesheet" href="muban/css/mob.css">
+		<link rel="stylesheet" href="muban/css/animate.css">
+		<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<body>
+		        	<!--导航栏-->
+			<section>
+				<div class="rows main_menu">
+					<div class="container res-menu">
+						<nav class="navbar navbar-inverse">
+							<div>
+								<!-- Brand and toggle get grouped for better mobile display(MOBILE MENU) -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	                                <span class="icon-bar"></span>
+	                                <span class="icon-bar"></span>
+	                                <span class="icon-bar"></span>
+	                            	</button>
+									<img src="../images/logo.png" alt="" class="mob_logo" />
+								</div>
+								<!-- NAVIGATION MENU -->
+								<div class="collapse navbar-collapse" id="myNavbar">
+									<ul class="nav navbar-nav">
+										<li>
+											<a href="../srl/newpriject/lvxin/index.html">回到主页</a>
+										</li>
+										<li>
+											<a href="../by/addhouse.html">成为房主</a>
+										</li>
+										<li>
+											<a href="../experiencer.html">成为体验达人</a>
+										</li>
+										<li>
+											<a href="../ly/places.html">故事</a>
+										<li>
+											<a href="../by/housemuban/house_list.html">房源订单中心</a>
+										</li>
+										<li>
+											<a href="../by/user-profile.html">个人中心</a>
+										</li>
+									</ul>
+	
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</section>
+		
+		
+		
+
+		<div style="margin-top:20px ;" id="dm">
+			<!--<div class="col-md-3">
+				<div class="v_place_img">
+					<img src="https://z1.muscache.cn/4ea/air/r:w775-h300-sfit,e:fjpg-c70/pictures/2fa807dd-afc0-4980-b406-cb9610cb7e3f.jpg" alt="Tour Booking" title="Tour Booking" />
+				</div>
+				<div>
+					<a href="tour-details.html"><small>整间LOFT · 1张床</small></a><br />
+					<a href="tour-details.html"><strong>【华章】衡复文化区独门花园Loft古典新中式洋楼@FFC</strong></a><br />
+					<span>￥550 每晚</span><br />
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					<span>414 · 超赞房东</span>
+				</div>
+			</div>-->
+		</div>
+		 <div class="col-md-12">
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+							
+				</ul>
+			</nav>
+		</div>
+	</body>
+
+</html>
+
+<!--========= Scripts ===========-->
+<script src="muban/js/jquery-latest.min.js"></script>
+<script src="muban/js/bootstrap.js"></script>
+<script src="muban/js/wow.min.js"></script>
+<script src="muban/js/custom.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="bootstrap-3.3.7/js/bootstrap.js"></script>
+
+<script>
+	$(document).ready(function(){
+		var city=window.localStorage.getItem("city");		
+		var startpage = 0;
+		var pagesize = 12
+		page(city,startpage,pagesize)
+		
+		$.post("http://localhost:8080/OurProject/countH",{city:city},function(countH){
+			var pageNum = 0
+			$("#t").html(countH)
+			$("#pNum").html(countH)
+			if(countH%6 == 0){
+				pageNum = countH/6
+			}else{
+				pageNum = (countH-countH%12)/12+1
+			}
+			var li_str = ''
+			li_str +='<li id="qian">'
+			li_str +='<a href="#" aria-label="Previous">'
+			li_str +='<span aria-hidden="true">&laquo;</span>'
+			li_str +='</a>'
+			li_str +='</li>'
+			for(var i=1;i<=pageNum;i++){
+				li_str +='<li id="pageNumLi" data-page="'+i+'"><a href="#">'+i+'</a></li>'
+			}
+			li_str +='<li id="hou">'
+			li_str +='<a href="#" aria-label="Next">'
+			li_str +='<span aria-hidden="true">&raquo;</span>'
+			li_str +='</a>'
+			li_str +='</li>'					
+			
+			$(".pagination").html(li_str)
+			
+			$("li[id='pageNumLi']").click(function(){
+				console.log($(this).attr("data-page"))
+				startpage = ($(this).attr("data-page")-1)*pagesize
+				PL(houseid,startpage,pagesize)
+			})
+			
+			$("li[id='qian']").click(function(){
+				
+				if(0 >= (startpage-pagesize)){
+					startpage = 0;
+				}else{
+					startpage = startpage-pagesize
+				}
+				PL(houseid,startpage,pagesize)
+			})
+			$("li[id='hou']").click(function(){
+				if((startpage+pagesize)>=pageNum*pagesize){
+					startpage = (pageNum-1)*pagesize
+				}else{
+					startpage = startpage+pagesize
+				}
+				page(city,startpage,pagesize)
+			})
+			
+		})
+		
+		
+		
+		function page(city,startpage,pagesize){
+			$.post("http://localhost:8080/OurProject/findHouseByPage",{city:city,startpage:startpage,pagesize:pagesize},function(house){
+					console.log(house)
+					
+				var house_str="";
+				var c = 0
+				
+				if(house.length>6){
+					c = 6
+				}else{
+					c = house.length
+					
+				}
+
+				for(var j=0;j<c;j++){
+					$.post("http://localhost:8080/OurProject/avgScore",{houseid:house[j].houseid},function(score){
+						console.log(score)
+						
+						var sc = ''
+						if(score == 'n'){
+							$("#sid").html('0')
+						}else{
+							$("#sid").html(score)
+						}
+						
+						var a = ''
+						if(score<4 ){
+							a="一般房东"
+							$(".a").html(a)
+						}else{
+							a="超赞房东"
+							$(".a").html(a)
+						}
+					})
+					
+					$.post("http://localhost:8080/OurProject/countPL",{houseid:house[j].houseid},function(pinglun){
+						
+						if(pinglun == null){
+							$(".l").html("0")
+						}else{
+							$(".l").html(pinglun)
+						}
+						
+					})
+					sid = 'score'+j
+					console.log(sid)
+					house_str+=	'<div class="col-md-4 col-sm-6 col-xs-12 b_packages"><div class="v_place_img">'					
+					house_str+=	'<img style="height:200px" src="'+house[j].img+'"alt="Tour Booking" title="Tour Booking" />'
+					house_str+=	'</div>'
+					house_str+=	'<div style="height:150px"><a href="tour-details.html"><small><a class="a1" href="#" data-hId="'+house[j].houseid+'">'+house[j].type+'· '+house[j].bednum+'张床</small></a><br />'
+					house_str+='<a class="a1" href="#" data-hId="'+house[j].houseid+'"><strong>'+house[j].housename+'</strong></a><br />'
+					house_str+='<span>￥'+house[j].newprice+'每晚</span><br />'
+					house_str+='<strong>评分</strong><span id="sid"></span><strong>分</strong>&nbsp&nbsp'
+					house_str+='<span id="l'+j+'"></span>· <span class="a"></span></div></div>'
+					/*house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+					house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+					house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+					house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+					house_str+='<span>414 · 超赞房东</span></div></div>'*/
+				
+				}
+				
+					$("#dm").html(house_str)
+					
+					$("a[class='a1']").click(function(){
+						var houseid = $(this).attr("data-hId")
+						console.log(houseid)
+						window.localStorage.setItem("houseid",houseid);
+						window.location.href='house.html?houseid='+houseid;
+					});
+							
+			})
+		}	
+	})
+	
+</script>

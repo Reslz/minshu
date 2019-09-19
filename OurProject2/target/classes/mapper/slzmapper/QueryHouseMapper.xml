@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.slzdao.QueryHouseMapper">
+
+	<select id="getLocation" parameterType="com.neusoft.bean.lybean.LocationInfo" resultType="Integer">
+		select locationid 
+		from location
+		where 1 = 1 
+		<if test="province != null and province != ''">
+			and province like concat('%',#{province},'%') 
+		</if>
+		<if test="city != null and city != ''">
+			and city like concat('%',#{city},'%')  
+		</if>
+	</select>
+	
+	<select id="houseList" parameterType="com.neusoft.bean.lybean.QueryHouseResult" resultType="HouseInfo">
+	 	select * from house right join location on location.locationid = house.locationid 
+	 	right join userinfo on userinfo.uid = house.uid 
+	    <where>
+	        <foreach collection="array" item="id" open="and house.locationid in(" close=")" separator=",">
+	            #{id}
+	        </foreach>
+	    </where>
+	    limit #{startIndex},#{pageSize}
+	</select>
+	
+	<select id="getTotalCounts" parameterType="com.neusoft.bean.lybean.QueryHouseResult" resultType="Integer">
+		select count(houseid) a from house right join location on location.locationid = house.locationid 
+	 	right join userinfo on userinfo.uid = house.uid 
+	    <where>
+	        <if test="province != null and province != ''">
+				and province like concat('%',#{province},'%') 
+			</if>
+			<if test="city != null and city != ''">
+				and city like concat('%',#{city},'%')  
+			</if>
+	        <foreach collection="array" item="id" open="and house.locationid in(" close=")" separator=",">
+	            #{id}
+	        </foreach>
+	    </where>
+	</select>
+	
+
+	<select id="getSheShi" parameterType="java.util.ArrayList" resultType="String">
+		select sheshi from sheshi 
+		<where>
+			<if test="list!=null and list.size() > 0">
+				<foreach collection="list" open="and sheshiid in(" close=")" item="sheshiid" separator=",">
+					#{sheshiid}
+				</foreach>
+			</if>
+		</where>
+	</select>
+	
+	
+</mapper>

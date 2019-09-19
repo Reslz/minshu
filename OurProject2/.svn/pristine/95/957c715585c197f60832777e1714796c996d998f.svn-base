@@ -1,0 +1,64 @@
+package com.neusoft.controller.srlcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.neusoft.bean.lybean.UserInfo;
+import com.neusoft.service.srlservice.UserInfoService;
+
+
+
+
+@CrossOrigin(origins = "*", maxAge = 3600)
+@Controller
+public class UserInfoController<UserService> {
+
+	
+	@Autowired
+	private UserInfoService userInfoService;
+//登录
+	@RequestMapping(value = "login",method = {RequestMethod.POST,RequestMethod.GET})
+	@ResponseBody
+	public UserInfo login(UserInfo UserInfo) {
+		UserInfo userinfo = userInfoService.login(UserInfo);
+		return userinfo;
+	}
+	
+	
+//验证
+	@RequestMapping(value = "check",method = {RequestMethod.POST,RequestMethod.GET})
+	@ResponseBody
+	public int checkemail(UserInfo userInfo) {
+		try {
+			userInfoService.checkemail(userInfo);
+			return 1;
+		} catch (Exception e) {
+			return 0;
+		}		
+	}
+	
+	
+//注册	
+	@RequestMapping(value = "regist",method = {RequestMethod.POST,RequestMethod.GET})
+	@ResponseBody
+	public int regist(UserInfo userInfo) {
+		try {
+			userInfoService.regist(userInfo);
+			return 1;
+		} catch (Exception e) {
+			return 0;
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+}

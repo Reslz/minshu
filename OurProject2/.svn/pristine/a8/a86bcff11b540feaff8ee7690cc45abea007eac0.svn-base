@@ -1,0 +1,40 @@
+package com.neusoft.service.slzservice;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.LocationInfo;
+import com.neusoft.bean.lybean.QueryHouseResult;
+import com.neusoft.dao.slzdao.QueryHouseMapper;
+
+@Service("qhService")
+public class QueryHouseServiceImpl implements QueryHouseService{
+
+	@Autowired
+	private QueryHouseMapper qhMapper ;
+	
+	@Override
+	public List<Integer> getLocation(LocationInfo locationInfo) {
+		// TODO Auto-generated method stub
+		List<Integer> list = qhMapper.getLocation(locationInfo);
+		return list;
+	}
+
+	@Override
+	public List<HouseInfo> houseList(QueryHouseResult qh) {
+		// TODO Auto-generated method stub
+		List<HouseInfo> houseList = qhMapper.houseList(qh);
+		return houseList;
+	}
+
+	@Override
+	public Integer getTotalCounts(QueryHouseResult qh) {
+		// TODO Auto-generated method stub
+		Integer totalCounts = qhMapper.getTotalCounts(qh);
+		return totalCounts;
+	}
+
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.slzdao.TYDRMapper">
+
+	<insert id="drAdd" parameterType="com.neusoft.bean.lybean.TiYanDaRen" >
+		insert into tiyandaren (location,language,type,introduce,content,place,provide,title,img,uid) 
+		values (#{location},#{language},#{type},#{introduce},#{content},#{place},#{provide},#{title},#{img},#{uid})
+	</insert>
+	
+	<insert id="submitTiYan" parameterType="com.neusoft.bean.lybean.TiYanInFo">
+	insert into tiyanfangyuan (uid,houseid,check_in_time,check_out_time) values(#{uid},#{houseid},#{checkInTime},#{checkOutTime})
+	</insert>
+
+	<select id="selectDaRen" parameterType="int" resultType="com.neusoft.bean.lybean.UserInfo">
+		select * from tiyandaren where uid = #{uid}
+	
+	</select>
+	
+		<!--总订单数  -->
+	<select id="orderCount" parameterType="int" resultType="int">
+		select count(*) from tiyanfangyuan where uid=#{uid}
+	</select>
+	<!--查询全部订单  -->
+	<select id="userOrderList" parameterType="int" resultType="userOrderInfo">
+		select h.housename,h.houseid, l.province,l.city,l.county,l.floor ,u.realname,u.tel,u.email,b.check_in_time,b.check_out_time,h.newprice  
+		from tiyanfangyuan b,house h,location l,userinfo u
+		where b.houseid = h.houseid
+		and h.locationid = l.locationid
+		and u.uid = h.uid
+		and b.uid=#{uid}
+		ORDER BY b.check_in_time desc
+		<!-- limit #{startindex},#{pagesize} -->
+	</select>
+	
+	<!--历史订单总数  -->
+	<select id="hisOrderCount" parameterType="int" resultType="int">
+		select count(*) from tiyanfangyuan where check_out_time &lt; now() and uid=#{uid}
+	</select>
+	
+	<!--查询历史订单  -->
+ 	<select id="userHistory"  parameterType="int" resultType="userOrderInfo">
+		select  h.housename,h.houseid, l.province,l.city,l.county,l.floor ,u.realname,u.tel,u.email,b.check_in_time,b.check_out_time,h.newprice
+		from tiyanfangyuan b,house h,location l,userinfo u
+		where b.houseid = h.houseid
+		and h.locationid = l.locationid
+		and u.uid = h.uid
+		and b.check_out_time &lt; now()
+		and b.uid=#{uid}
+	</select> 
+	
+	<insert id="pingLun" parameterType="pinglunInfo">
+		insert into pinglun (houseid,pinglun,ptime,uid,score) 
+		values (#{houseid},#{pinglun},now(),#{uid},#{score})
+	</insert>
+	
+	
+</mapper>

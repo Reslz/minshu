@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.srldao.HousesheshiInfoMapper">
+
+<select id="findhousesheshi" resultType="String">
+select sheshiid from house where houseid = 1
+</select>
+
+<select id="houselocationinfo" parameterType="houseinfo" resultType="map">
+select *
+from housetype t join
+house h on 
+t.id = h.housetype
+join location l ON
+l.locationid = h.locationid
+where houseid = #{houseid}
+</select>
+
+<select id="findpinluninfo" resultType="map" parameterType="PingLun">
+select *
+from pinglun p join userinfo u
+on p.uid = u.uid
+where houseid = #{houseid}
+order by ptime desc
+limit #{startindex},#{pagesize}
+</select>
+
+
+
+</mapper>

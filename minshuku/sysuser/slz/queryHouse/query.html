@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>房源搜索</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700" rel="stylesheet">
+
+		<!-- FONT-AWESOME ICON CSS -->
+		<link rel="stylesheet" href="../../srl/newpriject/lvxin/css/font-awesome.min.css">
+
+		<!--== ALL CSS FILES ==-->
+		<link rel="stylesheet" href="../../srl/newpriject/lvxin/css/style.css">
+		<link rel="stylesheet" href="../../srl/newpriject/lvxin/css/bootstrap.css">
+		<link rel="stylesheet" href="../../srl/newpriject/lvxin/css/mob.css">
+		<link rel="stylesheet" href="../../srl/newpriject/lvxin/css/animate.css">
+		<style>
+			table {
+				display: inline-block;
+				border-collapse: collapse;
+			}
+			th, td {
+				padding: 0.3em 1em;
+			} 
+					
+		</style>
+	</head>
+	<body>
+		<!--====== 主页图片 ==========-->
+		<section>
+			<div class="rows home_enq">
+				<div class="container">
+					<div class="home_form">
+						<!-- ENQUIRY FORM SUCCESS MESSAGE -->
+						<div class="succ_mess_qe">Thank you for contacting us we will get back to you soon.</div>
+						<!-- SLIDER ENQUIRY FORM -->
+						<form id="home_enquiry" name="home_enquiry" action="">
+							<ul>
+								<li class="col-md-3 col-sm-12 col-xs-12"></li>
+								<li class="col-md-1 col-sm-12 col-xs-12">
+									<h4>快速搜索</h4>
+								</li>
+								<li class="col-md-4 col-sm-6 col-xs-12">
+									<input type="text" class="qename" id="province" name="province" placeholder="输入省份">
+									<input type="text" class="qename" id="city" name="city" placeholder="输入城市">
+								</li>
+								<li class="col-md-1 col-sm-6 col-xs-12 btn-toolbar">
+									<input class="btn btn-default" type="submit" value="查找" id="submit">
+								</li>
+								<li class="col-md-3 col-sm-12 col-xs-12"></li>
+							</ul>
+							<div id="div" style="width: 750px; margin-left: 230px; margin-top: -8px;background-color: white; display: none;">
+								<table>
+									<thead>
+										<tr>
+											<th colspan="4" style="text-align: center;">国内热门城市</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr >
+											<td><a class="city">北京</a></td>
+											<td><a class="city">上海</a></td>
+											<td><a class="city">成都</a></td>
+											<td><a class="city">重庆</a></td>
+										</tr>
+										<tr>
+											<td><a class="city">杭州</a></td>
+											<td><a class="city">厦门</a></td>
+											<td><a class="city">广州</a></td>
+											<td><a class="city">西安</a></td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<thead>
+										<tr>
+											<th colspan="4" style="text-align: center;">国际热门城市</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr >
+											<td><a class="city">大阪</a></td>
+											<td><a class="city">东京</a></td>
+											<td><a class="city">京都</a></td>
+											<td><a class="city">曼谷</a></td>
+										</tr>
+										<tr>
+											<td><a class="city">首尔</a></td>
+											<td><a class="city">清迈</a></td>
+											<td><a class="city">华盛顿</a></td>
+											<td><a class="city">伦敦</a></td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<thead>
+										<tr>
+											<th colspan="4" style="text-align: center;">夏季好去处</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr >
+											<td><a class="city">深圳</a></td>
+											<td><a class="city">南京</a></td>
+											<td><a class="city">武汉</a></td>
+											<td><a class="city">长沙</a></td>
+										</tr>
+										<tr>
+											<td><a class="city">苏州</a></td>
+											<td><a class="city">吉隆坡</a></td>
+											<td><a class="city">宁波</a></td>
+											<td><a class="city">福州</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+	
+	<script src="../../srl/newpriject/lvxin/js/jquery-latest.min.js"></script>
+	<script src="../../../js/bootstrap.js"></script>
+	<script src="../../srl/newpriject/lvxin/js/wow.min.js"></script>
+	<script src="../../srl/newpriject/lvxin/js/custom.js"></script>
+	<script src="../../srl/newpriject/lvxin/jsfile/commons.js"></script>
+	<script src="query.js"></script>
+</html>

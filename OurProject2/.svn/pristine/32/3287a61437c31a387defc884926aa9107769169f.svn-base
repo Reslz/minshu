@@ -1,0 +1,9 @@
+package com.neusoft.service.slzservice;
+
+import com.neusoft.bean.lybean.TiYanDaRen;
+
+public interface TYDRService {
+
+	void drAdd(TiYanDaRen dr);
+	
+}

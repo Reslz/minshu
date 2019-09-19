@@ -1,0 +1,40 @@
+package com.neusoft.service.byservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.neusoft.bean.lybean.HouseImg;
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.LocationInfo;
+import com.neusoft.dao.bydao.HouseImgMapper;
+import com.neusoft.dao.bydao.HouseInfoMapper;
+import com.neusoft.dao.bydao.byLocationMapper;
+
+@Service
+public class HouseInfoServiceImpl implements HouseInfoService{
+	@Autowired
+	private HouseInfoMapper houseInfoMapper;
+	@Autowired
+	private byLocationMapper locationMapper;
+	@Autowired
+	private HouseImgMapper houseImgMapper;
+
+	@Override
+	public void addHouse(HouseInfo houseInfo,LocationInfo locationInfo,HouseImg houseImg) {
+		locationMapper.addLocation(locationInfo);//�����ַ
+		int locationid = locationMapper.findLocation(locationInfo);//���ҵ�ַid
+		
+		houseInfo.setLocationid(locationid);//��ַid��house��
+		houseInfoMapper.addHouse(houseInfo);//��house���������
+		
+		/*int houseid = houseInfoMapper.findHouse(houseInfo);//����houseid
+		houseImg.setHouseid(houseid);
+		System.out.println(houseid);
+		houseImgMapper.insertImg(houseImg);//����ͼƬ
+*/		
+	}
+
+	
+	
+	
+}

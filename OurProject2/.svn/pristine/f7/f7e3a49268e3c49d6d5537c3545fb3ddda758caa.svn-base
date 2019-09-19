@@ -1,0 +1,76 @@
+package com.neusoft.controller.bycontroller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.neusoft.bean.lybean.HouseInfo;
+import com.neusoft.bean.lybean.HouseListInfo;
+import com.neusoft.bean.lybean.LocationInfo;
+import com.neusoft.service.byservice.HouseListService;
+@CrossOrigin(origins = "*", maxAge = 3600)
+@Controller
+public class HouseListController {
+	@Autowired
+	private HouseListService houseListService;
+	
+	@RequestMapping("/countHouse")
+	@ResponseBody
+	public int countHouse(int uid) {
+		int count = houseListService.countHouse(uid);
+		return count;
+	}
+	
+	@RequestMapping("/houseList")
+	@ResponseBody
+	public List<HouseListInfo> houseList(int uid){
+		List<HouseListInfo> list = houseListService.houseList(uid);
+		return list;
+	}
+	
+	@RequestMapping("/housedel")
+	@ResponseBody
+	public String houseDel(int houseid) {
+		houseListService.housedel(houseid);
+		return "1";
+	}
+	
+	/*@RequestMapping("/houseEdit")
+	@ResponseBody
+	public List<HouseListInfo> houseEdit(int houseid) {
+		List<HouseListInfo> type = houseListService.houseEdit(houseid);
+		for (HouseListInfo t : type) {
+			System.out.println(t.getHouseid()+t.getHousetype());
+		}
+		return type;
+	}*/
+	
+	@RequestMapping("/showLoction")
+	@ResponseBody
+	public Map<String,Object> showHouseLoction(int locationid) {
+		Map<String,Object> m = houseListService.showHouseLoction(locationid);
+		return m;
+	}
+	@RequestMapping("/showHouseInfo")
+	@ResponseBody
+	public Map<String,Object> showHouseInfo(int houseid) {
+		Map<String,Object> h = houseListService.showHouseInfo(houseid);
+		return h;
+	}
+	
+	@RequestMapping("/updateHouse")
+	@ResponseBody
+	public String updateHouse(LocationInfo locationInfo,HouseInfo houseInfo) {
+		System.out.println("地址id"+locationInfo.getLocationid());
+		System.out.println("房子id"+houseInfo.getHouseid());
+		houseListService.editLocation(locationInfo);
+		houseListService.updateHouse(houseInfo);
+		return "1";
+	}
+	
+}

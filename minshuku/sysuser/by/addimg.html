@@ -1,0 +1,88 @@
+<!--<script src="../../js/islogin.js"></script>-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js" ></script>
+	<script src="../../js/common.js"></script>
+	<!--<script src="js/jquery-3.4.1.min.js"></script>-->
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+
+	<script> 
+		/*上传照片*/
+		function ProcessFile(e) {
+            var file = document.getElementById('file').files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    var txt = event.target.result;
+                    var img = document.createElement("img");
+                    img.setAttribute('style', 'width: 300px; height: 250px; vertical-align: middle; margin-right: 5px;')
+                    img.src = txt;//将图片base64字符串赋值给img的src
+                    document.getElementById("result").appendChild(img);
+                };
+            }
+            reader.readAsDataURL(file);
+        };
+        function contentLoaded() {
+            document.getElementById('file').addEventListener('change',ProcessFile, false);
+        };
+        window.addEventListener("DOMContentLoaded", contentLoaded, false);
+	</script>
+	<style>
+		#step3{
+			float: left;
+		}
+	</style>
+	<body>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div id="step3" >
+				<h2>为您的房源添加几张漂亮的照片吧</h2><br /><br />
+				上传照片：<input type="file" id="file" name="file" accept="image/jpeg,image/jpg,image/png" multiple="multiple"/>
+				<div id="result" ></div>
+				
+				<hr />
+				<div>
+					<button type="button" class="btn btn-primary" id="baocun">保存</button>
+					<button type="button" class="btn btn-primary" id="quxiao">取消</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	$(document).ready(function(){
+		var uid = window.localStorage.getItem("uid");
+		alert(uid);
+		
+		$("#quxiao").click(function(){
+			window.location.href="../srl/newpriject/lvxin/index.html";
+		});
+		
+		$("#baocun").click(function(){
+			var formData = new FormData(); 
+			var files = $("#file")[0].files;
+			for(var i = 0 ; i < files.length ; i ++){
+				formData.append('file',files[i]);
+			};
+	
+			$.ajax({
+				url: base_path+"/getImg",
+				type: 'POST',
+				cache: false,
+				data: formData,
+				processData: false,
+				contentType: false
+			}).done(function(res) {
+					alert("上传成功");
+				});
+		});
+		
+			
+	});
+	
+
+</script>

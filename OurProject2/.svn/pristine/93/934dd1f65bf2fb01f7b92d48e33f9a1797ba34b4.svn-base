@@ -1,0 +1,7 @@
+package com.neusoft.dao.bydao;
+
+import com.neusoft.bean.lybean.HouseImg;
+
+public interface HouseImgMapper {
+	void insertImg(HouseImg houseImg);
+}

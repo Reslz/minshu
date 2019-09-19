@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.dao.bydao.HouseTypeMapper">
+	
+	<select id="findAll" resultType="houseType">
+		select * from housetype
+	</select>
+	
+	<select id="findSheshi" resultType="sheShiInfo">
+		select * from sheshi
+	</select>
+	
+	<select id="rentway" resultType="rentWay">
+		select * from rentway
+	</select>
+	
+</mapper>

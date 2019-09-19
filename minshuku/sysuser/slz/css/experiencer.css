@@ -1,0 +1,18 @@
+body{
+	background-image: url(../images/beijing.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#experiencer01{
+	margin-left: 350px;
+	margin-top: 70px;
+}
+.content{
+	width: 30%;
+	margin-left: 250px;
+}
+#experiencer02 img{
+	height: 600px;
+	width: 470px;
+	margin-left: 25px;
+}

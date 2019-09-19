@@ -1,0 +1,948 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head http-equiv="Content-Type" content="text/html; charset=gb18030">
+		<title>欢迎访问名树网</title>
+
+		<!--== META TAGS ==-->
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700%7CMontserrat:400,700" rel="stylesheet">
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- FONT-AWESOME ICON CSS -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+		<!--== ALL CSS FILES ==-->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/mob.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/baozhang.css" />
+		<link rel="stylesheet" href="css/demoin.css" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+		<style>
+			table {
+				display: inline-block;
+				border-collapse: collapse;
+			}
+			
+			th,
+			td {
+				padding: 0.3em 1em;
+			}
+		</style>
+	</head>
+
+	<body data-spy="scroll" data-target="#navbar-example">
+
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status">&nbsp;</div>
+		</div>
+
+		<!--====== TOP HEADER ==========-->
+		<section>
+			<div class="rows head" data-spy="affix" data-offset-top="120">
+				<div class="container">
+					<div>
+						<!--====== BRANDING LOGO ==========-->
+						<div class="col-md-4 col-sm-12 col-xs-12 head_left">
+							<a href="index.html"><img src="images/logo.png" alt="" />
+							</a>
+						</div>
+						<!--====== HELP LINE & EMAIL ID ==========-->
+						<div class="col-md-8 col-sm-12 col-xs-12 head_right head_right_all">
+							<ul>
+								<li>
+									<a href="#"><span class="glyphicon glyphicon-phone-alt"></span> 24H温馨电话：888-8888-8888</a>
+								</li>
+
+								<li>
+									<div class="dropdown">
+										<button class="dropbtn">个人中心</button>
+										<div class="dropdown-content">
+											<a href="#"> 回到主页</a>
+											<a href="../../../by/addhouse.html"> 成为房主</a>
+											<a href="../../../slz/experiencer.html"> 成为体验达人</a>
+											<a href="../../../ly/places.html"> 故事</a>
+											<a href="../../../by/housemuban/house_list.html"> 房源订单中心</a>
+											<a href="../../../by/user-profile.html"> 修改个人信息</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--====== NAVIGATION MENU ==========-->
+		<!--模态框-->
+		<!-- 查询-->
+
+		<!-- Button trigger modal -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">  欢迎登陆名树~ </h4>
+					</div>
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">请输入邮箱</label>
+							<input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">请输入密码</label>
+							<input type="password" class="form-control" id="password" placeholder="请输入密码">
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+							<button type="button" class="btn btn-primary" id="commit">确定</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--注册============================-->
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">  欢迎注册名树~ </h4>
+					</div>
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">请输入邮箱</label>
+							<input type="email" class="form-control" id="email1" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">请输入密码</label>
+							<input type="password" class="form-control" id="password1" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">请再次输入密码</label>
+							<input type="password" class="form-control" id="repassword" placeholder="Password">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+							<button type="button" class="btn btn-primary" id="regist">确定</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--导航栏-->
+		<section>
+			<div class="rows main_menu">
+				<div class="container res-menu">
+					<nav class="navbar navbar-inverse">
+						<div>
+							<!-- Brand and toggle get grouped for better mobile display(MOBILE MENU) -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+								<img src="images/logo.png" alt="" class="mob_logo" />
+							</div>
+							<!-- NAVIGATION MENU -->
+							<div class="collapse navbar-collapse" id="myNavbar">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="../../../by/addhouse.html">成为房主</a>
+									</li>
+									<li>
+										<a href="../../../slz/experiencer.html">成为体验达人</a>
+									</li>
+									<li>
+										<a href="../../../ly/places.html">故事</a>
+										<li>
+											<a href="../../../by/housemuban/house_list.html">房源订单中心</a>
+										</li>
+										<li>
+											<a href="../../../by/user-profile.html">修改个人信息</a>
+										</li>
+										<div id="login&regist_button" style="padding-left: 1000px;">
+											<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">登陆</button>
+											<button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal2">注册</button>
+										</div>
+										<div style="padding-left: 400px; display: inline-block;">
+
+										</div>
+										<a href="../../../../sysuser/by/user-profile.html" id="headinfo" style="display: inline-block;"><img src="" alt="" class="img-circle"></a>
+										<span id="username1"></span>
+										<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" id="logout"><a class="glyphicon glyphicon-log-out"></a> 退出登录</button>
+										<!--<div style="padding-left: 850px;">
+											<a href="../../../../sysuser/by/user-profile.html" id="headinfo" style="display: inline-block;"><img src="" alt="" class="img-circle"></a>
+											<span id="username1"></span>
+										</div>-->
+										<!--<div style="padding-left: 1000px;">
+											<a href="../../../../sysuser/by/user-profile.html" id="headinfo" style="display: inline-block;"><img src="" alt="" class="img-circle"></a>
+											<span id="username1"></span>
+											<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" id="logout"><a class="glyphicon glyphicon-log-out"></a> 退出登录</button>
+										</div>-->
+								</ul>
+
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</section>
+
+		<!--====== BANNER ==========-->
+		<!-- SECTION: HEADER -->
+		<section class="c3 c3-slider">
+			<div class="container">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+						<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+						<div class="item active">
+							<img src="images/slider/1.png" alt="Chania" width="460" height="345">
+							<div class="carousel-caption slider-cap">
+								<h1 class="wow fadeInDown" data-wow-duration="1s">全世界最好的</h1>
+								<p class="wow fadeInUp" data-wow-duration="1.5s">发现南美洲最伟大的两个城市里约热内卢和布宜诺斯艾利斯。它确实是地球上最壮观的景点之一。</p>
+								<a href="../../../slz/queryHouse/hotels-list.html" class="hs1 wow fadeInUp" data-wow-duration="2.0s">Start Now!</a>
+
+							</div>
+						</div>
+
+						<div class="item">
+							<img src="images/slider/2.png" alt="Chania" width="460" height="345">
+							<div class="carousel-caption slider-cap">
+								<h1 class="wow fadeInDown" data-wow-duration="1s">民宿预订</h1>
+								<p class="wow fadeInUp" data-wow-duration="1.5s">是时候抛下烦恼，和最爱的人来一场说走就走的旅行,30,0000背包客的选择,就选名树</p>
+								<a href="../../../slz/queryHouse/hotels-list.html" class="hs1 wow fadeInUp" data-wow-duration="2.0s">Start Now!</a>
+							</div>
+						</div>
+
+						<div class="item">
+							<img src="images/slider/3.png" alt="Chania" width="460" height="345">
+							<div class="carousel-caption slider-cap">
+								<h1 class="wow fadeInDown" data-wow-duration="1s">来一次6天7晚的体验</h1>
+								<p class="wow fadeInUp" data-wow-duration="1.5s">南美洲最伟大的两个城市里约热内卢和布宜诺斯艾利斯。它确实是地球上最壮观的景点之一。</p>
+								<a href="../../../slz/queryHouse/hotels-list.html" class="hs1 wow fadeInUp" data-wow-duration="2.0s">Start Now!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--====== 主页图片 ==========-->
+		<section>
+			<div class="rows home_enq">
+				<div class="container">
+					<div class="home_form">
+						<!-- ENQUIRY FORM SUCCESS MESSAGE -->
+						<div class="succ_mess_qe">Thank you for contacting us we will get back to you soon.</div>
+						<!-- SLIDER ENQUIRY FORM -->
+						<form id="home_enquiry" name="home_enquiry" action="">
+							<ul>
+								<li class="col-md-3 col-sm-12 col-xs-12"></li>
+								<li class="col-md-1 col-sm-12 col-xs-12">
+									<h4>快速搜索</h4>
+								</li>
+								<li class="col-md-4 col-sm-6 col-xs-12">
+									<input type="text" class="qename" id="province" name="province" placeholder="输入省份">
+									<input type="text" class="qename" id="city" name="city" placeholder="输入城市">
+								</li>
+								<li class="col-md-1 col-sm-6 col-xs-12 btn-toolbar">
+									<input class="btn btn-default" type="submit" value="查找" id="submit">
+								</li>
+								<li class="col-md-3 col-sm-12 col-xs-12"></li>
+							</ul>
+							<div id="div" style="width: 750px; margin-left: 230px; margin-top: -8px;background-color: white; display: none;">
+								<table>
+									<thead>
+										<tr>
+											<th colspan="4" style="text-align: center;">国内热门城市</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr >
+											<td><a class="city">北京</a></td>
+											<td><a class="city">上海</a></td>
+											<td><a class="city">成都</a></td>
+											<td><a class="city">重庆</a></td>
+										</tr>
+										<tr>
+											<td><a class="city">杭州</a></td>
+											<td><a class="city">厦门</a></td>
+											<td><a class="city">广州</a></td>
+											<td><a class="city">西安</a></td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<thead>
+										<tr>
+											<th colspan="4" style="text-align: center;">国际热门城市</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr >
+											<td><a class="city">大阪</a></td>
+											<td><a class="city">东京</a></td>
+											<td><a class="city">京都</a></td>
+											<td><a class="city">曼谷</a></td>
+										</tr>
+										<tr>
+											<td><a class="city">首尔</a></td>
+											<td><a class="city">清迈</a></td>
+											<td><a class="city">华盛顿</a></td>
+											<td><a class="city">伦敦</a></td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<thead>
+										<tr>
+											<th colspan="4" style="text-align: center;">夏季好去处</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr >
+											<td><a class="city">深圳</a></td>
+											<td><a class="city">南京</a></td>
+											<td><a class="city">武汉</a></td>
+											<td><a class="city">长沙</a></td>
+										</tr>
+										<tr>
+											<td><a class="city">苏州</a></td>
+											<td><a class="city">吉隆坡</a></td>
+											<td><a class="city">宁波</a></td>
+											<td><a class="city">福州</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--====== HOME PLACES ==========-->
+		<section>
+			<div class="rows pad-bot-redu tb-space">
+				<div class="container">
+					<!-- TITLE & DESCRIPTION -->
+					<div class="spe-title">
+						<h2>劲爆 <span>半价</span> 优质房源</h2>
+						<div class="title-line">
+							<div class="tl-1"></div>
+							<div class="tl-2"></div>
+							<div class="tl-3"></div>
+						</div>
+						<p>是时候抛下烦恼，和最爱的人来一场说走就走的旅行,30,0000用户的选择,选名树,让您安心出行</p>
+					</div>
+					<div id="c1">
+
+						<!--起点-->
+
+						<!--终点-->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!--=======baozhang===============-->
+		<section>
+			<div class="at1">
+				<h1>名树旅行保障</h1>
+			</div>
+
+			<div class="b1">
+				<div class="b2 " data-toggle="modal" data-target=".bs-example-modal-lg">
+					<a href="#abs">
+						<div class="v1">
+							<img class="_1u6feuz3" src="https://z1.muscache.cn/airbnb/static/packages/IndicatorHostGuarantee.20c37f9e.svg" width="50" height="50" alt="https://z1.muscache.cn/airbnb/static/packages/IndicatorHostGuarantee.20c37f9e.svg">
+
+						</div>
+						<div class="p1">
+							<span>
+								<span class="ac1">安心房源保障</span>
+							</span>
+							<span>
+					<span>人工审核所有中国房源页面信息，入住更放心</span>
+							</span>
+						</div>
+
+				</div>
+				</a>
+				<div class="b3" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<a href="#abs">
+						<div class="v2">
+							<img class="_1u6feuz3" src="https://z1.muscache.cn/airbnb/static/packages/IndicatorCXinsurance.32cdc2f5.svg" width="50" height="50" alt="https://z1.muscache.cn/airbnb/static/packages/IndicatorCXinsurance.32cdc2f5.svg">
+
+						</div>
+
+						<div class="p2">
+							<span>
+								<span class="ac2">
+						专业中文客服
+					</span>
+							</span>
+							<span>
+					<span>(86) 400-120-8508、(86) 010-8783-3463，24 小时服务</span>
+							</span>
+						</div>
+
+				</div>
+				</a>
+				<div class="b4" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<a href="#abs">
+						<div class="v3">
+							<img class="_1u6feuz3" src="https://z1.muscache.cn/airbnb/static/packages/IndicatorExperienceInsurance.903112a9.svg" width="50" height="50" alt="https://z1.muscache.cn/airbnb/static/packages/IndicatorExperienceInsurance.903112a9.svg">
+						</div>
+						<div class="p3">
+							<span>
+					<span class="ac3">旅行安全保障</span>
+							</span>
+							<span>
+					<span >多重风险控制设计，全方位保障您的行程安全</span>
+							</span>
+						</div>
+
+				</div>
+				</a>
+				<div class="b5">
+					<button type="button" class="_1k03xgts" aria-busy="false" data-toggle="modal" data-target=".bs-example-modal-lg">查看全方位保障计划</button>
+				</div>
+			</div>
+			<!-- Large modal -->
+			<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>-->
+			<div class="mm" id="abs">
+
+				<div id="nb" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+					<div id="ll" class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header1">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+	                            &times;
+	            				 </button>
+								<!--<h1 class="modal-title" id="myModalLabel">名树旅行保障</h1>
+								<h4>全方位保障计划 · 无忧出行</h4>-->
+							</div>
+							<div class="modal-body">
+								<div id="navbar-example" class="navbar navbar-static">
+									<ul class="nav nav-pills" role="tablist">
+										<li role="presentation" class="active">
+											<a href="#php">安心房源保障</a>
+
+										</li>
+										<li role="presentation">
+											<a href="#js">专业中文客服</a>
+										</li>
+										<li role="presentation">
+											<a href="#mys">旅行安全保障</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-spy="scroll" data-target="#navbarExample" data-offset="50" class="scrollspy-example">
+								<div class="_aws">
+									<div class="aa">
+										<img src="images/axfybz.png" />
+									</div>
+									<div class="az">
+										<div class="bb">
+											<div>
+												<h3 id="php" style="font-weight: 600;">安心房源保障</h3>
+												<p>人工审核所有中国房源页面信息，入住更放心</p>
+											</div>
+
+											&nbsp;
+											<h4 id="asd">入住真实可靠</h4>
+											<p>若发现房源严重不符合描述并影响入住，经核实与协调仍无法入住，我们将最高全额退款并补偿您首晚房费</p>
+											&nbsp;
+											<h4 id="asd">旅居一尘不染</h4>
+											<p>若入住时发现房间未经打扫或有明显清洁问题，经核实与协调仍无法入住，我们将最高全额退款并补偿您首晚房费</p>
+											&nbsp;
+											<h4 id="asd">费用透明安全</h4>
+											<p>若房东无故取消订单或提出不合理的站外收款，经核实与协调仍无法入住，我们将最高全额退款并补偿您首晚房费</p>
+										</div>
+
+									</div>
+
+								</div>
+								&nbsp;
+								<div class="_aws">
+									<div class="dd">
+										<img src="images/zyzwkf.png" />
+									</div>
+									<div class="aw">
+										<div class="ee">
+											<div style="height: 50px;">
+												<h3 id="js" style="font-weight: 600;">专业中文客服</h3>
+
+												<p>
+													<div style="display: flex;">7 × 24 小时中文服务 400-120-8508, 010-8783-3463</div>
+												</p>
+											</div>
+
+										</div>
+										&nbsp;
+
+										<h4 id="asd">全天候中文服务</h4>
+										<p>无论遇到任何问题，您都可以通过客服电话、网站或 APP 等多重渠道，联系我们专业的中文客服团队</p>
+										&nbsp;
+										<h4 id="asd">复杂问题，随时响应</h4>
+										<p>我们为您解决各种问题，包括协助重新预订、退款等；还设有高达 500 万人民币的房东保障金计划以及为房源和体验提供保障的保险计划</p>
+										&nbsp;
+										<h4 id="asd">多种语言，全球支持</h4>
+										<p>除了中文，我们也提供 11 种语言的国际化的客服支持，确保您在世界各地的一切问题都能随时解决</p>
+
+									</div>
+
+								</div>
+								&nbsp;
+								<div class="_aws">
+									<div class="gg">
+										<img src="images/lxaqbz.png" />
+									</div>
+									<div class="ax">
+										<div class="hh">
+											<h3 id="mys" style="font-weight: 600;">旅行安全保障</h3>
+											<p>多重风险控制设计，全方位保障您的旅程安全</p>
+										</div>
+										&nbsp;
+
+										<h4 id="asd">实人实名，多重验证</h4>
+										<p>在中国房东上线房源与房客预订时，均需提供真实姓名与身份信息。每一位中国房东都经过实名验证，预订更放心</p>
+										&nbsp;
+										<h4 id="asd">紧急情况，安全保障</h4>
+										<p>通过多种方式搭建安全架构，提供了全球紧急报警功能，遇到任何紧急安全问题，都能快速获取帮助</p>
+										&nbsp;
+										<h4 id="asd">特殊状况，全面保护</h4>
+										<p>由于超出控制范围的意外情况或重大自然灾害等不可抗因素需要取消预订时，经核实后我们将最高提供全额退款</p>
+
+									</div>
+
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+	                        </button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		
+		
+				<!--====== HOME PLACES ==========-->
+		<section>
+			<div class="rows pad-bot-redu tb-space">
+				<div class="container">
+					<!-- TITLE & DESCRIPTION -->
+					<div class="spe-title">
+						<h2>Top <span>热门目的地</span> </h2>
+						<div class="title-line">
+							<div class="tl-1"></div>
+							<div class="tl-2"></div>
+							<div class="tl-3"></div>
+						</div>
+				
+					</div>
+
+					<div>
+						<div>
+							<ul id="u1" class="nav nav-pills">
+								<!--<li role="presentation" class="col-md-1">
+									<button class="btn btn-default btn-lg" type="button">北京</button>
+								</li>
+								<li role="presentation" class="col-md-1">
+									<button class="btn btn-default btn-lg" type="button">北京</button>
+								</li>-->
+							</ul>	
+						</div>
+
+						<div id="d1" style="margin-top: 15px;">
+							
+							<!-- TOUR PLACE 6 -->
+							<!--<div class="col-md-4 col-sm-6 col-xs-12 b_packages">
+								<div class="v_place_img">
+									<img src="https://z1.muscache.cn/4ea/air/r:w775-h300-sfit,e:fjpg-c70/pictures/2fa807dd-afc0-4980-b406-cb9610cb7e3f.jpg" alt="Tour Booking" title="Tour Booking" />
+								</div>
+								<div>
+								<a href="tour-details.html"><small>整间LOFT · 1张床</small></a><br />
+                                <a href="tour-details.html"><strong>【华章】衡复文化区独门花园Loft古典新中式洋楼@FFC</strong></a><br />
+								<span>￥550 每晚</span><br />
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+								<span>414 · 超赞房东</span>
+								</div>
+							</div>-->
+						</div>
+					</div>
+					
+					<div class="col-md-12">
+						 <h1><a href="#" id="aMore"><strong style="color: #46A546;">查看更多房源</strong><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></h1>
+					</div>
+		</section>
+
+		<!--===========demoin==================-->
+		<section>
+			<div class="lv1">
+				<div class="lv2">
+					<div class="lv3" id="a1">
+						<div class="col-xs-6 col-md-4 container-fluid">
+							<table class="lv3" id="a1">
+								<thead>
+									<tr>
+										<th>
+											<ul class="d1">
+
+												<li class="li1">名树</li>
+
+											</ul>
+										</th>
+										<th>
+											<ul class="d2">
+												<li class="li1">发现</li>
+
+											</ul>
+										</th>
+										<th>
+											<ul class="d3">
+												<li class="li1">出租</li>
+
+											</ul>
+										</th>
+										<th>
+											<ul class="d4">
+												<li class="li1">
+													<a href="https://weibo.com/airbnb?is_hot=1"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+													<a href="#" id="contact_weixin" onclick="openWindow(this)">
+														<i class="fa fa-weixin" aria-hidden="true"></i></a>
+												</li>
+											</ul>
+										</th>
+
+									</tr>
+
+								</thead>
+								<tbody id="c2">
+		
+								</tbody>
+
+							</table>
+							<div style="float: right;">
+
+							</div>
+
+							<div id="light_weixin " class="white_content ">
+								<!--<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<p>获得即时提醒，探索旅行故事</p>
+								<p>名树服务号：AirbnbOfficial</p>-->
+								<img src='images/erweima.png' />
+								<!--<button type="button" class="btn btn-primary">关闭</button>-->
+							</div>
+							<div id="fade" class="black_overlay" onclick="closeWindow()">
+							</div>
+						</div>
+						<!--<div id="light_qq " class="white_content ">
+			<img src='gongan.png' />
+		</div>-->
+					</div>
+				</div>
+
+			</div>
+
+			<div class="lv4 " id="a2 ">
+				<div class="lv5 ">
+					<p>
+
+						京ICP备16017121号-3 京ICP证 160773号 中国公安局标志 <img src="images/gongan.png ">
+						<a href=" http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502032345">京公网安备 11010502032345号 </a>安彼迎网络（北京）有限公司
+						<a href="images/yingyezhizhao.jpg">营业执照</a>
+						<!--<img src="yingyezhizhao.jpg" />-->
+					</p>
+				</div>
+				<div class="lv6 ">© 2019 Airbnb, Inc. All rights reserved.</div>
+
+			</div>
+			</div>
+		</section>
+
+		<!--========= Scripts ===========-->
+		<script src="js/jquery-latest.min.js"></script>
+		<script src="../../../../js/bootstrap.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="jsfile/commons.js"></script>
+		<script src="../../../slz/queryHouse/query.js"></script>
+		<!--<script src="../../../slz/queryHouse/houseList.js"></script>-->
+		<script type="text/javascript" src="../Bootstrap/bootstrap-3.3.7/js/jquery-3.4.1.min.js"></script>
+
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+		<script src="../Bootstrap/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		
+		<script>
+		$(document).ready(function(){
+		 	var city_str="";
+		 	$.post("http://localhost:8080/OurProject/findCity",{},function(city){
+		 		
+		 		for(var i=0;i<8;i++){    
+				    city_str+='<li role="presentation" class="col-md-1"><button data-city="'+city[i].city+'" id="ctBtn" class="btn btn-default btn-lg" type="button">'+city[i].city+'</button></li>'    	
+				}
+				$("#u1").html(city_str)	
+				console.log(city[0].city)
+				var city = city[0].city
+				fangyuan(city)
+				$("button[id='ctBtn']").click(function(){
+					city = $(this).attr("data-city")
+					fangyuan(city)
+					
+				})
+		 	})
+		
+			/*$.post("http://localhost:8080/OurProject/findLocation",{},function(data){
+			
+				var locationid = data[0].locationid
+				fangyuan(locationid)
+		
+			})*/
+			
+			function fangyuan(city)	{
+						$.post("http://localhost:8080/OurProject/findHouseByLid",{city:city},function(house){
+							console.log(house)
+							
+						var house_str="";
+						var c = 0
+						
+						if(house.length>6){
+							c = 6
+						}else{
+							c = house.length
+							
+						}
+		
+						for(var j=0;j<c;j++){
+							$.post("http://localhost:8080/OurProject/avgScore",{houseid:house[j].houseid},function(score){
+								console.log(score)
+								$(".score").html(score)
+								var a = ''
+								if(score<4 ){
+									a="一般房东"
+									$(".a").html(a)
+								}else{
+									a="超赞房东"
+									$(".a").html(a)
+								}
+							})
+							$.post("http://localhost:8080/OurProject/countPL",{houseid:house[j].houseid},function(pinglun){
+								$(".l").html(pinglun.length)
+								//console.log(pinglun.length)
+							})
+							
+							house_str+=	'<div class="col-md-4 col-sm-6 col-xs-12 b_packages"><div class="v_place_img">'					
+							house_str+=	'<img style="height:200px" src="'+house[j].img+'"alt="Tour Booking" title="Tour Booking" />'
+							house_str+=	'</div>'
+							house_str+=	'<div><a href="tour-details.html"><small><a class="a1" href="#" data-hId="'+house[j].houseid+'">'+house[j].type+'· '+house[j].bednum+'张床</small></a><br />'
+							house_str+='<a class="a1" href="#" data-hId="'+house[j].houseid+'"><strong>'+house[j].housename+'</strong></a><br />'
+							house_str+='<span>￥'+house[j].newprice+'每晚</span><br />'
+							house_str+='<strong>评分</strong><span class="score"></span><strong>分</strong>&nbsp&nbsp'
+							house_str+='<span class="l"></span>· <span class="a"></span></div></div>'
+							/*house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+							house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+							house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+							house_str+='<span class="glyphicon glyphicon-star" aria-hidden="true"></span>'
+							house_str+='<span>414 · 超赞房东</span></div></div>'*/
+						
+						}
+							$("#d1").html(house_str)
+							
+							$("a[class='a1']").click(function(){
+								var houseid = $(this).attr("data-hId")
+								console.log(houseid)
+								window.localStorage.setItem("houseid",houseid);
+								window.location.href='../../../thx/house.html?houseid='+houseid;
+							});
+						
+						
+						
+					})
+						$("a[id='aMore']").click(function(){
+						window.localStorage.setItem("city",city);
+						window.location.href='../../../thx/more.html?city='+city;
+						});		
+				}		
+				
+
+		});
+		</script>
+
+		<script>
+			function openWindow(obj) {
+				var weixin = "light_weixin ";
+				/*	switch(obj.id) {
+						case 'contact_weixin':
+							weixin = "light_weixin ";
+							break;
+
+						case 'contact_qq':
+							weixin = "light_qq ";
+							break;
+					}*/
+				document.getElementById("contact_weixin").style.display = 'block';
+				document.getElementById("fade").style.display = 'block';
+			}
+
+			function closeWindow() {
+				document.getElementById("light_weixin ").style.display = 'none';
+
+				document.getElementById("fade").style.display = 'none';
+			}
+
+			$(document).ready(function() {
+
+				$.post("http://localhost:8080/OurProject/findColumn", {}, function(data) {
+					var column_str = "";
+					/*console.log(data);*/
+					for(var i = 0; i < data.length; i++) {
+						/*console.log(data[i].connect1);*/
+						/*column_str+="<tr><td>"+data[i].connect1+"</td></tr>"*/
+						column_str += "<tr><td>" + data[i].connect1 + "</td><td>" + data[i].connect2 + "</td><td>" + data[i].connect3 + "</td>"
+						if(i == 1){
+							column_str += " <td><a href='https://www.airbnb.cn/terms '>条款</a></td>"
+						}else if(i == 2){
+							column_str += " <td><a href=' https://www.airbnb.cn/terms/privacy_policy'>隐私政策</a></td>"
+						}else if(i == 3){
+							column_str += " <td><a href=' https://www.airbnb.cn/sitemaps/v2'>网站地图</a></td>"
+						}else{
+							
+						}
+						column_str += "</tr>"
+					}
+					$("#c2").html(column_str);
+				})
+
+			});
+		</script>
+
+		<script>
+			$('#myModal').on('show.bs.modal', function() {
+				/* alert("显示模态框");*/
+			});
+
+			$('#myModal').on('shown.bs.modal', function() {
+				/*alert("完全显示模态框");*/
+			});
+
+			$('#myModal').on('hide.bs.modal', function() {
+				/*alert("隐藏模态框");*/
+			});
+
+			$('#myModal').on('hidden.bs.modal', function() {
+				/* alert("完全隐藏模态框");*/
+			});
+		</script>
+
+		<script>
+			window.onload = function() {
+				var uid = window.localStorage.getItem("uid");
+				var lr = document.getElementById('login&regist_button');
+				var logout = document.getElementById('logout');
+				if(uid != null) {
+					lr.style.display = "none";
+				} else {
+					lr.style.display = "";
+				}
+				if(uid == null) {
+					logout.style.display = "none";
+				} else {
+					logout.style.display = "";
+				}
+
+			}
+			var uid = window.localStorage.getItem("uid");
+		</script>
+		<script>
+			$(function() {
+				var username1 = window.localStorage.getItem("username");
+				$("#username1").text(username1);
+				var headimg = window.localStorage.getItem("img");
+				var src1 = "<img src='" + headimg + "' alt='' class='img-circle' width = '40px' height = '40px'>";
+				$("#headinfo").html(src1);
+				/*注销*/
+				$("#logout").click(function() {
+					var storage = window.localStorage;
+					storage.clear();
+					window.location.href = "index.html";
+
+				})
+
+				/*注册*/
+				$("#regist").click(function() {
+					regist();
+
+				})
+
+				/*登录*/
+				$("#commit").click(function() {
+					login();
+
+				})
+
+				$.post(base_path + "/picturelist?", {}, function(data) {
+
+					var str = "";
+					for(var i = 0; i < data.length; i++) {
+						str += "<div class='col-md-4 col-sm-6 col-xs-12 b_packages'><!-- OFFER BRAND --><div class='band'><img src='images/band1.png' alt='' /></div><!-- IMAGE --><div class='v_place_img'><img src='" + data[i].url + "' alt='Tour Booking' title='Tour Booking' /></div><!-- TOUR TITLE & ICONS --><div class='b_pack rows'><!-- TOUR TITLE --><div class='col-md-8 col-sm-8'><h4><a id = 'lookbtn' data-id = '" + data[i].houseid + "'>" + data[i].housename + "<span class='v_pl_name'>(England)</span></a></h4></div><!-- TOUR ICONS --><div class='col-md-4 col-sm-4 pack_icon'><ul><li><a href='#'><img src='images/clock.png' alt='Date' title='Tour Timing' /></a></li><li><a href='#'><img src='images/info.png' alt='Details' title='View more details' /></a></li><li><a href='#'><img src='images/price.png' alt='Price' title='Price' /></a></li><li><a href='#'><img src='images/map.png' alt='Location' title='Location' /></a></li></ul></div></div></div>";
+					}
+					$("#c1").html(str);
+					$("a[id='lookbtn']").click(function() {
+						var id = $(this).attr("data-id");
+						window.localStorage.setItem("houseid", id);
+						window.location.href = 'cpts_1320_byx/room.html';
+					})
+
+				})
+
+			});
+		</script>
+		<script>
+			$(function() {
+
+			})
+		</script>
+	</body>
+
+</html>
